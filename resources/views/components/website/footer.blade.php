@@ -1,57 +1,35 @@
-<!-- resources/views/components/website/footer.blade.php -->
-<footer id="footer" class="footer accent-background">
 
-    <div class="container footer-top">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">Impact</span>
-            </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-            <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-twitter-x"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                  <h3 class="text-xl font-bold mb-4">Trucking 360</h3>
+                  <p class="mb-4">Revolutionizing logistics with innovative solutions.</p>
+                  <div class="flex space-x-4">
+                      <a href="#"   class="text-2xl hover:text-secondary transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+                      <a href="#" class="text-2xl hover:text-secondary transition-colors duration-300"><i class="fab fa-facebook"></i></a>
+                  </div>
+              </div>
+              <div>
+                  <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                  <ul class="space-y-2">
+                      <li><a href="#home" class="hover:text-secondary transition-colors duration-300">Home</a></li>
+                      <li><a href="#services" class="hover:text-secondary transition-colors duration-300">Services</a></li>
+                      <li><a href="#about" class="hover:text-secondary transition-colors duration-300">About</a></li>
+                      <li><a href="#faq" class="hover:text-secondary transition-colors duration-300">FAQ</a></li>
+                      <li><a href="#contact" class="hover:text-secondary transition-colors duration-300">Contact</a></li>
+                  </ul>
+              </div>
+              <div>
+                  <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                  <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-secondary"></i> {{{$settings->address}}}</p>
+                  <p class="mb-2"><i class="fas fa-phone mr-2 text-secondary"></i> {{{$settings->phone}}}</p>
+                  <p><i class="fas fa-envelope mr-2 text-secondary"></i> {{{$settings->email}}}</p>
+              </div>
           </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
-            </ul>
+          <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+              <p>&copy; 2024 Trucking 360. All rights reserved.</p>
           </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p>United States</p>
-            <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-
-        </div>
       </div>
-
-      <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Impact</strong> <span>All Rights Reserved</span></p>
-
-      </div>
-</footer>
+  </footer>

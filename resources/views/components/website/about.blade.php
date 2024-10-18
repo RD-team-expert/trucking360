@@ -1,46 +1,75 @@
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>About Us<br></h2>
-          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div><!-- End Section Title -->
-
-        <div class="container">
-
-          <div class="row gy-4">
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3>Voluptatem dignissimos provident laboris nisi ut aliquip ex ea commodo</h3>
-              <img src="assets/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
-              <p>Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.</p>
-              <p>Temporibus nihil enim deserunt sed ea. Provident sit expedita aut cupiditate nihil vitae quo officia vel. Blanditiis eligendi possimus et in cum. Quidem eos ut sint rem veniam qui. Ut ut repellendus nobis tempore doloribus debitis explicabo similique sit. Accusantium sed ut omnis beatae neque deleniti repellendus.</p>
-            </div>
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-              <div class="content ps-0 ps-lg-5">
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                  <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-                </p>
-
-                <div class="position-relative mt-4">
-                  <img src="{{asset('website/img/about-2.jpg')}}" class="img-fluid rounded-4" alt="">
-                  <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+    <!-- About Us Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="{{asset('website/img/about.png')}}" alt="About Trucking 360" class="rounded-lg shadow-lg" style="max-width: 600px">
                 </div>
-              </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold text-primary mb-6">About Us</h2>
+                    <p class="text-gray-600 mb-6">
+                        Trucking 360 is a leading logistics company with over 20 years of experience in providing innovative transportation solutions. Our commitment to excellence and customer satisfaction sets us apart in the industry.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-2xl text-secondary mr-4"></i>
+                            <span class="text-gray-700">Expert Team</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-truck text-2xl text-secondary mr-4"></i>
+                            <span class="text-gray-700">Modern Fleet</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-globe text-2xl text-secondary mr-4"></i>
+                            <span class="text-gray-700">Global Reach</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-chart-line text-2xl text-secondary mr-4"></i>
+                            <span class="text-gray-700">Innovative Solutions</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-
         </div>
+    </section>
 
-      </section><!-- /About Section -->
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Typed.js initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            var typed = new Typed('#typed', {
+                stringsElement: '#typed-strings',
+                typeSpeed: 80,
+                backSpeed: 45,
+                loop: true,
+                showCursor: false
+            });
+        });
+
+        // Accordion functionality
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Contact form submission
+        // document.getElementById('contact-form').addEventListener('submit', (e) => {
+        //     e.preventDefault();
+        //     // Here you would typically send the form data to a server
+        //     alert('Thank you for your message. We will get back to you soon!');
+        //     e.target.reset();
+        // });
+    </script>

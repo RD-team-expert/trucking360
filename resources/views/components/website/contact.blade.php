@@ -1,89 +1,46 @@
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div><!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row gx-lg-0 gy-4">
-
-            <div class="col-lg-4">
-              <div class="info-container d-flex flex-column align-items-center justify-content-center">
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bi bi-geo-alt flex-shrink-0"></i>
-                  <div>
-                    <h3>Address</h3>
-                    <p>A108 Adam Street, New York, NY 535022</p>
-                  </div>
-                </div><!-- End Info Item -->
-
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bi bi-telephone flex-shrink-0"></i>
-                  <div>
-                    <h3>Call Us</h3>
-                    <p>+1 5589 55488 55</p>
-                  </div>
-                </div><!-- End Info Item -->
-
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bi bi-envelope flex-shrink-0"></i>
-                  <div>
-                    <h3>Email Us</h3>
-                    <p>info@example.com</p>
-                  </div>
-                </div><!-- End Info Item -->
-
-                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                  <i class="bi bi-clock flex-shrink-0"></i>
-                  <div>
-                    <h3>Open Hours:</h3>
-                    <p>Mon-Sat: 11AM - 23PM</p>
-                  </div>
-                </div><!-- End Info Item -->
-
-              </div>
-
-            </div>
-
-            <div class="col-lg-8">
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade" data-aos-delay="100">
-                <div class="row gy-4">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                  </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
-
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-
-                  <div class="col-md-12">
-                    <textarea class="form-control" name="message" rows="8" placeholder="Message" required=""></textarea>
-                  </div>
-
-                  <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit">Send Message</button>
-                  </div>
-
+<!-- Contact Section -->
+<section id="contact" class="py-20">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-primary mb-12">Contact Us</h2>
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-6 bg-primary text-white">
+                    <h3 class="text-2xl font-semibold mb-4">Get in Touch</h3>
+                    <p class="mb-4">We're here to help and answer any question you might have.</p>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-map-marker-alt mr-4 text-secondary"></i>
+                        <span> {{$settings->address}}</span>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-phone mr-4 text-secondary"></i>
+                        <span>{{$settings->phone}}</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope mr-4 text-secondary"></i>
+                        <span>{{$settings->email}}</span>
+                    </div>
                 </div>
-              </form>
-            </div><!-- End Contact Form -->
-
-          </div>
-
+                <div class="md:w-1/2 p-6">
+                    <form action="{{ route('contact.store') }}" method="POST" id="contact-form" class="space-y-4">
+                        @csrf
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-secondary text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors duration-300">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-
-      </section><!-- /Contact Section -->
+    </div>
+</section>

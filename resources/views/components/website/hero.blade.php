@@ -1,56 +1,44 @@
-  <!-- Hero Section -->
-  <section id="hero" class="hero section accent-background">
-
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-      <div class="row gy-5 justify-content-between">
-        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h2><span>Welcome to </span><span class="accent">Impact</span></h2>
-          <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
-          <div class="d-flex">
-            <a href="#about" class="btn-get-started">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-          </div>
+<!-- Hero Section with Gradient Background -->
+<section id="home" class="pt-20 min-h-screen flex items-center gradient-bg relative overflow-hidden">
+    <div class="container mx-auto px-0 flex flex-col md:flex-row items-center relative z-10">
+        <div class="md:w-1/2 md:pl-12 z-10">
+            <!-- Larger "Trucking 360" text -->
+            <h3 class="text-3xl md:text-5xl font-bold text-white mb-4">{{ $settings->website_name }}</h3>
+            <h4 class="text-3xl md:text-5xl font-bold text-white mb-4">Your Partner to Fantastic Plus</h4>
+            <br>
+            <div id="typed-strings">
+                <p>Best in-class dispatch service</p>
+                <p>24/7 available for your drivers</p>
+                <p>High communication quality</p>
+                <p>Scorecard analysis and action plans to secure Fantastic Plus scores</p>
+                <p>Customized reports</p>
+                <p>Daily disputes</p>
+            </div>
+            <span id="typed" class="text-lg md:text-3xl text-white"></span>
         </div>
-        <div class="col-lg-5 order-1 order-lg-2">
-          <img src="{{asset('website/img/hero-img.svg')}}" class="img-fluid" alt="">
+        
+        <!-- Image container with smaller image size and overflow -->
+        <div class="md:w-1/2 flex justify-end relative">
+            <img src="{{ asset('website/img/header.png') }}" alt="Truck Image" class="absolute bottom-0 right-0 w-auto h-48 md:h-64 lg:h-100">
         </div>
-      </div>
     </div>
+</section>
 
-    <div class="icon-boxes position-relative" data-aos="fade-up" data-aos-delay="200">
-      <div class="container position-relative">
-        <div class="row gy-4 mt-5">
+<!-- CSS for the gradient background -->
+<style>
+  .gradient-bg {
+    background: repeating-linear-gradient(to right, #2e368f, #e93232);
+  }
 
-          <div class="col-xl-3 col-md-6">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-easel"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-            </div>
-          </div><!--End Icon Box -->
+  /* Ensure the section can handle the overflowed image */
+  .overflow-hidden {
+    overflow: hidden;
+  }
 
-          <div class="col-xl-3 col-md-6">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-gem"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">Sed ut perspiciatis</a></h4>
-            </div>
-          </div><!--End Icon Box -->
-
-          <div class="col-xl-3 col-md-6">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-geo-alt"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">Magni Dolores</a></h4>
-            </div>
-          </div><!--End Icon Box -->
-
-          <div class="col-xl-3 col-md-6">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-command"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">Nemo Enim</a></h4>
-            </div>
-          </div><!--End Icon Box -->
-
-        </div>
-      </div>
-    </div>
-
-  </section><!-- /Hero Section -->
+  /* Adjust the image styling for overflow */
+  img.absolute {
+    position: absolute;
+    bottom: -300px;  /* Moves the image slightly below the section */
+    right: -40px;   /* Moves the image slightly off the right side */
+  }
+</style>

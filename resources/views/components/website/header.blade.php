@@ -1,45 +1,93 @@
-<!-- resources/views/components/website/header.blade.php -->
-<header id="header" class="header fixed-top">
-    <div class="topbar d-flex align-items-center">
-        <div class="container d-flex justify-content-center justify-content-md-between">
-            <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-                <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-            </div>
-            <div class="social-links d-none d-md-flex align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="branding d-flex align-items-center">
-        <div class="container position-relative d-flex align-items-center justify-content-between">
-            <a href="{{ url('/') }}" class="logo d-flex align-items-center">
-                <h1 class="sitename">Impact</h1>
-                <span>.</span>
+<!-- Header -->
+<header id="header" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md">
+    <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="{{url('/')}}" id="logo" class="text-2xl font-bold text-primary">
+                <img src="{{ asset('website/img/logo22.png') }}" alt="Trucking 360 Logo" class="h-8">
             </a>
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="#hero" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li class="dropdown">
-                        <a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a href="#">Dropdown 1</a></li>
-                            <li><a href="#">Dropdown 2</a></li>
-                        </ul>
+            <!-- Mobile Menu Toggle Button -->
+            <div class="block md:hidden">
+                <button id="menu-toggle" class="text-gray-600 hover:text-secondary focus:outline-none">
+                    <!-- Menu Icon -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Desktop Navigation Menu -->
+            <nav id="menu" class="hidden md:block">
+                <ul class="flex flex-row items-center space-x-6">
+                    <li><a href="#home" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">Home</a></li>
+                    <li><a href="#services" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">Services</a></li>
+                    <li><a href="#about" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">About</a></li>
+                    <li><a href="#faq" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">FAQ</a></li>
+                    <li><a href="#contact" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">Contact</a></li>
+                    <!-- "Book a Meeting" Button -->
+                    <li>
+                        <a href="{{url('/bookings/create')}}" class="block px-4 py-2 text-center text-white bg-primary hover:bg-secondary rounded transition-colors duration-300">
+                            Book a Meeting
+                        </a>
                     </li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
         </div>
     </div>
 </header>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 h-full bg-gray-900 bg-opacity-50 z-40 hidden">
+    <!-- Card Container Covering Full Width -->
+    <div class="bg-white w-full h-full relative">
+        <!-- Close Button -->
+        <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-600 hover:text-secondary focus:outline-none">
+            <!-- Close Icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <!-- Navigation Menu -->
+        <nav class="mt-16 px-4">
+            <ul class="flex flex-col items-center space-y-6 text-center">
+                <li><a href="#home" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Home</a></li>
+                <li><a href="#services" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Services</a></li>
+                <li><a href="#about" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">About</a></li>
+                <li><a href="#faq" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">FAQ</a></li>
+                <li><a href="#contact" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Contact</a></li>
+                <!-- "Book a Meeting" Button (Optional) -->
+                <li>
+                    {{-- <a href="#book-meeting" class="text-white text-2xl bg-primary hover:bg-secondary rounded px-6 py-2 transition-colors duration-300">
+                        Book a Meeting
+                    </a> --}}
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- Script to Toggle Mobile Menu -->
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenuOverlay.classList.toggle('hidden');
+        document.body.classList.toggle('overflow-hidden');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenuOverlay.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('#mobile-menu-overlay a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+    });
+</script>
+

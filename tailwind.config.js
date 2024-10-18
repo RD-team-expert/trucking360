@@ -13,7 +13,13 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+
             },
+            colors: {
+                primary: '#2e368f',
+                secondary: '#e93232',
+            },
+            
         },
     },
 
