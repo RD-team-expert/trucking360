@@ -10,6 +10,8 @@ use App\Models\Customer;
 use App\Models\GeneralSetting;
 use Illuminate\Support\Facades\Log;
 use App\Models\User;
+use App\Mail\BookingConfirmed;
+use Illuminate\Support\Facades\Mail;
 
 
 
@@ -34,7 +36,7 @@ class BookingController extends Controller
             'phone_number' => 'required|string|max:15',
             'domicile' => 'required|string|max:255',
             'description' => 'required|string',
-            'address' => 'required|string',
+            // 'address' => 'required|string',
         ]);
     
         // Create or find the customer
@@ -44,7 +46,7 @@ class BookingController extends Controller
                 'first_name' => $request->first_name,
                 'last_name' => $request->last_name,
                 'phone_number' => $request->phone_number,
-                'address' => $request->address, 
+                // 'address' => $request->address, 
             ]
         );
     
@@ -54,23 +56,27 @@ class BookingController extends Controller
             'date' => $request->date,
             'domicile' => $request->domicile,
             'description' => $request->description,
-            'address' => $request->address, 
+            // 'address' => $request->address, 
             'is_confirmed' => "pending", // Set the initial status to pending
         ]);
     
         // Create the notification
-        $userId = Auth::id();
+        $users = User::all();
 
-        // Create the notification
-        Notification::create([
-            'user_id' => $userId,
-            'type' => 'New Booking',
-            'title' => 'New Booking Created',
-            'message' => 'A new booking has been created for ' . $customer->first_name . ' ' . $customer->last_name . '.',
-            'url' => route('dashboard.bookings.index'),
-            'notifiable_type' => User::class, // Assuming the notifiable entity is a User
-            'notifiable_id' => $userId, // The ID of the notifiable entity
-        ]);
+        // Loop through each user and create a notification
+        foreach ($users as $user) {
+            Notification::create([
+                'user_id' => $user->id, // Assign the notification to each user
+                'type' => 'New Booking',
+                'title' => 'New Booking Created',
+                'message' => 'A new booking has been created for ' . $customer->first_name . ' ' . $customer->last_name . '.',
+                'url' => route('dashboard.bookings.index'),
+                'notifiable_type' => User::class,
+                'notifiable_id' => $user->id, // The ID of each notifiable entity (the user)
+            ]);
+        }
+
+        Mail::to($customer->email)->send(new BookingConfirmed($booking, $customer));
         
     
         // Redirect to the notification page with a success message

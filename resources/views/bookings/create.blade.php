@@ -15,12 +15,13 @@
                     Get Started
                 </a>
             </div>
-            <div class="md:w-1/2">
-                <img src="https://placehold.co/600x400?text=Book+a+Meeting" alt="Book a Meeting" class="rounded-lg shadow-lg">
+            <div class="md:w-1/2" style="visibility: hidden;">
+                <img src="https://placehold.co/600x400?text=Book+a+Meeting" alt="Book a Meeting" class="rounded-lg shadow-lg invisible">
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Booking Form Section -->
 <div id="form-section" class="container-booking bg-gray-50 min-h-screen flex items-center justify-center py-20">
@@ -94,14 +95,14 @@
                 @enderror
             </div>
 
-            <!-- Address -->
+            {{-- <!-- Address -->
             <div class="mb-5">
                 <label for="address" class="block text-gray-700 font-medium mb-2">Address</label>
                 <textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 @error('address') border-red-500 @enderror" id="address" name="address" rows="2" required>{{ old('address') }}</textarea>
                 @error('address')
                     <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                 @enderror
-            </div>
+            </div> --}}
 
             <!-- Description -->
             <div class="mb-5">

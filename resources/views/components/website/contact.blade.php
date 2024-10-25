@@ -1,5 +1,5 @@
 <!-- Contact Section -->
-<section id="contact" class="py-20">
+<section id="contact" class="py-20 bg-gray-100">
     <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-center text-primary mb-12">Contact Us</h2>
         <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">

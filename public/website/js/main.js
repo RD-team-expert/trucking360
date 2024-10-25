@@ -215,4 +215,22 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+  document.querySelectorAll('.feature-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        const icon = card.querySelector('.feature-icon');
+        icon.classList.remove('text-primary');
+        icon.classList.add('text-secondary');
+    });
+
+    card.addEventListener('mouseleave', () => {
+        const icon = card.querySelector('.feature-icon');
+        icon.classList.remove('text-secondary');
+        icon.classList.add('text-primary');
+    });
+});
+
+
+
 })();
+

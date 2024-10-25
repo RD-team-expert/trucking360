@@ -14,7 +14,7 @@ class CreateBookingsTable extends Migration
             $table->string('domicile')->nullable();
             $table->text('description')->nullable();
             $table->date('date');  // Replacing start_time and end_time with a single date
-            $table->string('address')->nullable();
+            // $table->string('address')->nullable();
             $table->string('is_confirmed')->default("pending");
             $table->timestamps();
         });

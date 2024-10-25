@@ -18,14 +18,49 @@
         </div>
         
         <!-- Image container with smaller image size and overflow -->
-        <div class="md:w-1/2 flex justify-end relative">
-            <img src="{{ asset('website/img/header.png') }}" alt="Truck Image" class="absolute bottom-0 right-0 w-auto h-48 md:h-64 lg:h-100">
-        </div>
+        <div class="header-container">
+          <img src="{{ asset('website/img/header.png') }}" alt="Truck Image" class="header-image">
+      </div>
+      
     </div>
 </section>
 
 <!-- CSS for the gradient background -->
 <style>
+.header-container {
+    width: 50%; /* md:w-1/2 */
+    display: flex; /* flex */
+    justify-content: flex-end; /* justify-end */
+    position: relative; /* relative */
+}
+
+.header-image {
+    position: absolute; /* absolute */
+    bottom: -345px; /* Moves the image slightly below the section */
+    right: -40px; /* Moves the image slightly off the right side */
+    width: auto; /* w-auto */
+    height: 12rem; /* h-48 */
+}
+
+@media (max-width: 767px) {
+    /* Hide the image on screens smaller than 768px (mobile devices) */
+    .header-image {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-image {
+        height: 16rem; /* md:h-64 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-image {
+        height: 44rem; /* lg:h-100 */
+    }
+}
+
   .gradient-bg {
     background: repeating-linear-gradient(to right, #2e368f, #e93232);
   }
@@ -35,10 +70,5 @@
     overflow: hidden;
   }
 
-  /* Adjust the image styling for overflow */
-  img.absolute {
-    position: absolute;
-    bottom: -300px;  /* Moves the image slightly below the section */
-    right: -40px;   /* Moves the image slightly off the right side */
-  }
+
 </style>

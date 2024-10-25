@@ -13,17 +13,45 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+
         .parallax {
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
+        
+        /* Spinner Styles */
+        .spinner-border {
+            border-top-color: transparent;
+            border-radius: 50%;
+            border-width: 2px;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Hide spinner by default */
+        .spinner-hidden {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-white">
-   
 
+    <!-- Global Spinner -->
+    <div id="globalSpinner" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div class="spinner-border border-t-4 border-white"></div>
+    </div>
     
     @include('components.website.header')
 
@@ -32,10 +60,40 @@
     </main>
 
     @include('components.website.footer')
-   
-
-
-
+    <script>
+        // Function to hide the spinner once the page has fully loaded
+        window.onload = function() {
+            document.getElementById('globalSpinner').style.display = 'none';
+        };
+    
+        // Show spinner on form submissions
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function () {
+                document.getElementById('globalSpinner').style.display = 'flex';
+            });
+        });
+    
+        // Show spinner on button/link clicks
+        document.querySelectorAll('a, button').forEach(element => {
+            element.addEventListener('click', function (e) {
+                const href = element.getAttribute('href');
+    
+                if (href && href.startsWith('#')) {
+                    // Show spinner for 1 second for anchor links (e.g., #contact)
+                    document.getElementById('globalSpinner').style.display = 'flex';
+                    setTimeout(function () {
+                        document.getElementById('globalSpinner').style.display = 'none';
+                    }, 1000); // 1 second delay
+                } else if (href !== null && href !== '' && !href.startsWith('#')) {
+                    // Show spinner for valid links that don't contain #
+                    document.getElementById('globalSpinner').style.display = 'flex';
+                }
+            });
+        });
+    </script>
+    
+    
+    
 
 </body>
 </html>

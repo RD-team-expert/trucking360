@@ -11,7 +11,7 @@
             <div class="md:w-1/2 mb-8 md:mb-0">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ $service->title }}</h1>
                 <p class="text-xl mb-6">{{ $service->description }}</p>
-                <a href="#contact" class="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300 inline-block">
+                <a href="#contact" class="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300 inline-block" style="visibility: hidden;">
                     {{ $service->button_text ?? 'Get a Quote' }}
                 </a>
             </div>
@@ -89,8 +89,8 @@
         </p>
         
         <!-- Contact Us Button with padding on top -->
-        <a href="#contact" class="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300 inline-block mb-6">
-            Contact Us
+        <a href="{{url('/bookings/create')}}" class="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300 inline-block mb-6">
+            Book a Meeting
         </a>
     </div>
 </section>

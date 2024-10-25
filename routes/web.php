@@ -34,6 +34,17 @@ Route::post('/visitors/store', [VisitorController::class, 'store'])->name('visit
 $settings = GeneralSetting::first();
 
 Route::view('/message', 'message',compact('settings'))->name('message');
+Route::get('/comingsoon', function () {
+$settings = GeneralSetting::first();
+
+    return view('comingsoon', compact('settings'));
+})->name('comingsoon');
+
+Route::get('/bookings/create', function () {
+    $settings = GeneralSetting::first();
+    
+        return view('embedbooking', compact('settings'));
+    })->name('embedbooking');
 
 Route::get('/pricing', function () {
     $settings = GeneralSetting::first();
@@ -58,7 +69,7 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 Route::get('/about', [AboutUsController::class, 'show'])->name('about');
 
 
-Route::get('/bookings/create', [BookingController::class, 'create'])->name('bookings.create')->middleware(TrackVisitor::class);;
+// Route::get('/bookings/create', [BookingController::class, 'create'])->name('bookings.create')->middleware(TrackVisitor::class);;
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store')->middleware(TrackVisitor::class);;
 
 

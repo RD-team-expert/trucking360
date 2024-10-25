@@ -6,8 +6,8 @@
 
 @section('content')
     @include('components.website.hero')
-    @include('components.website.services')
     @include('components.website.whyus')
+    @include('components.website.services')
     @include('components.website.about')
     {{-- @include('components.website.clients') --}}
     {{-- @include('components.website.stats') --}}

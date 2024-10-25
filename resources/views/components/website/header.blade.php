@@ -16,7 +16,25 @@
                     </svg>
                 </button>
             </div>
-            <!-- Desktop Navigation Menu -->
+           @if (Request::routeIs('embedbooking'))
+                <!-- Desktop Navigation Menu -->
+            <nav id="menu" class="hidden md:block">
+                <ul class="flex flex-row items-center space-x-6">
+                  
+                    <!-- "Book a Meeting" Button -->
+                    <li>
+                        <a href="{{ url('/bookings/create') }}" class="block px-4 py-2 text-center text-white bg-primary border border-primary hover:bg-white hover:text-secondary rounded transition-colors duration-300">
+                            Book a Meeting
+                        </a>
+                    </li>
+                    <a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-center text-primary border border-primary hover:bg-primary hover:text-secondary rounded transition-colors duration-300">
+                        Dashboard
+                    </a>
+                    
+                </ul>
+            </nav>
+           @else
+                <!-- Desktop Navigation Menu -->
             <nav id="menu" class="hidden md:block">
                 <ul class="flex flex-row items-center space-x-6">
                     <li><a href="#home" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">Home</a></li>
@@ -26,12 +44,18 @@
                     <li><a href="#contact" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">Contact</a></li>
                     <!-- "Book a Meeting" Button -->
                     <li>
-                        <a href="{{url('/bookings/create')}}" class="block px-4 py-2 text-center text-white bg-primary hover:bg-secondary rounded transition-colors duration-300">
+                        <a href="{{ url('/bookings/create') }}" class="block px-4 py-2 text-center text-white bg-primary border border-primary hover:bg-white hover:text-secondary rounded transition-colors duration-300">
                             Book a Meeting
                         </a>
                     </li>
+                    <a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-center text-primary border border-primary hover:bg-primary hover:text-secondary rounded transition-colors duration-300">
+                        Dashboard
+                    </a>
+                    
                 </ul>
             </nav>
+           @endif
+           
         </div>
     </div>
 </header>
@@ -55,6 +79,9 @@
                 <li><a href="#about" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">About</a></li>
                 <li><a href="#faq" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">FAQ</a></li>
                 <li><a href="#contact" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Contact</a></li>
+                <li><a href="{{url('bookings/create')}}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Book A Meeting</a></li>
+                <li><a href="{{ route('comingsoon') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Dashboard</a></li>
+
                 <!-- "Book a Meeting" Button (Optional) -->
                 <li>
                     {{-- <a href="#book-meeting" class="text-white text-2xl bg-primary hover:bg-secondary rounded px-6 py-2 transition-colors duration-300">
@@ -89,5 +116,7 @@
             document.body.classList.remove('overflow-hidden');
         });
     });
+
+    
 </script>
 

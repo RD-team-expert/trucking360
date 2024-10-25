@@ -15,7 +15,7 @@ class Booking extends Model
         'domicile',
         'description',
         'is_confirmed',
-        'address',
+        // 'address',
         
     ];
 

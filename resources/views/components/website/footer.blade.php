@@ -5,22 +5,36 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                   <h3 class="text-xl font-bold mb-4">Trucking 360</h3>
-                  <p class="mb-4">Revolutionizing logistics with innovative solutions.</p>
+                  <p class="mb-4">{{$settings->description}}</p>
                   <div class="flex space-x-4">
                       <a href="#"   class="text-2xl hover:text-secondary transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
                       <a href="#" class="text-2xl hover:text-secondary transition-colors duration-300"><i class="fab fa-facebook"></i></a>
                   </div>
               </div>
+              @if (Request::routeIs('embedbooking'))
+              <div style="visibility: hidden">
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-secondary transition-colors duration-300">Home</a></li>
+                    <li><a href="#services" class="hover:text-secondary transition-colors duration-300">Services</a></li>
+                    <li><a href="#about" class="hover:text-secondary transition-colors duration-300">About</a></li>
+                    <li><a href="#faq" class="hover:text-secondary transition-colors duration-300">FAQ</a></li>
+                    <li><a href="#contact" class="hover:text-secondary transition-colors duration-300">Contact</a></li>
+                </ul>
+            </div>
+              @else
               <div>
-                  <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                  <ul class="space-y-2">
-                      <li><a href="#home" class="hover:text-secondary transition-colors duration-300">Home</a></li>
-                      <li><a href="#services" class="hover:text-secondary transition-colors duration-300">Services</a></li>
-                      <li><a href="#about" class="hover:text-secondary transition-colors duration-300">About</a></li>
-                      <li><a href="#faq" class="hover:text-secondary transition-colors duration-300">FAQ</a></li>
-                      <li><a href="#contact" class="hover:text-secondary transition-colors duration-300">Contact</a></li>
-                  </ul>
-              </div>
+                <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-secondary transition-colors duration-300">Home</a></li>
+                    <li><a href="#services" class="hover:text-secondary transition-colors duration-300">Services</a></li>
+                    <li><a href="#about" class="hover:text-secondary transition-colors duration-300">About</a></li>
+                    <li><a href="#faq" class="hover:text-secondary transition-colors duration-300">FAQ</a></li>
+                    <li><a href="#contact" class="hover:text-secondary transition-colors duration-300">Contact</a></li>
+                </ul>
+            </div>
+              @endif
+             
               <div>
                   <h3 class="text-xl font-bold mb-4">Contact Info</h3>
                   <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-secondary"></i> {{{$settings->address}}}</p>

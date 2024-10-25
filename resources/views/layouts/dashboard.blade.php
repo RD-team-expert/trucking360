@@ -62,9 +62,9 @@
                     </a> --}}
         
                     <!-- About Link -->
-                    <a href="{{ route('dashboard.about') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.about') ? 'active' : '' }}">
+                    {{-- <a href="{{ route('dashboard.about') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.about') ? 'active' : '' }}">
                         <i class="fa fa-info-circle me-2"></i>About
-                    </a>
+                    </a> --}}
 
                 <!-- FAQs Link -->
 <a href="{{ route('dashboard.faqs.index') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.faqs.*') ? 'active' : '' }}">
@@ -90,7 +90,7 @@
                     <!-- Divider -->
                     <hr class="dropdown-divider text-grey mx-2">
         
-                    <a href="{{ route('dashboard.bookings.index') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.bookings.index') ? 'active' : '' }}">
+                    {{-- <a href="{{ route('dashboard.bookings.index') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.bookings.index') ? 'active' : '' }}">
                         <i class="fa fa-calendar-alt me-2"></i>Bookings
                     </a>
         
@@ -99,7 +99,7 @@
                     </a>
                     <a href="{{ route('details.index') }}" class="nav-item nav-link small {{ Request::routeIs('details.index') ? 'active' : '' }}">
                         <i class="fa fa-info-circle me-2"></i>AFP Details
-                    </a>
+                    </a> --}}
                 </div>
         
                 <!-- Website Button -->

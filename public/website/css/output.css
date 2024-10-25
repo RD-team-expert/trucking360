@@ -2344,3 +2344,9 @@
   }
   
 
+.feature-icon {
+    transition: all 0.3s ease;
+}
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
