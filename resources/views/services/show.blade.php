@@ -29,7 +29,7 @@
         <div class="flex flex-wrap mb-8">
             <button onclick="setActiveTab('overview')" class="px-6 py-3 font-semibold transition-colors duration-300 text-secondary border-b-2 border-secondary">Overview</button>
             <button onclick="setActiveTab('features')" class="px-6 py-3 font-semibold transition-colors duration-300 text-gray-600 hover:text-secondary">Features</button>
-            <button onclick="setActiveTab('benefits')" class="px-6 py-3 font-semibold transition-colors duration-300 text-gray-600 hover:text-secondary">Benefits</button>
+            {{-- <button onclick="setActiveTab('benefits')" class="px-6 py-3 font-semibold transition-colors duration-300 text-gray-600 hover:text-secondary">Benefits</button> --}}
             <button onclick="setActiveTab('faq')" class="px-6 py-3 font-semibold transition-colors duration-300 text-gray-600 hover:text-secondary">FAQ</button>
         </div>
 

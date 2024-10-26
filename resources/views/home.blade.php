@@ -2,7 +2,7 @@
 
 @extends('layouts.website.app')
 
-@section('title', 'Home')
+@section('title', 'Trucking360 - Home')
 
 @section('content')
     @include('components.website.hero')

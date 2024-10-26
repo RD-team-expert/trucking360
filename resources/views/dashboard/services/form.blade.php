@@ -70,23 +70,23 @@
             @enderror
         </div>
 
-        <!-- Benefits -->
+        {{-- <!-- Benefits -->
         <div class="mb-3">
             <label for="benefits" class="form-label">Benefits</label>
             <textarea name="benefits" id="benefits" class="form-control @error('benefits') is-invalid @enderror" rows="5">{{ old('benefits', $service->benefits ?? '') }}</textarea>
             @error('benefits')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
-        </div>
+        </div> --}}
 
-        <!-- Content -->
+        {{-- <!-- Content -->
         <div class="mb-3">
             <label for="content" class="form-label">Content</label>
             <textarea name="content" id="content" class="form-control @error('content') is-invalid @enderror" rows="5">{{ old('content', $service->content ?? '') }}</textarea>
             @error('content')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
-        </div>
+        </div> --}}
 
         <!-- Image -->
         <div class="mb-3">
@@ -102,14 +102,14 @@
             @enderror
         </div>
 
-        <!-- Button URL -->
+        {{-- <!-- Button URL -->
         <div class="mb-3">
             <label for="button_url" class="form-label">Button URL</label>
             <input type="url" name="button_url" id="button_url" class="form-control @error('button_url') is-invalid @enderror" value="{{ old('button_url', $service->button_url ?? '') }}">
             @error('button_url')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
-        </div>
+        </div> --}}
 
         <!-- FAQs Section -->
         <div class="mb-4">

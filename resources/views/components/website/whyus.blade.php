@@ -1,5 +1,5 @@
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 
 <section class="py-16  text-primary bg-gray-100">
     <div class="container mx-auto px-4">
