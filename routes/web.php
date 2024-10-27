@@ -28,6 +28,11 @@ use App\Http\Controllers\LogController;
 use App\Models\Log;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\VisitorController;
+use App\Http\Controllers\SitemapController;
+
+
+
+Route::get('/sitemap.xml', [SitemapController::class, 'generate'])->name('sitemap');
 
 Route::get('/', [HomeController::class, 'index'])->name('home')->middleware(TrackVisitor::class);;
 Route::post('/visitors/store', [VisitorController::class, 'store'])->name('visitors.store');

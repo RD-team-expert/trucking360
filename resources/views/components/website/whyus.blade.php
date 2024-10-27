@@ -33,8 +33,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-white">Customized Solutions</h3>
-                <p class="text-gray-300">We understand that every AFP has unique needs. Our flexible solutions are designed to your specific goals, ensuring alignment with Amazon's high expectations.</p>
+                <h3 class="text-xl font-semibold mb-2 text-white">Safety-Driven Focus</h3>
+                <p class="text-gray-300">Our expert safety team offers detailed reports and guidance, helping to minimize violations and protect your drivers and business reputation.</p>
             </div>
             <div class="feature-card bg-primary p-6 rounded-lg transition-all duration-300 transform hover:-translate-y-2">
                 <div class="mb-4">
