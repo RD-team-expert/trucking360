@@ -16,7 +16,7 @@
                     </svg>
                 </button>
             </div>
-           @if (Request::routeIs('embedbooking'))
+           @if (Request::routeIs('embedbooking') || Request::routeIs('services.show') )
                 <!-- Desktop Navigation Menu -->
             <nav id="menu" class="hidden md:block">
                 <ul class="flex flex-row items-center space-x-6">

@@ -4,24 +4,35 @@
 
 @section('content')
 
-<!-- Hero Section -->
 <section class="gradient-bg text-white py-20">
-    <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-8 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ $service->title }}</h1>
-                <p class="text-xl mb-6">{{ $service->description }}</p>
-                <a href="#contact" class="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300 inline-block" style="visibility: hidden;">
+    <div class="container mx-auto py-1">
+        <div class="flex flex-col md:flex-row items-center md:justify-between">
+            <!-- Text Content -->
+            <div class="md:w-1/2 md:pr-6 text-center md:text-left mb-8 md:mb-0">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">{{ $service->title }}</h1>
+                <p class="text-lg md:text-xl mb-6">{{ $service->description }}</p>
+                <a href="#contact" style="visibility: hidden;" class="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300 inline-block">
                     {{ $service->button_text ?? 'Get a Quote' }}
                 </a>
             </div>
-            <div class="md:w-1/2">
-                <!-- Adjust image size using Tailwind width (w) and height (h) classes -->
-                <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" class="rounded-lg shadow-lg w-3/4 h-auto">
+
+            <!-- Image with Fixed Size and Custom Border -->
+            <div class="md:w-1/2 flex justify-center">
+                <div class="image-frame rounded-lg p-2">
+                    <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" 
+                         class="w-[400px] h-[400px] rounded-lg shadow-lg object-cover">
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+{{-- <style>
+    .container{
+        padding-top: 30px; 
+    }
+</style> --}}
+
 
 <!-- Content Tabs -->
 <section class="py-16">
@@ -102,6 +113,13 @@
       .gradient-bg {
     background: repeating-linear-gradient(to right, #2e368f, #e93232);
   }
+
+  .image-frame {
+    border: 2px solid #fff; /* Customize the color and thickness as needed */
+    border-radius: 0.75rem; /* Keeps the rounded corners consistent */
+    max-width: 40rem;
+    margin-top: 2rem;
+}
 </style>
 
 <script>
