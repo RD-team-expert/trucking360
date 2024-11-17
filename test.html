@@ -29,6 +29,41 @@
         .animate-pulse {
             animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
+        /* Center and control the width of the grid on larger screens */
+.grid {
+    max-width: 800px; /* Limit the maximum width of the grid */
+    margin: 0 auto; /* Center the grid horizontally */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Ensure two equal columns */
+    gap: 1.5rem; /* Space between cards */
+}
+
+/* Ensure consistent card styling */
+.grid .bg-white {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem; /* Adjust padding for smaller size */
+    border-radius: 0.75rem; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Ensure buttons align at the bottom */
+.grid .bg-white button {
+    margin-top: auto;
+    align-self: center;
+    width: fit-content; /* Button size based on text */
+    padding: 0.75rem 1.5rem; /* Adjust button padding */
+    text-align: center;
+}
+
+/* Maintain responsiveness */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+}
+
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -96,19 +131,27 @@
                     <p class="mb-4">All services included for a fixed price of $125 per truck</p>
                     <ul class="mb-6 space-y-2">
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
                             Dispatch
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
                             Hiring
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
                             Fleet
                         </li>
                         <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
                             HR
                         </li>
                     </ul>
@@ -117,6 +160,7 @@
             </div>
             <p class="text-center mt-6 text-gray-600">Safety features are included for free in all plans</p>
         </section>
+
 
  <!-- Dispatch Section -->
  <section class="mb-16">
