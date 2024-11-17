@@ -67,37 +67,89 @@
 
     @include('components.website.footer')
     <script>
-        // Function to hide the spinner once the page has fully loaded
-        window.onload = function() {
-            document.getElementById('globalSpinner').style.display = 'none';
-        };
-    
-        // Show spinner on form submissions
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', function () {
-                document.getElementById('globalSpinner').style.display = 'flex';
+  document.addEventListener("DOMContentLoaded", function() {
+    const spinner = document.getElementById('globalSpinner');
+
+    // Function to show and hide spinner
+    const showSpinner = () => {
+        spinner.style.display = 'flex';
+        spinner.setAttribute('aria-busy', 'true');
+    };
+
+    const hideSpinner = () => {
+        spinner.style.display = 'none';
+        spinner.removeAttribute('aria-busy');
+    };
+
+    // Hide spinner immediately on pageshow (e.g., back navigation)
+    window.addEventListener('pageshow', () => hideSpinner());
+
+    // Ensure the spinner is hidden when navigating away
+    window.addEventListener('pagehide', () => hideSpinner());
+
+    // Show spinner on page load if content is delayed
+    window.addEventListener('load', hideSpinner); // Hide spinner after load
+
+    // Display spinner on form submissions
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', () => showSpinner());
+    });
+
+    // Display spinner on link/button clicks, excluding links with target="_blank"
+    document.addEventListener('click', (e) => {
+        const target = e.target.closest('a, button');
+        if (!target) return;
+
+        const href = target.getAttribute('href');
+        const isNewTab = target.getAttribute('target') === '_blank';
+
+        if (href && !href.startsWith('#') && !isNewTab) {
+            showSpinner();
+        } else if (href && href.startsWith('#') && !isNewTab) {
+            // For anchor links, show spinner briefly for smooth UX
+            showSpinner();
+            setTimeout(hideSpinner, 1000); // Short delay for anchor links
+        }
+    });
+
+    // Graceful loading fallback
+    setTimeout(() => {
+        if (document.readyState !== 'complete') showSpinner();
+    }, 200); // Show spinner after 200ms if page is not yet loaded
+});
+
+
+
+              // Header scroll effect
+              window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Typed.js initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            var typed = new Typed('#typed', {
+                stringsElement: '#typed-strings',
+                typeSpeed: 80,
+                backSpeed: 45,
+                loop: true,
+                showCursor: false
             });
         });
-    
-        // Show spinner on button/link clicks
-        document.querySelectorAll('a, button').forEach(element => {
-            element.addEventListener('click', function (e) {
-                const href = element.getAttribute('href');
-    
-                if (href && href.startsWith('#')) {
-                    // Show spinner for 1 second for anchor links (e.g., #contact)
-                    document.getElementById('globalSpinner').style.display = 'flex';
-                    setTimeout(function () {
-                        document.getElementById('globalSpinner').style.display = 'none';
-                    }, 1000); // 1 second delay
-                } else if (href !== null && href !== '' && !href.startsWith('#')) {
-                    // Show spinner for valid links that don't contain #
-                    document.getElementById('globalSpinner').style.display = 'flex';
-                }
-            });
-        });
+
+        // Accordion functionality
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
     </script>
-    
     
     
 

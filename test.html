@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trucking360 - Pricing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2e368f',
+                        secondary: '#e93232',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-primary text-white py-6">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold">Trucking360</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Straightforward Pricing, Unmatched Value</h2>
+            <div class="flex justify-center space-x-8 mb-8">
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>No hidden charges</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Straightforward pricing</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plans Section -->
+        <section class="mb-16">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Customizable Plan -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Customizable Plan</h3>
+                    <div class="mb-4">
+                        <label class="block mb-2">Select Services:</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="form-checkbox" value="75" data-service="Dispatch">
+                                <span class="ml-2">Dispatch ($75)</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="form-checkbox" value="25" data-service="Hiring">
+                                <span class="ml-2">Hiring ($25)</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="form-checkbox" value="20" data-service="Fleet">
+                                <span class="ml-2">Fleet ($20)</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="form-checkbox" value="20" data-service="HR">
+                                <span class="ml-2">HR ($20)</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="text-2xl font-bold mb-4">
+                        Total: $<span id="total-price">0</span>
+                    </div>
+                    <button class="bg-primary text-white px-6 py-2 rounded hover:bg-opacity-90 transition duration-300">Get Started</button>
+                </div>
+
+                <!-- Fantastic+ Bundle -->
+                <div class="bg-white p-6 rounded-lg shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-secondary text-white px-4 py-1 rounded-bl-lg animate-pulse">
+                        Best Value
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Fantastic+ Bundle</h3>
+                    <p class="mb-4">All services included for a fixed price of $125 per truck</p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Dispatch
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Hiring
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Fleet
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            HR
+                        </li>
+                    </ul>
+                    <button class="bg-secondary text-white px-6 py-2 rounded hover:bg-opacity-90 transition duration-300">Choose Fantastic+</button>
+                </div>
+            </div>
+            <p class="text-center mt-6 text-gray-600">Safety features are included for free in all plans</p>
+        </section>
+
+ <!-- Dispatch Section -->
+<section class="mb-16">
+    <h3 class="text-2xl font-bold mb-6 text-center">Dispatch</h3>
+    <div class="overflow-x-auto">
+        <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th class="py-3 px-4 text-left">Service</th>
+                    <th class="py-3 px-4 text-left">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="py-3 px-4 border-b">24/7 On Road Monitoring</td>
+                    <td class="py-3 px-4 border-b">We're always available to monitor drivers and can update situations in the same moment they occur</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Performance Disputes</td>
+                    <td class="py-3 px-4 border-b">Whenever there is an issue that affects the AFP's Operational Score, we handle disputes to guarantee nothing Amazon Controllable can affect their scores</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Hours Of Service Monitoring</td>
+                    <td class="py-3 px-4 border-b">Driver's hours are monitored 24/7 to make sure no violations would happen and plan tours and actions based on drivers' hours</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Unassigned Drive Time Reconcile</td>
+                    <td class="py-3 px-4 border-b">Whenever there are UADTs we can check them for AFPs to make sure they're fully compliant with Amazon and FMCSA rules</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Schedule Reminders</td>
+                    <td class="py-3 px-4 border-b">We send reminders a few hours before trips to ensure drivers attend, and that any issues are solved before the start of the trip</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Daily & Weekly Reporting</td>
+                    <td class="py-3 px-4 border-b">Acceptance, On Time, and Operational Score</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">FMCSA Tracking</td>
+                    <td class="py-3 px-4 border-b">We'll make sure AFP's FMCSA scores are within the threshold and coach drivers on how to maintain a good FMCSA score</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Tracking Comdata Cards and Purchases</td>
+                    <td class="py-3 px-4 border-b">Tracking inactive cards, troubleshooting active cards, and making sure all transactions have no fraudulent activity</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Hours Of Service Exceptions Reconcile</td>
+                    <td class="py-3 px-4 border-b">Whenever there is a need to use an Hours Of Service exception (e.g., 16 hours shift time exception, adverse conditions exception), we are available</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Hours Of Service (Yard Move/Personal Conveyance) Reconcile</td>
+                    <td class="py-3 px-4 border-b">Whenever there is a need to use YM or PC, we can assist</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Driver Safety Checks</td>
+                    <td class="py-3 px-4 border-b">We'll have drivers contact Dispatch whenever they arrive at a site or something new happens, ensuring Dispatch is up-to-date and can assist with any issues</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">ROC Communication</td>
+                    <td class="py-3 px-4 border-b">We'll take full responsibility in communicating with ROC, creating necessary cases, and fixing occurring problems</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Relay Load Notes</td>
+                    <td class="py-3 px-4 border-b">We'll ensure that notes are added correctly and that the AFP's performance is unaffected by new updates</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Accident / Incident Investigation & Reporting</td>
+                    <td class="py-3 px-4 border-b">We'll deal with incidents/accidents professionally and ensure all follow-ups are documented, investigated, and reported</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4">Talk & Text Availability 24/7</td>
+                    <td class="py-3 px-4">We're always available to respond to texts and calls whenever needed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Safety Section -->
+<section class="mb-16">
+    <h3 class="text-2xl font-bold mb-6 text-center text-red-600">SAFETY</h3>
+    <div class="overflow-x-auto">
+        <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th class="py-3 px-4 text-left">Service</th>
+                    <th class="py-3 px-4 text-left">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="py-3 px-4 border-b">Netradyne Reports</td>
+                    <td class="py-3 px-4 border-b">We can keep track of Netradyne reports and keep AFPs up-to-date on their behaviors</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Safety Coachings (Netradyne and/or Organic)</td>
+                    <td class="py-3 px-4 border-b">We’ll coach drivers via WhatsApp and by call to help them understand more and achieve better scores</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Expectations and Coaching Call Before First Tour</td>
+                    <td class="py-3 px-4 border-b">We can give new drivers a call to address everything needed in the work and maximize the knowledge they have</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Safety Campaigns</td>
+                    <td class="py-3 px-4 border-b">We'll create and send safety content and campaigns to keep drivers engaged in safety and understand it better with simpler ways</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Company Safety Trend Analysis & Coaching</td>
+                    <td class="py-3 px-4 border-b">Coming Soon</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Safety Reminders</td>
+                    <td class="py-3 px-4 border-b">Coming Soon</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Smith System Training Coordination & Selection</td>
+                    <td class="py-3 px-4 border-b">We coordinate Smith System training for drivers, tracking attendance and ensuring they make use of the classes</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Weather Monitoring</td>
+                    <td class="py-3 px-4 border-b">We monitor the weather and act based on changes to ensure drivers' safety</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Fleet Section -->
+<section class="mb-16">
+    <h3 class="text-2xl font-bold mb-6 text-center">Fleet</h3>
+    <div class="overflow-x-auto">
+        <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th class="py-3 px-4 text-left">Service</th>
+                    <th class="py-3 px-4 text-left">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="py-3 px-4 border-b">Tracking Annual Inspections</td>
+                    <td class="py-3 px-4 border-b">We'll keep track of trucks' annual inspections and be on the lookout for any that might expire soon</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Repair Orders' Invoice Tracking</td>
+                    <td class="py-3 px-4 border-b">We'll keep track of all repair orders for AFPs' tractors and provide related information</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Pilot Allowance Tracking and Comparing</td>
+                    <td class="py-3 px-4 border-b">We’ll track AFPs' pilot allowances and ensure they’re not overpaid</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Partner-Managed Repairs Reimbursements</td>
+                    <td class="py-3 px-4 border-b">We'll issue reimbursements for Partner-managed Repairs and track them</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Partner-Managed Repairs Archive</td>
+                    <td class="py-3 px-4 border-b">We'll maintain an archive of reimbursements for Partner-managed Repairs</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Work Order Creation & Tracking</td>
+                    <td class="py-3 px-4 border-b">We'll be responsible for creating, tracking, and closing work orders</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Escalations</td>
+                    <td class="py-3 px-4 border-b">We'll be responsible for any escalation needed for issues AFPs can't solve</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Mechanical Tractor Disputes</td>
+                    <td class="py-3 px-4 border-b">We’ll manage any mechanical tractor disputes that are not carrier controllable</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">Amerit Communication 24/7</td>
+                    <td class="py-3 px-4 border-b">We’ll be available 24/7 to communicate with Amerit</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">DSS Communication 24/7</td>
+                    <td class="py-3 px-4 border-b">We’ll be available 24/7 to communicate with DSS</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4 border-b">T360 Network Sourced Parts Rate</td>
+                    <td class="py-3 px-4 border-b">Coming Soon</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4">Partner Parts Sourcing</td>
+                    <td class="py-3 px-4">Coming Soon</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <!-- FAQs Section -->
+        <section>
+            <h3 class="text-2xl font-bold mb-6">Frequently Asked Questions</h3>
+            <div class="space-y-4" id="faq-accordion">
+                <!-- FAQ items will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+  
+
+    <script>
+        // Calculate total price for customizable plan
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const totalPriceElement = document.getElementById('total-price');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateTotalPrice);
+        });
+
+        function updateTotalPrice() {
+            let total = 0;
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    total += parseInt(checkbox.value);
+                }
+            });
+            totalPriceElement.textContent = total;
+        }
+
+        // Tooltip functionality
+        const tooltipButtons = document.querySelectorAll('[data-tooltip]');
+        tooltipButtons.forEach(button => {
+            button.addEventListener('mouseenter', showTooltip);
+            button.addEventListener('mouseleave', hideTooltip);
+        });
+
+        function showTooltip(event) {
+            const tooltip = document.createElement('div');
+            tooltip.textContent = event.target.dataset.tooltip;
+            tooltip.className = 'absolute bg-gray-800 text-white p-2 rounded text-sm z-10';
+            document.body.appendChild(tooltip);
+
+            const rect = event.target.getBoundingClientRect();
+            tooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
+            tooltip.style.left = `${rect.left + window.scrollX}px`;
+        }
+
+        function hideTooltip() {
+            const tooltip = document.querySelector('.absolute.bg-gray-800');
+            if (tooltip) {
+                tooltip.remove();
+            }
+        }
+
+        // FAQ Accordion
+        const faqData = [
+            {
+                question: "How does the Per Accepted Contract pricing work?",
+                answer: "We keep billing straightforward and aligned with your usage. Each week, you're only billed for the contracts you accept. For example, if you have 17 contracted tractors but only accept 15 contracts, you'll only be billed for those 15. If you're using our dispatching service at $75 per contract, your weekly bill would be 15 x $75 = $1,125. For those on our Fantastic+ bundle, covering dispatch, hiring, HR, and fleet services, the rate is $125 per contract, so you'd pay 15 x $125 = $1,875. Our goal is to make billing transparent and flexible, matching your operational pace."
+            },
+            {
+                question: "Why is Per Accepted Contract pricing beneficial to me?",
+                answer: "Our per-accepted contract pricing provides flexibility and savings, ensuring you only pay for active operations. Unlike flat-rate models that charge regardless of tractor status, our approach aligns costs with your actual usage—no unnecessary charges if a tractor is down. This way, you maximize value, paying only for what's actively moving your business forward."
+            },
+            {
+                question: "Will my pricing change if I add more tractors?",
+                answer: "The rate per accepted contract stays consistent, so you know what to expect! However, accepting more contracts will increase the total amount billed, based on how many contracts you accept that week. For instance, if you accepted 14 contracts at our dispatching rate of $75, your bill would be 14 x $75 = $1,050. With 15 contracts, it would be 15 x $75 = $1,125. For Fantastic+ bundle users at $125 per accepted contract, the bill would be 14 x $125 = $1,750, and for 15 accepted contracts, 15 x $125 = $1,875. This predictable per-unit pricing scales with your operations while keeping costs transparent."
+            },
+            {
+                question: "Will I pay for a rejected contract?",
+                answer: "No, we only bill for contracts you accept. If a contract is rejected, there's no charge, regardless of whether you're on our Fantastic+ bundle or just the dispatching service. Our commitment is to ensure billing reflects the work accepted, so you can focus on what counts."
+            },
+            {
+                question: "Why is it beneficial to bill per accepted contract for hiring, fleet, HR, and other services?",
+                answer: "Our service billing is tied to your accepted contract count to adapt to your operational needs. If you're running fewer contracts, you won't pay a flat fee for services like hiring, HR, and fleet management. Instead, your costs decrease with usage, ensuring fair pricing without locking you into fixed rates. It's a flexible model designed to optimize your expenses as your operations fluctuate."
+            },
+            {
+                question: "Why do you bill weekly?",
+                answer: "Weekly billing is designed to stay in sync with your business. By billing per accepted contract each week, we offer precise billing that reflects any changes in your accepted contracts. This way, you're always paying accurately for what you actually use, supporting a flexible and transparent billing cycle."
+            },
+            {
+                question: "Are there any hidden fees or setup costs?",
+                answer: "Not at all—our pricing is completely transparent. You're billed based solely on the accepted contracts each week, with no hidden fees or setup costs. We want you to feel confident in exactly what you're paying for."
+            },
+            {
+                question: "Am I locked into a contract?",
+                answer: "No, you have complete flexibility. You can cancel at any time with just a one-week notice, giving you full control over your service commitments. We're here to support you as your needs evolve."
+            },
+            {
+                question: "How does billing work if a tractor breaks down during the week?",
+                answer: "If your tractor experiences a breakdown during an accepted contract, rest assured that you'll still be billed solely for the accepted contract amount, without any extra charges. Should you choose to continue the contract with a Permaloaner or a different tractor from your fleet, there's no need to worry—our goal is to ensure your operations can carry on smoothly without unexpected costs. We're here to support you through any challenges!"
+            },
+            {
+                question: "How do you track the daily Operational Excellence Score?",
+                answer: "We have proprietary technology that will enable us to provide you with a daily Operational Excellence Score that will take into account previous day acceptance and on-time metrics."
+            }
+        ];
+
+        const faqContainer = document.getElementById('faq-accordion');
+
+        faqData.forEach((faq, index) => {
+            const faqItem = document.createElement('div');
+            faqItem.className = 'border-b border-gray-200';
+            faqItem.innerHTML = `
+                <button class="flex justify-between items-center w-full py-4 px-6 text-left hover:bg-gray-50 focus:outline-none" id="faq-button-${index}">
+                    <span class="font-medium">${faq.question}</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="hidden px-6 pb-4" id="faq-answer-${index}">
+                    <p>${faq.answer}</p>
+                </div>
+            `;
+            faqContainer.appendChild(faqItem);
+
+            const button = faqItem.querySelector(`#faq-button-${index}`);
+            const answer = faqItem.querySelector(`#faq-answer-${index}`);
+            const icon = button.querySelector('svg');
+
+            button.addEventListener('click', () => {
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+</html>

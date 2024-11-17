@@ -7,8 +7,8 @@
                 <h3 class="text-xl md:text-2xl font-bold mb-4">Trucking 360</h3>
                 <p class="mb-4 text-sm md:text-base">{{ $settings->description }}</p>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-2xl hover:text-secondary transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="text-2xl hover:text-secondary transition-colors duration-300"><i class="fab fa-facebook"></i></a>
+                    <a href="{{$settings->linkedin_link}}" class="text-2xl hover:text-secondary transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="{{$settings->facebook_link}}" class="text-2xl hover:text-secondary transition-colors duration-300"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
 
@@ -40,10 +40,32 @@
             <!-- Contact Info -->
             <div>
                 <h3 class="text-xl md:text-2xl font-bold mb-4">Contact Info</h3>
-                <p class="mb-2 text-sm md:text-base flex items-center"><i class="fas fa-map-marker-alt mr-2 text-secondary"></i> {{ $settings->address }}</p>
-                <p class="mb-2 text-sm md:text-base flex items-center"><i class="fas fa-phone mr-2 text-secondary"></i> {{ $settings->phone }}</p>
-                <p class="text-sm md:text-base flex items-center"><i class="fas fa-envelope mr-2 text-secondary"></i> {{ $settings->email }}</p>
+                
+                <!-- Address -->
+                <p class="mb-2 text-sm md:text-base flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2 text-secondary"></i> 
+                    <a href="https://www.google.com/maps/search/?q={{ urlencode($settings->address) }}" target="_blank" class="text-white hover:text-secondary transition-colors duration-300">
+                        {{ $settings->address }}
+                    </a>
+                </p>
+            
+                <!-- Phone -->
+                <p class="mb-2 text-sm md:text-base flex items-center">
+                    <i class="fas fa-phone mr-2 text-secondary"></i> 
+                    <a href="tel:{{ $settings->phone }}" class="text-white hover:text-secondary transition-colors duration-300">
+                        {{ $settings->phone }}
+                    </a>
+                </p>
+            
+                <!-- Email -->
+                <p class="text-sm md:text-base flex items-center">
+                    <i class="fas fa-envelope mr-2 text-secondary"></i> 
+                    <a href="mailto:{{ $settings->email }}" class="text-white hover:text-secondary transition-colors duration-300">
+                        {{ $settings->email }}
+                    </a>
+                </p>
             </div>
+            
         </div>
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm md:text-base">
             <p>&copy; 2024 Trucking 360. All rights reserved.</p>

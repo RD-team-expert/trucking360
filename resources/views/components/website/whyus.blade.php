@@ -1,7 +1,7 @@
 
   {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 
-<section class="py-16  text-primary bg-gray-100">
+<section id="why" class="py-16  text-primary bg-gray-100">
     <div class="container mx-auto px-4">
         <h2 class="text-2xl font-semibold text-center mb-2">Our Commitment to Excellence</h2>
         <h1 class="text-4xl font-bold text-center mb-6">Why Choose Us!</h1>

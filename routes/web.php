@@ -44,6 +44,11 @@ $settings = GeneralSetting::first();
 
     return view('comingsoon', compact('settings'));
 })->name('comingsoon');
+Route::get('/aboutus', function () {
+    $settings = GeneralSetting::first();
+    
+        return view('about.show', compact('settings'));
+    });
 
 Route::get('/bookings/create', function () {
     $settings = GeneralSetting::first();
@@ -69,6 +74,17 @@ Route::get('/contact', function () {
 })->middleware(TrackVisitor::class);;
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
+Route::get('/contactus', function () {
+    $settings = GeneralSetting::first();
+
+    return view('contact.show', compact('settings'));
+})->name('contact');
+
+Route::get('/whyt360', function () {
+    $settings = GeneralSetting::first();
+
+    return view('why.show', compact('settings'));
+})->name('whyt360');
 
 
 Route::get('/about', [AboutUsController::class, 'show'])->name('about');
