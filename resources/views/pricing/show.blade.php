@@ -59,171 +59,172 @@
     </div>
 </section>
 
-
-        <!-- Plans Section -->
-        <section class="mb-16">
-            <div class="grid md:grid-cols-2 gap-8" style="   max-width: 800px; /* Limit the maximum width of the grid */
-            margin: 0 auto; /* Center the grid horizontally */
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Ensure two equal columns */
-            gap: 1.5rem; /* Space between cards */">
-                <!-- Customizable Plan -->
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold mb-4">
-                        Customizable Plan
-                    </h3>
-                    <div class="mb-4">
-                        <label class="block mb-2">Select Services:</label>
-                        <div class="space-y-2">
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox"
-                                    value="75"
-                                    data-service="Dispatch"
-                                />
-                                <span class="ml-2">Dispatch (75$)</span>
-                            </label>
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox"
-                                    value="25"
-                                    data-service="Hiring"
-                                />
-                                <span class="ml-2">Hiring (25$)</span>
-                            </label>
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox"
-                                    value="20"
-                                    data-service="Fleet"
-                                />
-                                <span class="ml-2">Fleet (20$)</span>
-                            </label>
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox"
-                                    value="20"
-                                    data-service="HR"
-                                />
-                                <span class="ml-2">HR (20$)</span>
-                            </label>
-                        </div>
+<!-- Plans Section -->
+<section class="mb-16 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Customizable Plan -->
+        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">
+                    Customizable Plan
+                </h3>
+                <div class="mb-4">
+                    <label class="block mb-2 text-gray-700 font-medium">
+                        Select Services:
+                    </label>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input
+                                type="checkbox"
+                                class="form-checkbox text-primary focus:ring-primary"
+                                value="75"
+                                data-service="Dispatch"
+                            />
+                            <span class="ml-2 text-gray-700">Dispatch (75$)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input
+                                type="checkbox"
+                                class="form-checkbox text-primary focus:ring-primary"
+                                value="25"
+                                data-service="Hiring"
+                            />
+                            <span class="ml-2 text-gray-700">Hiring (25$)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input
+                                type="checkbox"
+                                class="form-checkbox text-primary focus:ring-primary"
+                                value="20"
+                                data-service="Fleet"
+                            />
+                            <span class="ml-2 text-gray-700">Fleet (20$)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input
+                                type="checkbox"
+                                class="form-checkbox text-primary focus:ring-primary"
+                                value="20"
+                                data-service="HR"
+                            />
+                            <span class="ml-2 text-gray-700">HR (20$)</span>
+                        </label>
                     </div>
-                    <div class="text-2xl font-bold mb-4">
-                        Total: $<span id="total-price">0</span>
-                    </div>
-                    <button
-                        class="bg-primary text-white px-6 py-2 rounded hover:bg-opacity-10 transition duration-300"
-                    >
-                        Get Started
-                    </button>
                 </div>
-
-                <!-- Fantastic+ Bundle -->
-                <div
-                    class="bg-white p-6 rounded-lg shadow-lg relative overflow-hidden"
-                >
-                    <div
-                        class="absolute top-0 right-0 bg-secondary text-white px-4 py-1 rounded-bl-lg animate-pulse"
-                    >
-                        Best Value
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">
-                        Fantastic+ Bundle
-                    </h3>
-                    <p class="mb-4">
-                        All services included for a fixed price of <span class="text-secondary" style="font-weight: bold">125$</span> per
-                        truck
-                    </p>
-                    <ul class="mb-6 space-y-2">
-                        <li class="flex items-center">
-                            <svg
-                                class="w-5 h-5 text-green-500 mr-2"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M5 13l4 4L19 7"
-                                ></path>
-                            </svg>
-                            Dispatch
-                        </li>
-                        <li class="flex items-center">
-                            <svg
-                                class="w-5 h-5 text-green-500 mr-2"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M5 13l4 4L19 7"
-                                ></path>
-                            </svg>
-                            Hiring
-                        </li>
-                        <li class="flex items-center">
-                            <svg
-                                class="w-5 h-5 text-green-500 mr-2"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M5 13l4 4L19 7"
-                                ></path>
-                            </svg>
-                            Fleet
-                        </li>
-                        <li class="flex items-center">
-                            <svg
-                                class="w-5 h-5 text-green-500 mr-2"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M5 13l4 4L19 7"
-                                ></path>
-                            </svg>
-                            HR
-                        </li>
-                    </ul>
-                    <button
-                        class="bg-secondary text-white px-6 py-2 rounded hover:bg-opacity-10 transition duration-300"
-                    >
-                        Choose Fantastic+
-                    </button>
+                <div class="text-2xl font-bold mb-4">
+                    Total: $<span id="total-price">0</span>
                 </div>
             </div>
-            <p class="text-center mt-6 text-gray-600">
-                Safety features are included for free in all plans
-            </p>
-        </section>
+            <button
+                class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-80 transition duration-300 mt-auto"
+            >
+                Get Started
+            </button>
+        </div>
+
+        <!-- Fantastic+ Bundle -->
+        <div
+            class="bg-white p-6 rounded-lg shadow-lg relative overflow-hidden flex flex-col justify-between"
+        >
+            <div>
+                <div
+                    class="absolute top-0 right-0 bg-secondary text-white px-4 py-1 rounded-bl-lg animate-pulse"
+                >
+                    Best Value
+                </div>
+                <h3 class="text-2xl font-bold mb-4">
+                    Fantastic+ Bundle
+                </h3>
+                <p class="mb-4 text-gray-700">
+                    All services included for a fixed price of <span class="text-secondary font-bold">125$</span> per truck
+                </p>
+                <ul class="mb-6 space-y-2">
+                    <li class="flex items-center text-gray-700">
+                        <svg
+                            class="w-5 h-5 text-green-500 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M5 13l4 4L19 7"
+                            ></path>
+                        </svg>
+                        Dispatch
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <svg
+                            class="w-5 h-5 text-green-500 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M5 13l4 4L19 7"
+                            ></path>
+                        </svg>
+                        Hiring
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <svg
+                            class="w-5 h-5 text-green-500 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M5 13l4 4L19 7"
+                            ></path>
+                        </svg>
+                        Fleet
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <svg
+                            class="w-5 h-5 text-green-500 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M5 13l4 4L19 7"
+                            ></path>
+                        </svg>
+                        HR
+                    </li>
+                </ul>
+            </div>
+            <button
+                class="bg-secondary text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-80 transition duration-300 mt-auto"
+            >
+                Choose Fantastic+
+            </button>
+        </div>
+    </div>
+    <p class="text-center mt-6 text-gray-600">
+        Safety features are included for free in all plans
+    </p>
+</section>
+
 
         <!-- Dispatch Section -->
         <section class="mb-16 py-16">
-            <h3 class="text-2xl font-bold mb-12 text-center">Dispatch</h3>
+            <h3 class="text-4xl font-extrabold mb-12 text-center text-gray-800 tracking-wide">Dispatch</h3>
             <div class="overflow-x-auto mb-12">
                 <table
                     class="w-full bg-white shadow-md rounded-lg overflow-hidden"
@@ -407,7 +408,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">
                                 Netradyne Reports
                             </td>
@@ -416,7 +417,7 @@
                                 keep AFPs up to date on their behaviours
                             </td>
                         </tr>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">
                                 Safety Coachings (Netradyne and/or Organic)
                             </td>
@@ -428,7 +429,7 @@
                                 scores
                             </td>
                         </tr>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr >
                             <td class="py-3 px-4 border-b">
                                 Expectations and Coaching Call Before First
                                 Tour
@@ -441,7 +442,7 @@
                                 knowledge that drivers have
                             </td>
                         </tr>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">
                                 Safety Campaigns
                             </td>
@@ -451,19 +452,19 @@
                                 and understand it better with simpler ways
                             </td>
                         </tr>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">
                                 Company Safety Trend Analysis & Coaching
                             </td>
                             <td class="py-3 px-4 border-b">NEED INFO</td>
                         </tr>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">
                                 Safety Reminders
                             </td>
                             <td class="py-3 px-4 border-b">NEED INFO</td>
                         </tr>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">
                                 Smith System Training Coordination &
                                 Selection
@@ -478,7 +479,7 @@
                                 to
                             </td>
                         </tr>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">
                                 Weather Monitoring
                             </td>
@@ -491,8 +492,10 @@
                     </tbody>
                 </table>
             </div>
-            <h3 class="text-2xl font-bold mb-12 text-center">Fleet</h3>
-            <div class="overflow-x-auto mb-12">
+            <h3 class="text-4xl font-extrabold mb-12 text-center text-gray-800 tracking-wide">
+                Fleet
+            </h3>
+                        <div class="overflow-x-auto mb-12">
                 <table
                     class="w-full bg-white shadow-md rounded-lg overflow-hidden"
                 >
@@ -632,19 +635,19 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">Trucks Handling Campaigns</td>
                             <td class="py-3 px-4 border-b">We'll create and send content and campaigns on how to handle tractors to help drivers know better on how to deal with tractors and maintain tractors at top health statuses at all times</td>
                         </tr>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">Defects Data Archive</td>
                             <td class="py-3 px-4 border-b">Keep track of trucks' defects and create an archive so AFPs can be up to date</td>
                         </tr>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">Tractors' Health Report</td>
                             <td class="py-3 px-4 border-b">We'll keep AFPs up to date on their tractors' health while keeping track of tractors' defects, the reason behind them, any new updates, and estimated fix days based on new updates</td>
                         </tr>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">Driver Damage Report</td>
                             <td class="py-3 px-4 border-b">We can keep track of issues that are done by drivers (incidents, accidents, false reports, and damages) to make sure AFPs have the data on what drivers are doing to their tractors</td>
                         </tr>
@@ -652,7 +655,7 @@
                     </tbody>
                 </table>
             </div>
-            <h3 class="text-2xl font-bold mb-12 text-center">Hiring</h3>
+            <h3 class="text-4xl font-extrabold mb-12 text-center text-gray-800 tracking-wide">Hiring</h3>
             <div class="overflow-x-auto mb-12">
                 <table
                     class="w-full bg-white shadow-md rounded-lg overflow-hidden"
@@ -716,7 +719,7 @@
                     </tbody>
                 </table>
             </div>
-            <h3 class="text-2xl font-bold mb-12 text-center">HR</h3>
+            <h3 class="text-4xl font-extrabold mb-12 text-center text-gray-800 tracking-wide">HR</h3>
             <div class="overflow-x-auto mb-12">
                 <table
                     class="w-full bg-white shadow-md rounded-lg overflow-hidden"
@@ -784,8 +787,8 @@
                             <td class="py-3 px-4 border-b">Employee Engagement Program</td>
                             <td class="py-3 px-4 border-b">NEED INFO</td>
                         </tr>
-                        <thead class="bg-secondary text-white">
-                            <tr>
+                        <thead>
+                            <tr class="bg-secondary text-white">
                                 <th class="py-3 px-4 text-left">
                                     Saftey included
                                 </th>
@@ -794,11 +797,11 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr >
                             <td class="py-3 px-4 border-b">Netradyne Safety Feedback (Safety Disputes)</td>
                             <td class="py-3 px-4 border-b">NEED INFO</td>
                         </tr>
-                        <tr class="bg-secondary bg-opacity-50">
+                        <tr>
                             <td class="py-3 px-4 border-b">Safety Competitions</td>
                             <td class="py-3 px-4 border-b">NEED INFO</td>
                         </tr>
