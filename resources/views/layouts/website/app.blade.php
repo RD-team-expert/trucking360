@@ -10,6 +10,8 @@
      --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/assets/output.css') }}">
+
     <script src="{{ asset('build/assets/app.js') }}" defer></script>
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>

@@ -48,7 +48,7 @@ Route::get('/aboutus', function () {
     $settings = GeneralSetting::first();
     
         return view('about.show', compact('settings'));
-    });
+    })->name('aboutus');
 
 Route::get('/bookings/create', function () {
     $settings = GeneralSetting::first();
@@ -59,8 +59,8 @@ Route::get('/bookings/create', function () {
 Route::get('/pricing', function () {
     $settings = GeneralSetting::first();
 
-    return view('partials.pricing', compact('settings'));
-});
+    return view('pricing.show', compact('settings'));
+})->name('pricing');
 
 Route::get('/services', [ServicePageController::class, 'index'])->name('services.index')->middleware(TrackVisitor::class);;
 Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show')->middleware(TrackVisitor::class);;
