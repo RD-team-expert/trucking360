@@ -88,7 +88,7 @@
                 <li><a href="{{ route('whyt360') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Why trucking360</a></li>
                 <li><a href="{{ route('aboutus') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">About</a></li>
                 {{-- <li><a href="#faq" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">FAQ</a></li> --}}
-                <li><a href="{{ route('pricing') }}" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">Pricing</a></li>
+                <li><a href="{{ route('pricing') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Pricing</a></li>
 
                 <li><a href="#contact" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Contact</a></li>
                 <!-- Resources Dropdown (Mobile) -->

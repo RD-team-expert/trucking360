@@ -11,17 +11,17 @@
         
 
     <main class="container mx-auto px-4 py-8 con">
-      <!-- Hero Section -->
+   <!-- Hero Section -->
 <section class="text-center py-16 bg-gray-100">
     <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-bold mb-6 text-gray-800">
+        <h2 class="text-4xl font-bold mb-6" style="color: #2e368f;"> <!-- Primary color applied -->
             Straightforward Pricing, Unmatched Value
         </h2>
-        <div class="flex justify-between items-center max-w-lg mx-auto">
+        <div class="flex justify-between items-center max-w-5xl mx-auto"> <!-- Wide space between features -->
             <!-- Feature 1 -->
             <div class="flex items-center">
                 <svg
-                    class="w-6 h-6 text-green-500 mr-2"
+                    class="w-6 h-6 text-green-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -34,13 +34,12 @@
                         d="M5 13l4 4L19 7"
                     ></path>
                 </svg>
-                <span class="text-lg text-gray-700">No hidden charges</span>
+                <span class="text-lg font-bold text-gray-700">Straightforward pricing</span> <!-- No extra space -->
             </div>
-
             <!-- Feature 2 -->
             <div class="flex items-center">
                 <svg
-                    class="w-6 h-6 text-green-500 mr-2"
+                    class="w-6 h-6 text-green-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -53,173 +52,231 @@
                         d="M5 13l4 4L19 7"
                     ></path>
                 </svg>
-                <span class="text-lg text-gray-700">Straightforward pricing</span>
+                <span class="text-lg font-bold text-gray-700">Safety features are included for free in all plans</span> <!-- No extra space -->
+            </div>
+            <!-- Feature 3 -->
+            <div class="flex items-center">
+                <svg
+                    class="w-6 h-6 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                    ></path>
+                </svg>
+                <span class="text-lg font-bold text-gray-700">No hidden charges</span> <!-- No extra space -->
             </div>
         </div>
     </div>
 </section>
-
 <!-- Plans Section -->
 <section class="mb-16 px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto relative">
         <!-- Customizable Plan -->
-        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between">
-            <div>
-                <h3 class="text-2xl font-bold mb-4">
-                    Customizable Plan
-                </h3>
-                <div class="mb-4">
-                    <label class="block mb-2 text-gray-700 font-medium">
-                        Select Services:
-                    </label>
-                    <div class="space-y-2">
-                        <label class="flex items-center">
-                            <input
-                                type="checkbox"
-                                class="form-checkbox text-primary focus:ring-primary"
-                                value="75"
-                                data-service="Dispatch"
-                            />
-                            <span class="ml-2 text-gray-700">Dispatch (75$)</span>
+        <div class="relative">
+            <!-- Hidden Placeholder for Best Value -->
+            <div class="invisible bg-primary text-white text-center font-bold text-lg py-2 w-full absolute top-[-20px] left-0 rounded-t-lg shadow-md">
+                Placeholder
+            </div>
+
+            <!-- Customizable Plan Card -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between h-full mt-6">
+                <div class="flex flex-col justify-between flex-grow">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">
+                        Customizable Plan
+                    </h3>
+                    <div class="flex items-center text-2xl font-bold mb-4">
+                        Total: 
+                        <span class="total-wrapper ml-2">
+                            <span class="dollar-sign">$</span>
+                            <span id="total-price">145</span>
+                        </span>
+                        <span class="per-contracted ml-2">Per contracted tractor</span>
+                    </div>
+                    <!-- Customizable Explanation -->
+                    <p class="text-gray-600 text-sm mb-4">
+                        Build your own plan by selecting or unselecting the services below to perfectly match your business needs.
+                    </p>
+                    <div class="mb-4">
+                        <label class="block mb-2 text-gray-700 font-medium">
+                            Select Services:
                         </label>
-                        <label class="flex items-center">
-                            <input
-                                type="checkbox"
-                                class="form-checkbox text-primary focus:ring-primary"
-                                value="25"
-                                data-service="Hiring"
-                            />
-                            <span class="ml-2 text-gray-700">Hiring (25$)</span>
-                        </label>
-                        <label class="flex items-center">
-                            <input
-                                type="checkbox"
-                                class="form-checkbox text-primary focus:ring-primary"
-                                value="20"
-                                data-service="Fleet"
-                            />
-                            <span class="ml-2 text-gray-700">Fleet (20$)</span>
-                        </label>
-                        <label class="flex items-center">
-                            <input
-                                type="checkbox"
-                                class="form-checkbox text-primary focus:ring-primary"
-                                value="20"
-                                data-service="HR"
-                            />
-                            <span class="ml-2 text-gray-700">HR (20$)</span>
-                        </label>
+                        <div class="space-y-4">
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="75"
+                                    data-service="Dispatch"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    Dispatch ($75)
+                                </span>
+                            </label>
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="20"
+                                    data-service="Fleet"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    Fleet ($20)
+                                </span>
+                            </label>
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="25"
+                                    data-service="Hiring"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    Hiring ($25)
+                                </span>
+                            </label>
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="20"
+                                    data-service="HR"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    HR ($20)
+                                </span>
+                            </label>
+                        </div>
                     </div>
                 </div>
-                <div class="text-2xl font-bold mb-4">
-                    Total: $<span id="total-price">0</span>
-                </div>
+                <!-- Button -->
+                <button
+                    class="bg-secondary text-white px-6 py-3 w-full rounded-lg font-medium hover:bg-opacity-80 transition duration-300 mt-4"
+                >
+                    Get Started
+                </button>
             </div>
-            <button
-                class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-80 transition duration-300 mt-auto"
-            >
-                Get Started
-            </button>
         </div>
 
         <!-- Fantastic+ Bundle -->
-        <div
-            class="bg-white p-6 rounded-lg shadow-lg relative overflow-hidden flex flex-col justify-between"
-        >
-            <div>
-                <div
-                    class="absolute top-0 right-0 bg-secondary text-white px-4 py-1 rounded-bl-lg animate-pulse"
-                >
-                    Best Value
-                </div>
-                <h3 class="text-2xl font-bold mb-4">
-                    Fantastic+ Bundle
-                </h3>
-                <p class="mb-4 text-gray-700">
-                    All services included for a fixed price of <span class="text-secondary font-bold">125$</span> per truck
-                </p>
-                <ul class="mb-6 space-y-2">
-                    <li class="flex items-center text-gray-700">
-                        <svg
-                            class="w-5 h-5 text-green-500 mr-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 13l4 4L19 7"
-                            ></path>
-                        </svg>
-                        Dispatch
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <svg
-                            class="w-5 h-5 text-green-500 mr-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 13l4 4L19 7"
-                            ></path>
-                        </svg>
-                        Hiring
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <svg
-                            class="w-5 h-5 text-green-500 mr-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 13l4 4L19 7"
-                            ></path>
-                        </svg>
-                        Fleet
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <svg
-                            class="w-5 h-5 text-green-500 mr-2"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 13l4 4L19 7"
-                            ></path>
-                        </svg>
-                        HR
-                    </li>
-                </ul>
+        <div class="relative">
+            <!-- Best Value Banner -->
+            <div class="bg-primary text-white text-center font-bold text-lg py-2 w-full absolute top-[-20px] left-0 rounded-t-lg shadow-md">
+                Best Value
             </div>
-            <button
-                class="bg-secondary text-white px-6 py-2 rounded-lg font-medium hover:bg-opacity-80 transition duration-300 mt-auto"
-            >
-                Choose Fantastic+
-            </button>
+
+            <!-- Fantastic+ Bundle Card -->
+            <div class="bg-white rounded-2xl shadow-lg flex flex-col justify-between h-full mt-6 p-8">
+                <div class="flex flex-col justify-between flex-grow">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">
+                        Fantastic+ Bundle
+                    </h3>
+                    <div class="flex items-center text-2xl font-bold mb-4">
+                        <span class="total-wrapper">
+                            <span class="dollar-sign">$</span>
+                            <span id="total-price">125</span>
+                        </span>
+                        <span class="per-contracted ml-2">Per contracted tractor</span>
+                    </div>
+                    <p class="mb-4 text-gray-700">
+                        Save <span class="font-bold">$80 monthly</span> and <span class="font-bold">$4,160 annually</span>
+                        per contracted tractor by choosing the F+ Bundle plan.
+                    </p>
+                    <ul class="mb-6 space-y-4">
+                        <li class="flex items-start text-gray-700">
+                            <svg
+                                class="w-5 h-5 text-green-500 mr-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"
+                                ></path>
+                            </svg>
+                            <span><strong>Dispatch</strong></span>
+                        </li>
+                        <li class="flex items-start text-gray-700">
+                            <svg
+                                class="w-5 h-5 text-green-500 mr-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"
+                                ></path>
+                            </svg>
+                            <span><strong>Fleet</strong></span>
+                        </li>
+                        <li class="flex items-start text-gray-700">
+                            <svg
+                                class="w-5 h-5 text-green-500 mr-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"
+                                ></path>
+                            </svg>
+                            <span><strong>Hiring</strong></span>
+                        </li>
+                        <li class="flex items-start text-gray-700">
+                            <svg
+                                class="w-5 h-5 text-green-500 mr-2"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 13l4 4L19 7"
+                                ></path>
+                            </svg>
+                            <span><strong>HR</strong></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Button -->
+                <button
+                    class="bg-secondary text-white px-6 py-3 w-full rounded-lg font-medium hover:bg-opacity-80 transition duration-300 mt-4 self-end"
+                >
+                    Get Started
+                </button>
+            </div>
         </div>
     </div>
-    <p class="text-center mt-6 text-gray-600">
-        Safety features are included for free in all plans
-    </p>
 </section>
+
+
+
+
 
 
         <!-- Dispatch Section -->
@@ -871,7 +928,29 @@
         .con{
             padding-top: 5rem; 
         }
+
+        .total-wrapper {
+    background: #2e368f;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1px 6px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px; /* Optional: To add small space between $ and the value */
+}
+
+.dollar-sign {
+    color: white;
+    font-weight: bold;
+}
     
+
+.per-contracted {
+    font-size: 0.9rem; /* Slightly smaller than the total */
+    color: #555; /* Subtle gray color */
+    margin-left: 8px; /* Adds space between total and text */
+}
     
     </style>
 
