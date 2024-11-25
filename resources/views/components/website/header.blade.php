@@ -35,15 +35,15 @@
                 <!-- Desktop Navigation Menu -->
                 <nav id="menu" class="hidden md:block">
                     <ul class="flex flex-row items-center space-x-6">
-                        <li><a href="{{ route('whyt360') }}" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">Why trucking360</a></li>
-                        <li><a href="{{ route('aboutus') }}" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">About</a></li>
+                        <li><a href="{{ route('whyt360') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">Why trucking<span style="color: #e93232">360</span></a></li>
+                        <li><a href="{{ route('aboutus') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">About</a></li>
                         
-                        <li><a href="{{ route('pricing') }}" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">Pricing</a></li>
+                        <li><a href="{{ route('pricing') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">Pricing</a></li>
                         {{-- <li><a href="#faq" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">FAQ</a></li> --}}
-                        <li><a href="{{ route('contact') }}" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">Contact</a></li>
+                        <li><a href="{{ route('contact') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">Contact</a></li>
                         <!-- Resources Dropdown -->
                         <li class="relative group">
-                            <a href="#" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">
+                            <a href="#" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold">
                                 Resources
                                 <svg class="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -61,7 +61,7 @@
                                 Book a Meeting
                             </a>
                         </li>
-                        <a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-center text-white bg-primary border border-primary hover:bg-white hover:text-secondary rounded transition-colors duration-300">
+                        <a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-center text-white bg-secondary border border-secondary hover:bg-white hover:text-secondary rounded transition-colors duration-300">
                             Dashboard
                         </a>
                     </ul>

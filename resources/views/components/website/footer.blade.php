@@ -25,7 +25,7 @@
                 </ul>
             </div>
             @else
-            <div>
+            <div style="visibility: hidden">
                 <h3 class="text-xl md:text-2xl font-bold mb-4">Quick Links</h3>
                 <ul class="space-y-2 text-sm md:text-base">
                     <li><a href="#home" class="hover:text-secondary transition-colors duration-300">Home</a></li>

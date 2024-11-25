@@ -7,10 +7,10 @@
             <h4 class="text-2xl font-bold text-white mb-4 md:text-3xl">Your Partner to Fantastic Plus</h4>
             <br>
             <div id="typed-strings" class="hidden md:block">
-                <p>Best in-class dispatch service</p>
-                <p>24/7 available for your drivers</p>
-                <p>High communication quality</p>
-                <p>Scorecard analysis and action plans to secure Fantastic Plus scores</p>
+                <p>Best-in-class dispatch service</p>
+                <p>Available 24/7 for your drivers</p>
+                <p>High-quality communication</p>
+                <p>Scorecard analysis and tailored action plans to achieve and maintain Fantastic Plus scores</p>
                 <p>Customized reports</p>
                 <p>Daily disputes</p>
             </div>

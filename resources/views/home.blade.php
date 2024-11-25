@@ -14,7 +14,7 @@
     @include('components.website.calltoaction')
     {{-- @include('components.website.testimonials') --}}
     @include('components.website.faq')
-    <section class="bg-gray-100 py-12">
+    {{-- <section class="bg-gray-100 py-12">
         <div class="container mx-auto px-4">
           <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
             <div class="p-8">
@@ -70,6 +70,6 @@
           messageDiv.classList.remove('hidden');
         }
       });
-      </script>
+      </script> --}}
     @include('components.website.contact')
 @endsection

@@ -148,12 +148,12 @@
                                 <input
                                     type="checkbox"
                                     class="form-checkbox text-primary focus:ring-primary"
-                                    value="20"
+                                    value="25"
                                     data-service="HR"
                                     checked
                                 />
                                 <span class="ml-2 text-gray-700">
-                                    HR ($20)
+                                    HR ($25)
                                 </span>
                             </label>
                         </div>
@@ -886,9 +886,9 @@
         <section class="py-16 bg-gray-100">
             <div class="container mx-auto px-6 text-center">
                 <div class="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg inline-block">
-                    <h2 class="text-3xl font-bold text-primary mb-4">Ready to Optimize Your Logistics?</h2>
+                    <h2 class="text-3xl font-bold text-primary mb-4">Ready to Take Your Logistics to the Next Level?</h2>
                     <p class="text-gray-700 mb-6">
-                        Let's discuss how we can streamline your supply chain and improve your bottom line.
+                        Let’s discuss tailored solutions to maximize your efficiency.
                     </p>
                     <a href="{{url('bookings/create')}}"
                        class="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-colors duration-300">
