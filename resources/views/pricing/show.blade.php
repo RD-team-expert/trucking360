@@ -11,66 +11,26 @@
         
 
     <main class="container mx-auto px-4 py-8 con">
-   <!-- Hero Section -->
+<!-- Hero Section -->
 <section class="text-center py-16 bg-gray-100">
     <div class="max-w-4xl mx-auto">
+        <!-- Title -->
         <h2 class="text-4xl font-bold mb-6" style="color: #2e368f;"> <!-- Primary color applied -->
             Straightforward Pricing, Unmatched Value
         </h2>
-        <div class="flex justify-between items-center max-w-5xl mx-auto"> <!-- Wide space between features -->
+        <!-- Features -->
+        <div class="features-container">
             <!-- Feature 1 -->
-            <div class="flex items-center">
-                <svg
-                    class="w-6 h-6 text-green-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                    ></path>
-                </svg>
-                <span class="text-lg font-bold text-gray-700">Straightforward pricing</span> <!-- No extra space -->
+            <div class="feature-item">
+                Straightforward pricing
             </div>
             <!-- Feature 2 -->
-            <div class="flex items-center">
-                <svg
-                    class="w-6 h-6 text-green-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                    ></path>
-                </svg>
-                <span class="text-lg font-bold text-gray-700">Safety features are included for free in all plans</span> <!-- No extra space -->
+            <div class="feature-item">
+                Safety features are included for free in all plans
             </div>
             <!-- Feature 3 -->
-            <div class="flex items-center">
-                <svg
-                    class="w-6 h-6 text-green-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                    ></path>
-                </svg>
-                <span class="text-lg font-bold text-gray-700">No hidden charges</span> <!-- No extra space -->
+            <div class="feature-item">
+                No hidden charges
             </div>
         </div>
     </div>
@@ -78,100 +38,10 @@
 <!-- Plans Section -->
 <section class="mb-16 px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto relative">
-        <!-- Customizable Plan -->
-        <div class="relative">
-            <!-- Hidden Placeholder for Best Value -->
-            <div class="invisible bg-primary text-white text-center font-bold text-lg py-2 w-full absolute top-[-20px] left-0 rounded-t-lg shadow-md">
-                Placeholder
-            </div>
-
-            <!-- Customizable Plan Card -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between h-full mt-6">
-                <div class="flex flex-col justify-between flex-grow">
-                    <h3 class="text-2xl font-bold mb-4 text-primary">
-                        Customizable Plan
-                    </h3>
-                    <div class="flex items-center text-2xl font-bold mb-4">
-                        Total: 
-                        <span class="total-wrapper ml-2">
-                            <span class="dollar-sign">$</span>
-                            <span id="total-price">145</span>
-                        </span>
-                        <span class="per-contracted ml-2">Per contracted tractor</span>
-                    </div>
-                    <!-- Customizable Explanation -->
-                    <p class="text-gray-600 text-sm mb-4">
-                        Build your own plan by selecting or unselecting the services below to perfectly match your business needs.
-                    </p>
-                    <div class="mb-4">
-                        <label class="block mb-2 text-gray-700 font-medium">
-                            Select Services:
-                        </label>
-                        <div class="space-y-4">
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox text-primary focus:ring-primary"
-                                    value="75"
-                                    data-service="Dispatch"
-                                    checked
-                                />
-                                <span class="ml-2 text-gray-700">
-                                    Dispatch ($75)
-                                </span>
-                            </label>
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox text-primary focus:ring-primary"
-                                    value="20"
-                                    data-service="Fleet"
-                                    checked
-                                />
-                                <span class="ml-2 text-gray-700">
-                                    Fleet ($20)
-                                </span>
-                            </label>
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox text-primary focus:ring-primary"
-                                    value="25"
-                                    data-service="Hiring"
-                                    checked
-                                />
-                                <span class="ml-2 text-gray-700">
-                                    Hiring ($25)
-                                </span>
-                            </label>
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox text-primary focus:ring-primary"
-                                    value="25"
-                                    data-service="HR"
-                                    checked
-                                />
-                                <span class="ml-2 text-gray-700">
-                                    HR ($25)
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <!-- Button -->
-                <button
-                    class="bg-secondary text-white px-6 py-3 w-full rounded-lg font-medium hover:bg-opacity-80 transition duration-300 mt-4"
-                >
-                    Get Started
-                </button>
-            </div>
-        </div>
-
         <!-- Fantastic+ Bundle -->
-        <div class="relative">
+        <div class="relative plan-card">
             <!-- Best Value Banner -->
-            <div class="bg-primary text-white text-center font-bold text-lg py-2 w-full absolute top-[-20px] left-0 rounded-t-lg shadow-md">
+            <div class="best-value-banner">
                 Best Value
             </div>
 
@@ -271,6 +141,96 @@
                 </button>
             </div>
         </div>
+
+        <!-- Customizable Plan -->
+        <div class="relative plan-card">
+            <!-- Hidden Placeholder for Best Value -->
+            <div class="invisible bg-primary text-white text-center font-bold text-lg py-2 w-full absolute top-[-20px] left-0 rounded-t-lg shadow-md">
+                Placeholder
+            </div>
+
+            <!-- Customizable Plan Card -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between h-full mt-6">
+                <div class="flex flex-col justify-between flex-grow">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">
+                        Customizable Plan
+                    </h3>
+                    <div class="flex items-center text-2xl font-bold mb-4">
+                        Total:
+                        <span class="total-wrapper ml-2">
+                            <span class="dollar-sign">$</span>
+                            <span id="total-price">145</span>
+                        </span>
+                        <span class="per-contracted ml-2">Per contracted tractor</span>
+                    </div>
+                    <!-- Customizable Explanation -->
+                    <p class="text-gray-600 text-sm mb-4">
+                        Build your own plan by selecting or unselecting the services below to perfectly match your business needs.
+                    </p>
+                    <div class="mb-4">
+                        <label class="block mb-2 text-gray-700 font-medium">
+                            Select Services:
+                        </label>
+                        <div class="space-y-4">
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="75"
+                                    data-service="Dispatch"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    Dispatch ($75)
+                                </span>
+                            </label>
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="20"
+                                    data-service="Fleet"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    Fleet ($20)
+                                </span>
+                            </label>
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="25"
+                                    data-service="Hiring"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    Hiring ($25)
+                                </span>
+                            </label>
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="25"
+                                    data-service="HR"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    HR ($25)
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Button -->
+                <button
+                    class="bg-primary text-white px-6 py-3 w-full rounded-lg font-medium hover:bg-opacity-80 transition duration-300 mt-4"
+                >
+                    Get Started
+                </button>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -281,590 +241,457 @@
 
         <!-- Dispatch Section -->
         <section class="mb-16 py-16">
-            <h3 class="text-4xl font-extrabold mb-12 text-center text-gray-800 tracking-wide">Dispatch</h3>
-            <div class="overflow-x-auto mb-12">
-                <table
-                    class="w-full bg-white shadow-md rounded-lg overflow-hidden"
-                >
-                    <thead class="bg-primary text-white">
-                        <tr>
-                            <th class="py-3 px-4 text-left">Service</th>
-                            <th class="py-3 px-4 text-left">Description</th>
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-12">
+                <table class="w-full text-sm text-center text-gray-900 border border-gray-300">
+                    <!-- Dispatching Services Header -->
+                    <thead>
+                        <tr class="bg-primary text-white border-b border-gray-300 ">
+                            <th colspan="2" class="text-2xl font-bold px-6 py-4">
+                                Dispatching Services
+                            </th>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-300">
+                            <th scope="col" class="px-6 py-3">Service</th>
+                            <th scope="col" class="px-6 py-3">Description</th>
                         </tr>
                     </thead>
+                    <!-- Dispatching Services Body -->
                     <tbody>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                24/7 On Road Monitoring
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We're always available to monitor drivers
-                                and can update situations in the same moment
-                                they occur
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">24/7 On Road Monitoring</td>
+                            <td class="px-6 py-4">Ensures drivers are monitored around the clock with real-time updates for seamless operations.</td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Performance Disputes</td>
+                            <td class="px-6 py-4">Handles performance disputes impacting the AFP's Operational Score, preventing negative effects from Amazon-controllable factors.</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Hours Of Service Monitoring</td>
+                            <td class="px-6 py-4">Monitors driver hours continuously to prevent violations and optimize scheduling.</td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Unassigned Drive Time Reconcile</td>
+                            <td class="px-6 py-4">Reconciles unassigned drive time to maintain compliance with Amazon policy and FMCSA regulations.</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Schedule Reminders</td>
+                            <td class="px-6 py-4">Provides timely schedule reminders to drivers, helping them stay on track and proactively address potential challenges before their scheduled trips.</td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Daily & Weekly Reporting</td>
+                            <td class="px-6 py-4">Delivers detailed reports on Acceptance, On-Time Performance, and Operational Excellence Scores on a daily and weekly cadence to stay up to date with your company’s KPI’s.</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Tracking Comdata Cards and Purchases</td>
+                            <td class="px-6 py-4">Manages Comdata card activity, resolves issues, and ensures secure transactions.</td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Hours Of Service Exceptions Reconcile</td>
+                            <td class="px-6 py-4">Supports proper usage of HOS exceptions, including shift time and adverse conditions allowances.</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Hours Of Service (Yard Move/Personal Conveyance) Reconcile</td>
+                            <td class="px-6 py-4">Provides assistance for utilizing Yard Move or Personal Conveyance exceptions effectively, in compliance of the regulations.</td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Driver Safety Checks</td>
+                            <td class="px-6 py-4">Requires drivers to report key updates to ensure timely assistance, issue resolution and reassurance of safe driving practices.</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">ROC Communication</td>
+                            <td class="px-6 py-4">Handles ROC communications, including case creation and issue resolution, for seamless workflow allowing for drivers to focus more on driving.</td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Relay Load Notes</td>
+                            <td class="px-6 py-4">Maintains detailed load notes to safeguard AFPs' scores and operational performance.</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Accident / Incident Investigation & Reporting</td>
+                            <td class="px-6 py-4">Manages accident and incident processes, ensuring thorough documentation and resolution from start to finish.</td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Talk & Text Availability 24/7</td>
+                            <td class="px-6 py-4">Ensures dedicated support availability to your drivers around the clock via prompt responses to calls and messages.</td>
+                        </tr>
+            
+                        <!-- Safety Header -->
+                        <tr class="bg-secondary text-white border-b border-gray-300">
+                            <th colspan="2" class="text-lg font-bold px-6 py-4">
+                                Safety and Support Services
+                            </th>
+                        </tr>
+            
+                        <!-- Safety Services -->
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Netradyne Reports</td>
+                            <td class="px-6 py-4">Monitors Netradyne reports and provides real-time updates on driver behavior.</td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Safety Coachings (Netradyne and/or Organic)</td>
+                            <td class="px-6 py-4">Delivers driver coaching through Netradyne and other channels to improve safety scores and awareness.</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Safety Campaigns</td>
+                            <td class="px-6 py-4">Creates engaging campaigns that promote driver safety using impactful methods.</td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Safety Reminders</td>
+                            <td class="px-6 py-4">Reinforces best practices with regular safety reminders, tips and tricks.</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Smith System Training Coordination & Selection</td>
+                            <td class="px-6 py-4">Coordinates Smith System training for drivers and tracks their progress post-completion.</td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Weather Monitoring</td>
+                            <td class="px-6 py-4">Monitors weather conditions and adjusts plans strategically to prioritize driver safety.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-12">
+                <table class="w-full text-sm text-center text-gray-900 border border-gray-300">
+                    <!-- Fleet Services Header -->
+                    <thead>
+                        <tr class="bg-primary text-white border-b border-gray-300">
+                            <th colspan="2" class="text-2xl font-bold px-6 py-4">
+                                Fleet Services
+                            </th>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-300">
+                            <th scope="col" class="px-6 py-3">Service</th>
+                            <th scope="col" class="px-6 py-3">Description</th>
+                        </tr>
+                    </thead>
+                    <!-- Fleet Services Body -->
+                    <tbody>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Annual Inspections Tracking</td>
+                            <td class="px-6 py-4">
+                                Ensures trucks' annual inspections are tracked and kept current to meet DOT requirements by identifying inspections nearing expiration, coordinating with on-site maintenance vendors and providing updated documentation.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Performance Disputes
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                Whenever there is an issue that affects the
-                                AFP's Operational Score. We can do the
-                                disputes needed as soon as possible to
-                                guarantee nothing Amazon Controllable can
-                                affect their scores
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Repair Orders' Invoice Tracking</td>
+                            <td class="px-6 py-4">
+                                Tracks all repair orders for tractors, including dates, vendors, and costs, providing a comprehensive record of fleet-related expenses.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Hours Of Service Monitoring
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                Driver's hours are monitored 24/7 to make
-                                sure no violations would happen and plan
-                                tours and actions based on drivers' hours
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Pilot Allowance Tracking and Comparing</td>
+                            <td class="px-6 py-4">
+                                Monitors maintenance pilot allowance and compares it with report data to identify and prevent unnecessary expenditures.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Unassigned Drive Time Reconcile
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                Whenever there are UADTs we can check them
-                                for AFPs to make sure they're fully
-                                compliant with Amazon and FMCSA rules
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Partner-Managed Repairs Reimbursements and Tracking</td>
+                            <td class="px-6 py-4">
+                                Issues reimbursement documentation for partner-managed repairs and tracks payments until completion, ensuring accuracy and accountability.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Schedule Reminders
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                Even tho we're sending the schedule to the
-                                drivers. We send them reminders on their
-                                tours a few hours before their trips and
-                                then send them a form a head of time to make
-                                sure they're attending and to make sure
-                                issues will be solved before the start of
-                                the trip
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Partner-Managed Repairs Archive</td>
+                            <td class="px-6 py-4">
+                                Maintains an archive of partner-managed repair reimbursements, providing a detailed history of received amounts and timelines.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Daily & Weekly Reporting
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                Acceptance, On Time, and Operational Score
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Work Order Creation & Tracking</td>
+                            <td class="px-6 py-4">
+                                Oversees the creation, tracking, and closure of work orders while ensuring units return to active status promptly for maximum tractor uptime.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                FMCSA tracking
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll make sure AFP's FMCSA scores are
-                                within the threshold and will make plans and
-                                coach drivers on how to maintain a good
-                                FMCSA score
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Escalations</td>
+                            <td class="px-6 py-4">
+                                Handles escalations for unresolved issues, ensuring swift and effective resolutions.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Tracking Comdata cards and purchases
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                Tracking inactive cards, troubleshooting
-                                active cards that are not working, and
-                                making sure all transactions have no
-                                fraudulent
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Mechanical Tractor Disputes</td>
+                            <td class="px-6 py-4">
+                                Manages disputes related to mechanical tractor issues that are not carrier-controllable to ensure the highest operational excellence score is achieved.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Hours Of Service Exceptions Reconcile
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                Whenever there is a need to use an Hours Of
-                                Service exception (16 hours shift time
-                                exception, adverse conditions exception), we
-                                are available
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">On-Site Maintenance Vendor Communication 24/7</td>
+                            <td class="px-6 py-4">
+                                Provides 24/7 availability for on-site maintenance vendor communications, ensuring timely responses and issue resolution.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Hours Of Service (Yard Move/Personal
-                                Conveyance) Reconcile
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                Whenever there is a need to use YM or PC, we
-                                can assist
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">DSS Communication 24/7</td>
+                            <td class="px-6 py-4">
+                                Offers round-the-clock support for DSS communications to address inquiries and concerns promptly.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Driver Safety Checks
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll have drivers contact Dispatch whenever
-                                they arrive at a site or whenever something
-                                new happens so Dispatch are up to date and
-                                can assist with any issues and plan
-                                accordingly
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Trucks Handling Campaigns</td>
+                            <td class="px-6 py-4">
+                                Develops and shares campaigns to educate drivers on proper tractor handling and maintenance for optimal performance and overall fleet health.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                ROC Communication
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll take the full responsibility and the
-                                lead in communicating with ROC, creating
-                                needed cases and fixing occurring problems
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Defects Data Archive</td>
+                            <td class="px-6 py-4">
+                                Maintains and organizes truck defect records, providing AFPs with accurate, up-to-date information to support informed decisions, streamline maintenance, and ensure compliance.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Relay Load Notes
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll be in charge of adding notes of each
-                                new update that happens. We'll make sure to
-                                make the AFP look on the right side and that
-                                it'll not affect its scores
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Tractors' Health Report</td>
+                            <td class="px-6 py-4">
+                                Provides comprehensive updates on tractor health, including defect causes, repair timelines, and ongoing maintenance needs.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Accident / Incident Investigation &
-                                Reporting
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll deal with incidents/accidents
-                                professionally and will do all the needed
-                                follow-ups. Have the situation documented,
-                                investigated, and reported
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Talk & Text Availability 24/7
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We're always available to respond to texts
-                                and calls whenever there is a need to do so.
-                                We won't let any communication needed slip
-                            </td>
-                        </tr>
-                        <thead class="bg-secondary text-white">
-                            <tr>
-                                <th class="py-3 px-4 text-left">
-                                    Saftey included
-                                </th>
-                                <th class="py-3 px-4 text-left">
-                                    Description
-                                </th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Netradyne Reports
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We can keep track of Netradyne reports and
-                                keep AFPs up to date on their behaviours
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Safety Coachings (Netradyne and/or Organic)
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                Will do all the safety coachings on
-                                Netradyne and on top of that we'll coach
-                                drivers via WhatsApp and by call to help
-                                them understand more and achieve better
-                                scores
-                            </td>
-                        </tr>
-                        <tr >
-                            <td class="py-3 px-4 border-b">
-                                Expectations and Coaching Call Before First
-                                Tour
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We can give new drivers a call where we can
-                                address everything needed in the work, how
-                                to achieve better work, and what we are
-                                expecting from them. This will maximize the
-                                knowledge that drivers have
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Safety Campaigns
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll create and send safety content and
-                                campaigns to keep drivers engaged in safety
-                                and understand it better with simpler ways
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Company Safety Trend Analysis & Coaching
-                            </td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Safety Reminders
-                            </td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Smith System Training Coordination &
-                                Selection
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                Whenever drivers have areas where they can
-                                make use of extra training. We can
-                                coordinate with Smith System to have a class
-                                and assign drivers to it. Also, we'll keep
-                                track of drivers' attendance and if they
-                                made use of those classes we assigned them
-                                to
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Weather Monitoring
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll always monitor the weather and act
-                                based on the new changes to the forecast to
-                                make sure drivers are safe
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Driver Damage Report</td>
+                            <td class="px-6 py-4">
+                                Tracks driver-related incidents, accidents, false reports, and damages, delivering actionable data for fleet management and accountability.
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <h3 class="text-4xl font-extrabold mb-12 text-center text-gray-800 tracking-wide">
-                Fleet
-            </h3>
-                        <div class="overflow-x-auto mb-12">
-                <table
-                    class="w-full bg-white shadow-md rounded-lg overflow-hidden"
-                >
-                    <thead class="bg-primary text-white">
-                        <tr>
-                            <th class="py-3 px-4 text-left">Service</th>
-                            <th class="py-3 px-4 text-left">Description</th>
+            
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-12">
+                <table class="w-full text-sm text-center text-gray-900 border border-gray-300">
+                    <!-- Hiring Services Header -->
+                    <thead>
+                        <tr class="bg-primary text-white border-b border-gray-300">
+                            <th colspan="2" class="text-2xl font-bold px-6 py-4">
+                                Hiring Services
+                            </th>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-300">
+                            <th scope="col" class="px-6 py-3">Service</th>
+                            <th scope="col" class="px-6 py-3">Description</th>
                         </tr>
                     </thead>
+                    <!-- Hiring Services Body -->
                     <tbody>
-                        <!-- Fleet Section -->
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Tracking Annual Inspections
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                Trucks' annual inspections are a DOT
-                                requirement to have it updated and not
-                                expired. We'll keep track of those
-                                inspections and be on the lookout for any
-                                that might expire soon and provide the
-                                latest copy available to make sure AFPs are
-                                within DOT requirements
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">MVR Review</td>
+                            <td class="px-6 py-4">
+                                Reviews Motor Vehicle Reports (MVR) to ensure compliance with safety and qualification standards, tailored to the AFPs desires.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Repair Orders' Invoice Tracking
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll keep track of all Repair Orders done
-                                for AFPs' tractors, their dates, vendors,
-                                and amounts so AFPs can know everything
-                                they're paying that is fleet related
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">SPHRR Review</td>
+                            <td class="px-6 py-4">
+                                Conducts Safety Performance History Record reviews to identify and address potential hiring risks.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Pilot Allowance Tracking and Comparing
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll keep tracking AFPs' pilot allowance
-                                and compare it with data available from our
-                                reports to make sure that AFPs are not
-                                paying more money than needed
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">One-Way Interviews</td>
+                            <td class="px-6 py-4">
+                                Facilitates one-way interviews to streamline the candidate screening process.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Partner-Managed Repairs Reimbursements and
-                                Tracking
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll issue a reimbursement for
-                                Partner-managed Repairs and keep track of
-                                those reimbursements until the amount needed
-                                is paid and AFPs have their money back
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Phone Screening</td>
+                            <td class="px-6 py-4">
+                                Performs phone screenings to evaluate candidate qualifications and fit for the role.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Partner-Managed Repairs Archive
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll have an archive of reimbursements for
-                                Partner-managed Repairs so AFPs can know
-                                what they got back and when
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Job Postings & Advertising</td>
+                            <td class="px-6 py-4">
+                                Creates and manages job postings and advertising campaigns to attract the right talent.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Work Order Creation & Tracking
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll always be on the lookout for any Work
-                                Order creation need and we'll be responsible
-                                for creating it, tracking it, and closing it
-                                while flipping the unit back to active once
-                                it's finished
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Expiring Driver Document Tracking</td>
+                            <td class="px-6 py-4">
+                                Monitors and tracks expiring driver documents to ensure timely renewal and compliance.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Escalations</td>
-                            <td class="py-3 px-4 border-b">
-                                We'll be responsible for any escalation
-                                needed for any issue that AFPs are not able
-                                to solve
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Drug Test Follow-Up</td>
+                            <td class="px-6 py-4">
+                                Coordinates and tracks drug test follow-ups to meet regulatory and company requirements.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Mechanical Tractor Disputes
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll be responsible for any mechanical
-                                tractor disputes that are not Carrier
-                                Controllable
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">CDL & Finishing School Programs</td>
+                            <td class="px-6 py-4">
+                                Manages the partnership for CDL and finishing school programs to build a qualified driver pipeline.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Amerit Communication 24/7
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll be available 24/7 to communicate and
-                                answer Amerit
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Assist JJ Keller</td>
+                            <td class="px-6 py-4">
+                                Provides support and coordination with JJ Keller for compliance and driver management solutions.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                DSS Communication 24/7
-                            </td>
-                            <td class="py-3 px-4 border-b">
-                                We'll be available 24/7 to communicate and
-                                answer DSS
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Maintain Healthy Pipeline</td>
+                            <td class="px-6 py-4">
+                                Implements strategies to maintain a robust pipeline of qualified candidates to ensure staffing is never an issue.
                             </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                T360 Network Sourced Parts Rate
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">EEO Guidelines & Best Practices</td>
+                            <td class="px-6 py-4">
+                                Ensures adherence to Equal Employment Opportunity guidelines and best practices in recruitment and hiring.
                             </td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">
-                                Partner Parts Sourcing
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Fountain Management</td>
+                            <td class="px-6 py-4">
+                                Oversees the management of Fountain to optimize hiring workflows, organization and candidate experience.
                             </td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
                         </tr>
-                        <thead class="bg-secondary text-white">
-                            <tr>
-                                <th class="py-3 px-4 text-left">
-                                    Saftey included
-                                </th>
-                                <th class="py-3 px-4 text-left">
-                                    Description
-                                </th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Trucks Handling Campaigns</td>
-                            <td class="py-3 px-4 border-b">We'll create and send content and campaigns on how to handle tractors to help drivers know better on how to deal with tractors and maintain tractors at top health statuses at all times</td>
+            
+                        <!-- Safety Header -->
+                        <tr class="bg-secondary text-white border-b border-gray-300">
+                            <th colspan="2" class="text-lg font-bold px-6 py-4">
+                                Safety and Support Services
+                            </th>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Defects Data Archive</td>
-                            <td class="py-3 px-4 border-b">Keep track of trucks' defects and create an archive so AFPs can be up to date</td>
+            
+                        <!-- Safety Services -->
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Safety Campaigns</td>
+                            <td class="px-6 py-4">
+                                Creates engaging campaigns that promote driver safety using impactful methods.
+                            </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Tractors' Health Report</td>
-                            <td class="py-3 px-4 border-b">We'll keep AFPs up to date on their tractors' health while keeping track of tractors' defects, the reason behind them, any new updates, and estimated fix days based on new updates</td>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Safety Reminders</td>
+                            <td class="px-6 py-4">
+                                Reinforces best practices with regular safety reminders, tips and tricks.
+                            </td>
                         </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Driver Damage Report</td>
-                            <td class="py-3 px-4 border-b">We can keep track of issues that are done by drivers (incidents, accidents, false reports, and damages) to make sure AFPs have the data on what drivers are doing to their tractors</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-            <h3 class="text-4xl font-extrabold mb-12 text-center text-gray-800 tracking-wide">Hiring</h3>
-            <div class="overflow-x-auto mb-12">
-                <table
-                    class="w-full bg-white shadow-md rounded-lg overflow-hidden"
-                >
-                    <thead class="bg-primary text-white">
-                        <tr>
-                            <th class="py-3 px-4 text-left">Service</th>
-                            <th class="py-3 px-4 text-left">Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="py-3 px-4 border-b">MVR Review</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">SPHRR Review</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">One-Way Interviews</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Phone Screening</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Job Postings & Advertising</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Expiring Driver Document Tracking</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Drug Test Follow-Up</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">CDL & Finishing School Programs</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Assist JJ Keller</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Maintain Healthy Pipeline</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">EEO Guidelines & Best Practices</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Fountain Management</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-            <h3 class="text-4xl font-extrabold mb-12 text-center text-gray-800 tracking-wide">HR</h3>
-            <div class="overflow-x-auto mb-12">
-                <table
-                    class="w-full bg-white shadow-md rounded-lg overflow-hidden"
-                >
-                    <thead class="bg-primary text-white">
-                        <tr>
-                            <th class="py-3 px-4 text-left">Service</th>
-                            <th class="py-3 px-4 text-left">Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Scheduling Assistance</td>
-                            <td class="py-3 px-4 border-b">We provide tailored scheduling assistance to ensure drivers are assigned trips efficiently while meeting Hours of Service requirements. Our support helps AFPs maintain on-time performance and minimizes downtime, keeping operations streamlined and productive.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Payroll Administration</td>
-                            <td class="py-3 px-4 border-b">Ensuring drivers are paid accurately and on time is essential for maintaining satisfaction and trust. We handle payroll administration by tracking hours worked between Relaay and ADP. Our service streamlines the payroll process, reduces errors, and provides AFPs with peace of mind knowing their drivers are compensated correctly.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Value Added Partners (T360 Org.)</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Virtual Orientation</td>
-                            <td class="py-3 px-4 border-b">Introducing new drivers to your company is crucial for setting the tone and expectations. Our Virtual Orientation service provides a comprehensive onboarding experience, covering company policies, safety protocols, and operational procedures. This remote solution ensures drivers are well-prepared and equipped to succeed, saving time while maintaining a professional and consistent onboarding process.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Integration of Drivers into Systems</td>
-                            <td class="py-3 px-4 border-b">We handle the integration process by setting up driver profiles in platforms such as Relay, ADP, UIIA, and Netradyne. This ensures accurate data tracking, smooth communication, and compliance, allowing AFPs to focus on their core operations without administrative delays.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Health Benefits Tracking</td>
-                            <td class="py-3 px-4 border-b">We manage the administration and monitoring of health benefit enrollments, updates, and expirations. Our service ensures drivers have access to their benefits without interruptions, helping AFPs maintain compliance and support a healthy workforce.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Workplace Injury Tracking & Mitigation</td>
-                            <td class="py-3 px-4 border-b">We track workplace injuries to identify trends, address root causes, and develop mitigation strategies. We also take care of OSHA reporting processes to ensure compliance.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Insurance Reviews</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">CAPs (If Wanted)</td>
-                            <td class="py-3 px-4 border-b">We create tailored Corrective Action Plans to help drivers improve their performance and adhere to company policies. These plans include clear actions, deadlines, and follow-ups to ensure accountability and foster continuous improvement.</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Just-Cause Terminations</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Employee File Tracking & Documentation</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Driver Scorecards (Daily, Weekly, Monthly)</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Intermodal Training</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Employee Engagement Program</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <thead>
-                            <tr class="bg-secondary text-white">
-                                <th class="py-3 px-4 text-left">
-                                    Saftey included
-                                </th>
-                                <th class="py-3 px-4 text-left">
-                                    Description
-                                </th>
-                            </tr>
-                        </thead>
-                        <tr >
-                            <td class="py-3 px-4 border-b">Netradyne Safety Feedback (Safety Disputes)</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-4 border-b">Safety Competitions</td>
-                            <td class="py-3 px-4 border-b">NEED INFO</td>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Driver Safety Checks</td>
+                            <td class="px-6 py-4">
+                                Requires drivers to report key updates to ensure timely assistance, issue resolution and reassurance of safe driving practices.
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-12">
+                <table class="w-full text-sm text-center text-gray-900 border border-gray-300">
+                    <!-- HR Services Header -->
+                    <thead>
+                        <tr class="bg-primary text-white border-b border-gray-300">
+                            <th colspan="2" class="text-2xl font-bold px-6 py-4">
+                                HR Services
+                            </th>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-300">
+                            <th scope="col" class="px-6 py-3">Service</th>
+                            <th scope="col" class="px-6 py-3">Description</th>
+                        </tr>
+                    </thead>
+                    <!-- HR Services Body -->
+                    <tbody>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Scheduling Assistance</td>
+                            <td class="px-6 py-4">
+                                Offers tailored scheduling support to assign trips efficiently while meeting Hours of Service requirements, minimizing downtime and maintaining on-time performance.
+                            </td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Payroll Administration</td>
+                            <td class="px-6 py-4">
+                                Handles payroll administration by tracking hours worked through Relay and ADP, ensuring drivers are paid accurately and on time, streamlining processes and reducing errors.
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Virtual Orientation</td>
+                            <td class="px-6 py-4">
+                                Provides a comprehensive onboarding experience covering company policies, safety protocols, and operational procedures to prepare drivers for success in a remote, professional format.
+                            </td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Integration of Drivers into Systems</td>
+                            <td class="px-6 py-4">
+                                Manages the setup of driver profiles in platforms such as Relay, ADP, UIIA, and Netradyne, ensuring accurate data tracking and compliance.
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Health Benefits Tracking</td>
+                            <td class="px-6 py-4">
+                                Administers and monitors health benefit enrollments, updates, and expirations, ensuring uninterrupted access and regulatory compliance.
+                            </td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Workplace Injury Tracking & Mitigation</td>
+                            <td class="px-6 py-4">
+                                Tracks workplace injuries, identifies trends, addresses root causes, and develops mitigation strategies, including OSHA reporting to ensure compliance.
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Insurance Reviews</td>
+                            <td class="px-6 py-4">
+                                Conducts thorough reviews of insurance policies to ensure optimal coverage and compliance, at the best premium price.
+                            </td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">CAPs (Optional)</td>
+                            <td class="px-6 py-4">
+                                Develops tailored Corrective Action Plans with clear actions, deadlines, and follow-ups to support performance improvement and accountability.
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Just-Cause Terminations</td>
+                            <td class="px-6 py-4">
+                                Facilitates just-cause terminations in compliance with legal and organizational standards, approved by the AFP Business Owner.
+                            </td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Employee File Tracking & Documentation</td>
+                            <td class="px-6 py-4">
+                                Maintains accurate and organized employee files and documentation for compliance and operational efficiency.
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Driver Scorecards (Daily, Weekly, Monthly)</td>
+                            <td class="px-6 py-4">
+                                Generates detailed driver performance scorecards to track and enhance operational metrics.
+                            </td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Intermodal Training</td>
+                            <td class="px-6 py-4">
+                                Provides specialized training programs for intermodal operations to enhance driver skills and performance of transporting intermodal containers.
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Employee Engagement Program</td>
+                            <td class="px-6 py-4">
+                                Develops initiatives to boost employee engagement, morale, and retention through strategic programming.
+                            </td>
+                        </tr>
+            
+                        <!-- Safety Header -->
+                        <tr class="bg-secondary text-white border-b border-gray-300">
+                            <th colspan="2" class="text-lg font-bold px-6 py-4">
+                                Safety and Support Services
+                            </th>
+                        </tr>
+            
+                        <!-- Safety Services -->
+                        <tr class="bg-white border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Netradyne Safety Feedback (Safety Disputes)</td>
+                            <td class="px-6 py-4">
+                                Handles safety feedback and disputes through Netradyne, ensuring fairness and compliance.
+                            </td>
+                        </tr>
+                        <tr class="bg-primary/10 border-b border-gray-300">
+                            <td class="px-6 py-4 font-medium">Safety Competitions</td>
+                            <td class="px-6 py-4">
+                                Organizes safety competitions to promote best practices and driver engagement in safety protocols.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
         </section>
 
         <!-- FAQs Section -->
@@ -916,7 +743,21 @@
         /* Center and control the width of the grid on larger screens */
        
     
-
+  /* Adjust Best Value Banner */
+  .best-value-banner {
+        position: absolute;
+        top: -20px; /* Adjust this value to push it higher or lower */
+        left: 0;
+        width: 100%;
+        background-color: #2e368f; /* Primary color */
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.125rem; /* Text size equivalent to text-lg */
+        padding: 0.5rem; /* Padding for banner */
+        border-radius: 0.5rem 0.5rem 0 0; /* Rounded top corners */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    }
     
         /* Maintain responsiveness */
         @media (max-width: 768px) {
@@ -951,7 +792,57 @@
     color: #555; /* Subtle gray color */
     margin-left: 8px; /* Adds space between total and text */
 }
-    
+    /* General Styles */
+    .feature-item {
+        position: relative; /* Create a relative container for the icon */
+        display: inline-block; /* Inline-block for proper alignment */
+        padding-left: 2.5rem; /* Create space for the SVG icon */
+        text-align: center; /* Center text */
+        font-weight: bold; /* Make text bold */
+        color: #28a745; /* Green color for text */
+    }
+
+    .feature-item::before {
+        content: ''; /* Add an empty pseudo-element for the SVG icon */
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: 0; /* Position to the left */
+        transform: translateY(-50%); /* Adjust for vertical alignment */
+        width: 1.5rem; /* Set width for the SVG icon */
+        height: 1.5rem; /* Set height for the SVG icon */
+        background: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%2328a745%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M5 13l4 4L19 7%27/%3E%3C/svg%3E') no-repeat center center;
+        background-size: contain; /* Ensure the icon fits within the element */
+    }
+
+    /* Desktop Specific Styles */
+    @media (min-width: 768px) {
+        .features-container {
+            display: flex;
+            justify-content: space-between; /* Even spacing for desktop */
+            max-width: 100%;
+        }
+    }
+
+    /* Mobile Specific Styles */
+    @media (max-width: 768px) {
+        .features-container {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            gap: 1rem; /* Add spacing between stacked items */
+            text-align: left; /* Align text to the left on mobile */
+        }
+
+        .feature-item {
+            padding-left: 2.5rem; /* Maintain space for SVG icon */
+        }
+    }
+
+        /* Add spacing between plans on smaller screens */
+        @media (max-width: 768px) {
+        .plan-card {
+            margin-bottom: 1.5rem; /* Adjust spacing as needed */
+        }
+    }
     </style>
 
 </div>

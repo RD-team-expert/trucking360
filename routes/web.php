@@ -26,6 +26,7 @@ use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\AfpDetailController;
 use App\Http\Controllers\LogController;
 use App\Models\Log;
+use App\Models\Faq;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\SitemapController;
@@ -61,6 +62,13 @@ Route::get('/pricing', function () {
 
     return view('pricing.show', compact('settings'));
 })->name('pricing');
+
+Route::get('/faqs', function () {
+    $settings = GeneralSetting::first();
+    $faqs = Faq::all(); 
+
+    return view('faqs.show', compact('settings','faqs'));
+})->name('faqs');
 
 Route::get('/services', [ServicePageController::class, 'index'])->name('services.index')->middleware(TrackVisitor::class);;
 Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show')->middleware(TrackVisitor::class);;

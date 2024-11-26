@@ -115,7 +115,7 @@
         <div class="flex flex-col md:flex-row items-center justify-center flex-grow">
             <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0 opacity-0" id="mainContent">
                 <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-                    The Future is <span class="text-gradient">Coming Soon</span>
+                    The Future is <br> <span class="text-gradient">Coming Soon</span>
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 max-w-lg">
                     We're crafting something extraordinary. Prepare to experience innovation like never before.

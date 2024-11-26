@@ -12,30 +12,34 @@
                 </div>
             </div>
 
-            <!-- Quick Links -->
-            @if (Request::routeIs('embedbooking') || Request::routeIs('services.show') )
-            <div style="visibility: hidden">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Quick Links</h3>
-                <ul class="space-y-2">
-                    <li><a href="#home" class="hover:text-secondary transition-colors duration-300">Home</a></li>
-                    <li><a href="#services" class="hover:text-secondary transition-colors duration-300">Services</a></li>
-                    <li><a href="#about" class="hover:text-secondary transition-colors duration-300">About</a></li>
-                    <li><a href="#faq" class="hover:text-secondary transition-colors duration-300">FAQ</a></li>
-                    <li><a href="#contact" class="hover:text-secondary transition-colors duration-300">Contact</a></li>
-                </ul>
-            </div>
-            @else
-            <div style="visibility: hidden">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Quick Links</h3>
-                <ul class="space-y-2 text-sm md:text-base">
-                    <li><a href="#home" class="hover:text-secondary transition-colors duration-300">Home</a></li>
-                    <li><a href="#services" class="hover:text-secondary transition-colors duration-300">Services</a></li>
-                    <li><a href="#about" class="hover:text-secondary transition-colors duration-300">About</a></li>
-                    <li><a href="#faq" class="hover:text-secondary transition-colors duration-300">FAQ</a></li>
-                    <li><a href="#contact" class="hover:text-secondary transition-colors duration-300">Contact</a></li>
-                </ul>
-            </div>
-            @endif
+                <!-- Quick Links -->
+                @if (Request::routeIs('embedbooking') || Request::routeIs('services.show') )
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="{{url('/')}}" class="hover:text-secondary transition-colors duration-300">Home</a></li>
+                        <li><a href="{{ route('whyt360') }}" class="hover:text-secondary transition-colors duration-300">Why trucking360</a></li>
+                        <li><a href="{{ route('aboutus') }}" class="hover:text-secondary transition-colors duration-300">About</a></li>
+                        <li><a href="{{ route('faqs') }}" class="hover:text-secondary transition-colors duration-300">FAQ</a></li>
+                        <li><a href="{{ route('pricing') }}" class="hover:text-secondary transition-colors duration-300">Pricing</a></li>
+                        <li><a href="{{ route('contact') }}" class="hover:text-secondary transition-colors duration-300">Contact us</a></li>
+  
+                    </ul>
+                </div>
+                @else
+                <div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm md:text-base">
+                      <li><a href="{{url('/')}}" class="hover:text-secondary transition-colors duration-300">Home</a></li>
+                      <li><a href="{{ route('whyt360') }}" class="hover:text-secondary transition-colors duration-300">Why trucking360</a></li>
+                      <li><a href="{{ route('aboutus') }}" class="hover:text-secondary transition-colors duration-300">About</a></li>
+                      <li><a href="{{ route('faqs') }}" class="hover:text-secondary transition-colors duration-300">FAQ</a></li>
+                      <li><a href="{{ route('pricing') }}" class="hover:text-secondary transition-colors duration-300">Pricing</a></li>
+                      <li><a href="{{ route('contact') }}" class="hover:text-secondary transition-colors duration-300">Contact us</a></li>
+  
+                    </ul>
+                </div>
+                @endif
 
             <!-- Contact Info -->
             <div>
@@ -65,7 +69,7 @@
                     </a>
                 </p>
             </div>
-            
+        
         </div>
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm md:text-base">
             <p>&copy; 2024 Trucking 360. All rights reserved.</p>

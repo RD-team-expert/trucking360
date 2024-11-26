@@ -16,7 +16,7 @@
                     </svg>
                 </button>
             </div>
-           @if (Request::routeIs('embedbooking') || Request::routeIs('services.show') )
+           @if (Request::routeIs('services.show') )
                 <!-- Desktop Navigation Menu -->
                 <nav id="menu" class="hidden md:block">
                     <ul class="flex flex-row items-center space-x-6">
@@ -51,7 +51,7 @@
                             </a>
                             <ul class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
                                 <li><a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Newsletter</a></li>
-                                <li><a href="#faq" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQ's</a></li>
+                                <li><a href="{{ route('faqs') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQ's</a></li>
                                 <li><a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Free Resources</a></li>
                             </ul>
                         </li>
@@ -101,7 +101,7 @@
                     </button>
                     <ul id="mobile-resources-dropdown" class="hidden mt-2 space-y-2">
                         <li><a href="{{ route('comingsoon') }}" class="text-gray-700 text-xl hover:text-secondary transition-colors duration-300">Newsletter</a></li>
-                        <li><a href="#faq" class="text-gray-700 text-xl hover:text-secondary transition-colors duration-300">FAQ's</a></li>
+                        <li><a href="{{ route('faqs') }}" class="text-gray-700 text-xl hover:text-secondary transition-colors duration-300">FAQ's</a></li>
                         <li><a href="{{ route('comingsoon') }}" class="text-gray-700 text-xl hover:text-secondary transition-colors duration-300">Free Resources</a></li>
                     </ul>
                 </li>
