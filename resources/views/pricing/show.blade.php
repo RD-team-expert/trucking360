@@ -60,7 +60,7 @@
                     </div>
                     <p class="mb-4 text-gray-700">
                         Save <span class="font-bold">$80 monthly</span> and <span class="font-bold">$4,160 annually</span>
-                        per contracted tractor by choosing the F+ Bundle plan.
+                        <span class="font-bold">per contracted tractor</span> by choosing the F+ Bundle plan.
                     </p>
                     <ul class="mb-6 space-y-4">
                         <li class="flex items-start text-gray-700">
