@@ -38,6 +38,95 @@
 <!-- Plans Section -->
 <section class="mb-16 px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto relative">
+         <!-- Customizable Plan -->
+         <div class="relative plan-card">
+            <!-- Hidden Placeholder for Best Value -->
+            <div class="invisible bg-primary text-white text-center font-bold text-lg py-2 w-full absolute top-[-20px] left-0 rounded-t-lg shadow-md">
+                Placeholder
+            </div>
+
+            <!-- Customizable Plan Card -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between h-full mt-6">
+                <div class="flex flex-col justify-between flex-grow">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">
+                        Customizable Plan
+                    </h3>
+                    <div class="flex items-center text-2xl font-bold mb-4">
+                        Total:
+                        <span class="total-wrapper ml-2">
+                            <span class="dollar-sign">$</span>
+                            <span id="total-price">145</span>
+                        </span>
+                        <span class="per-contracted ml-2">Per contracted tractor</span>
+                    </div>
+                    <!-- Customizable Explanation -->
+                    <p class="text-gray-600 text-sm mb-4">
+                        Build your own plan by selecting or unselecting the services below to perfectly match your business needs.
+                    </p>
+                    <div class="mb-4">
+                        <label class="block mb-2 text-gray-700 font-medium">
+                            Select Services:
+                        </label>
+                        <div class="space-y-4">
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="75"
+                                    data-service="Dispatch"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    Dispatch ($75)
+                                </span>
+                            </label>
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="20"
+                                    data-service="Fleet"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    Fleet ($20)
+                                </span>
+                            </label>
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="25"
+                                    data-service="Hiring"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    Hiring ($25)
+                                </span>
+                            </label>
+                            <label class="flex items-center">
+                                <input
+                                    type="checkbox"
+                                    class="form-checkbox text-primary focus:ring-primary"
+                                    value="25"
+                                    data-service="HR"
+                                    checked
+                                />
+                                <span class="ml-2 text-gray-700">
+                                    HR ($25)
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Button -->
+                <button
+                    class="bg-primary text-white px-6 py-3 w-full rounded-lg font-medium hover:bg-opacity-80 transition duration-300 mt-4"
+                >
+                    Get Started
+                </button>
+            </div>
+        </div>
         <!-- Fantastic+ Bundle -->
         <div class="relative plan-card">
             <!-- Best Value Banner -->
@@ -52,7 +141,8 @@
                         Fantastic+ Bundle
                     </h3>
                     <div class="flex items-center text-2xl font-bold mb-4">
-                        <span class="total-wrapper">
+                        Total: 
+                        <span class="total-wrapper-red ml-2">
                             <span class="dollar-sign">$</span>
                             <span id="total-price">125</span>
                         </span>
@@ -142,95 +232,7 @@
             </div>
         </div>
 
-        <!-- Customizable Plan -->
-        <div class="relative plan-card">
-            <!-- Hidden Placeholder for Best Value -->
-            <div class="invisible bg-primary text-white text-center font-bold text-lg py-2 w-full absolute top-[-20px] left-0 rounded-t-lg shadow-md">
-                Placeholder
-            </div>
-
-            <!-- Customizable Plan Card -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between h-full mt-6">
-                <div class="flex flex-col justify-between flex-grow">
-                    <h3 class="text-2xl font-bold mb-4 text-primary">
-                        Customizable Plan
-                    </h3>
-                    <div class="flex items-center text-2xl font-bold mb-4">
-                        Total:
-                        <span class="total-wrapper ml-2">
-                            <span class="dollar-sign">$</span>
-                            <span id="total-price">145</span>
-                        </span>
-                        <span class="per-contracted ml-2">Per contracted tractor</span>
-                    </div>
-                    <!-- Customizable Explanation -->
-                    <p class="text-gray-600 text-sm mb-4">
-                        Build your own plan by selecting or unselecting the services below to perfectly match your business needs.
-                    </p>
-                    <div class="mb-4">
-                        <label class="block mb-2 text-gray-700 font-medium">
-                            Select Services:
-                        </label>
-                        <div class="space-y-4">
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox text-primary focus:ring-primary"
-                                    value="75"
-                                    data-service="Dispatch"
-                                    checked
-                                />
-                                <span class="ml-2 text-gray-700">
-                                    Dispatch ($75)
-                                </span>
-                            </label>
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox text-primary focus:ring-primary"
-                                    value="20"
-                                    data-service="Fleet"
-                                    checked
-                                />
-                                <span class="ml-2 text-gray-700">
-                                    Fleet ($20)
-                                </span>
-                            </label>
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox text-primary focus:ring-primary"
-                                    value="25"
-                                    data-service="Hiring"
-                                    checked
-                                />
-                                <span class="ml-2 text-gray-700">
-                                    Hiring ($25)
-                                </span>
-                            </label>
-                            <label class="flex items-center">
-                                <input
-                                    type="checkbox"
-                                    class="form-checkbox text-primary focus:ring-primary"
-                                    value="25"
-                                    data-service="HR"
-                                    checked
-                                />
-                                <span class="ml-2 text-gray-700">
-                                    HR ($25)
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <!-- Button -->
-                <button
-                    class="bg-primary text-white px-6 py-3 w-full rounded-lg font-medium hover:bg-opacity-80 transition duration-300 mt-4"
-                >
-                    Get Started
-                </button>
-            </div>
-        </div>
+       
     </div>
 </section>
 
@@ -772,6 +774,17 @@
 
         .total-wrapper {
     background: #2e368f;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1px 6px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px; /* Optional: To add small space between $ and the value */
+}
+
+.total-wrapper-red {
+    background: #e93232;
     border-radius: 8px;
     text-align: center;
     padding: 1px 6px;
