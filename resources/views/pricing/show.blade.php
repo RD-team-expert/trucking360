@@ -5,17 +5,46 @@
 @section('content')
 
 
-{{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+<script src="https://cdn.tailwindcss.com"></script>
 
 <div class="bg-gray-100 font-sans">
         
 
     <main class="container mx-auto px-4 py-8 con">
+<!-- Hero Section -->
+<section class="text-center py-16 bg-gray-100" data-aos="fade-up" data-aos-delay="200">
+    <div class="max-w-4xl mx-auto">
+        <!-- Title -->
+        <h2 class="text-4xl font-bold mb-6" style="color: #2e368f;"> <!-- Primary color applied -->
+            Straightforward Pricing, Unmatched Value
+        </h2>
+        <!-- Features -->
+        <div class="features-container">
+            <!-- Feature 1 -->
+            <div class="feature-item">
+                Straightforward pricing
+            </div>
+            <!-- Feature 2 -->
+            <div class="feature-item">
+                Safety features are included for free in all plans
+            </div>
+            <!-- Feature 3 -->
+            <div class="feature-item">
+                No hidden charges
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Plans Section -->
-<section class="mb-16 px-4">
+<section class="mb-16 px-4" data-aos="fade-up" data-aos-delay="600">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto relative">
-        <!-- Customizable Plan -->
-        <div class="relative plan-card" data-aos="fade-up" data-aos-delay="200">
+         <!-- Customizable Plan -->
+         <div class="relative plan-card">
+            <!-- Hidden Placeholder for Best Value -->
+            <div class="invisible bg-primary text-white text-center font-bold text-lg py-2 w-full absolute top-[-20px] left-0 rounded-t-lg shadow-md">
+                Placeholder
+            </div>
+
             <!-- Customizable Plan Card -->
             <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between h-full mt-6">
                 <div class="flex flex-col justify-between flex-grow">
@@ -30,6 +59,7 @@
                         </span>
                         <span class="per-contracted ml-2">Per contracted tractor</span>
                     </div>
+                    <!-- Customizable Explanation -->
                     <p class="text-gray-600 text-sm mb-4">
                         Build your own plan by selecting or unselecting the services below to perfectly match your business needs.
                     </p>
@@ -97,9 +127,13 @@
                 </button>
             </div>
         </div>
-
         <!-- Fantastic+ Bundle -->
-        <div class="relative plan-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="relative plan-card">
+            <!-- Best Value Banner -->
+            <div class="best-value-banner" data-aos="flip-right" data-aos-delay="800">
+                Best Value
+            </div>
+
             <!-- Fantastic+ Bundle Card -->
             <div class="bg-white rounded-2xl shadow-lg flex flex-col justify-between h-full mt-6 p-8">
                 <div class="flex flex-col justify-between flex-grow">
@@ -197,24 +231,28 @@
                 </button>
             </div>
         </div>
+
+       
     </div>
 </section>
 
 
 
 
+
+
         <!-- Dispatch Section -->
-        <section class="mb-16 py-16">
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-12" data-aos="zoom-in" data-aos-delay="800">
+        <section class="mb-16 py-16" data-aos="zoom-in" data-aos-delay="700">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-12">
                 <table class="w-full text-sm text-center text-gray-900 border border-gray-300">
                     <!-- Dispatching Services Header -->
                     <thead>
-                        <tr class="bg-primary text-white border-b border-gray-300">
+                        <tr class="bg-primary text-white border-b border-gray-300 ">
                             <th colspan="2" class="text-2xl font-bold px-6 py-4">
                                 Dispatching Services
                             </th>
                         </tr>
-                        <tr class="bg-gray-50 border-b border-gray-300">
+                        <tr class="bg-primary border-b border-gray-300 bg-opacity-50">
                             <th scope="col" class="px-6 py-3">Service</th>
                             <th scope="col" class="px-6 py-3">Description</th>
                         </tr>
@@ -323,7 +361,7 @@
                                 Fleet Services
                             </th>
                         </tr>
-                        <tr class="bg-gray-50 border-b border-gray-300">
+                        <tr class="bg-primary border-b border-gray-300 bg-opacity-50">
                             <th scope="col" class="px-6 py-3">Service</th>
                             <th scope="col" class="px-6 py-3">Description</th>
                         </tr>
@@ -427,7 +465,7 @@
                                 Hiring Services
                             </th>
                         </tr>
-                        <tr class="bg-gray-50 border-b border-gray-300">
+                        <tr class="bg-primary border-b border-gray-300 bg-opacity-50">
                             <th scope="col" class="px-6 py-3">Service</th>
                             <th scope="col" class="px-6 py-3">Description</th>
                         </tr>
@@ -546,7 +584,7 @@
                                 HR Services
                             </th>
                         </tr>
-                        <tr class="bg-gray-50 border-b border-gray-300">
+                        <tr class="bg-primary border-b border-gray-300 bg-opacity-50">
                             <th scope="col" class="px-6 py-3">Service</th>
                             <th scope="col" class="px-6 py-3">Description</th>
                         </tr>
