@@ -1,15 +1,16 @@
 <!-- Contact Section -->
 <section id="contact" class="py-20 bg-gray-100">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-primary mb-12">Contact Us</h2>
-        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+        <h2 class="text-3xl font-bold text-center text-primary mb-12" data-aos="fade-up">Contact Us</h2>
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
             <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2 p-6 bg-primary text-white">
+                <!-- Contact Information -->
+                <div class="md:w-1/2 p-6 bg-primary text-white" data-aos="fade-right" data-aos-delay="300">
                     <h3 class="text-2xl font-semibold mb-4">Get in Touch</h3>
                     <p class="mb-4">We're here to help and answer any question you might have.</p>
                     <div class="flex items-center mb-4">
                         <i class="fas fa-map-marker-alt mr-4 text-secondary"></i>
-                        <span> {{$settings->address}}</span>
+                        <span>{{$settings->address}}</span>
                     </div>
                     <div class="flex items-center mb-4">
                         <i class="fas fa-phone mr-4 text-secondary"></i>
@@ -20,7 +21,9 @@
                         <span>{{$settings->email}}</span>
                     </div>
                 </div>
-                <div class="md:w-1/2 p-6">
+
+                <!-- Contact Form -->
+                <div class="md:w-1/2 p-6" data-aos="fade-left" data-aos-delay="400">
                     <form action="{{ route('contact.store') }}" method="POST" id="contact-form" class="space-y-4">
                         @csrf
                         <div>

@@ -9,6 +9,7 @@
     {{-- <link href="{{ asset('website/css/output.css') }}" rel="stylesheet">
      --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}">
     <link rel="stylesheet" href="{{ asset('build/assets/output.css') }}">
 
@@ -68,6 +69,8 @@
     </main>
 
     @include('components.website.footer')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <script>
   document.addEventListener("DOMContentLoaded", function() {
     const spinner = document.getElementById('globalSpinner');
@@ -132,17 +135,7 @@
             }
         });
 
-        // Typed.js initialization
-        document.addEventListener('DOMContentLoaded', function() {
-            var typed = new Typed('#typed', {
-                stringsElement: '#typed-strings',
-                typeSpeed: 80,
-                backSpeed: 45,
-                loop: true,
-                showCursor: false
-            });
-        });
-
+    
         // Accordion functionality
         function toggleAccordion(element) {
             const content = element.nextElementSibling;
@@ -151,6 +144,21 @@
             content.classList.toggle('hidden');
             icon.classList.toggle('rotate-180');
         }
+
+           // Initialize AOS with custom configuration
+   AOS.init({
+        duration: 1000, // Animation duration
+        offset: 120, // Offset from the viewport
+        easing: 'ease-in-out', // Animation easing
+        once: false, // Allow animations to repeat
+    });
+
+    // Add scroll listener to reset AOS when at the top
+    window.addEventListener('scroll', function () {
+        if (window.scrollY === 0) {
+            AOS.refresh(); // Refresh AOS animations when scrolled to the top
+        }
+    });
     </script>
     
     

@@ -2,28 +2,28 @@
 <section id="home" class="pt-20 min-h-screen flex items-center gradient-bg relative overflow-hidden">
     <div class="container mx-auto px-0 flex flex-col md:flex-row items-center relative z-10">
         <div class="md:w-1/2 md:pl-12 z-10">
-            <!-- "Trucking 360" text size increased on mobile only -->
-            <h1 class="text-5xl font-bold text-white mb-4 md:text-4xl">{{ $settings->website_name }}</h1>
-            <h4 class="text-2xl font-bold text-white mb-4 md:text-3xl">Your Partner to Fantastic Plus</h4>
+            <!-- "Trucking 360" text with animations -->
+            <h1 class="text-5xl font-bold text-white mb-4 md:text-5xl" data-aos="fade-down">{{ $settings->website_name }}</h1>
+            <h4 class="text-2xl font-bold text-white mb-4 md:text-4xl" data-aos="fade-up" data-aos-delay="200">Your Partner to Fantastic Plus</h4>
             <br>
             <div id="typed-strings" class="hidden md:block">
                 <p>Best-in-class dispatch service</p>
                 <p>Available 24/7 for your drivers</p>
                 <p>High-quality communication</p>
-                <p>Scorecard analysis and tailored action plans to achieve and maintain Fantastic Plus scores</p>
+                <p>Scorecard analysis and tailored action plans to achieve and maintain Fantastic Plus scores</p>
                 <p>Customized reports</p>
                 <p>Daily disputes</p>
             </div>
-            <span id="typed" class="text-lg md:text-3xl text-white"></span>
+            <span id="typed" class="text-lg md:text-3xl text-white" data-aos="fade-in" data-aos-delay="400"></span>
         </div>
-        
+
         <!-- Image container with responsive sizing and positioning -->
-        <div class="header-container">
-          <img src="{{ asset('website/img/header.png') }}" alt="Truck Image" class="header-image">
-      </div>
-      
+        <div class="header-container" data-aos="zoom-in" data-aos-delay="600">
+            <img src="{{ asset('website/img/header.png') }}" alt="Truck Image" class="header-image">
+        </div>
     </div>
-    <!-- Added animated background particles -->
+
+    <!-- Animated background particles -->
     <div class="particles" aria-hidden="true"></div>
 </section>
 
@@ -87,9 +87,13 @@
 
 @media (min-width: 1920px) {
     .header-image {
-        height: 64rem;
-        bottom: -500px;
+        height: 53rem;
+        bottom: -415px;
         right: -190px;
+    }
+
+    h3 {
+        font-size: 2.75rem;
     }
 }
 
@@ -155,3 +159,18 @@
 
 
 </style>
+
+
+<script>
+        // Typed.js initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            var typed = new Typed('#typed', {
+                stringsElement: '#typed-strings',
+                typeSpeed: 80,
+                backSpeed: 45,
+                loop: true,
+                showCursor: false,
+            });
+        });
+
+</script>
