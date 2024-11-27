@@ -18,7 +18,7 @@
         </div>
 
         <!-- Image container with responsive sizing and positioning -->
-        <div class="header-container" data-aos="zoom-in" data-aos-delay="600">
+        <div class="header-container" data-aos="fade-left" data-aos-delay="600">
             <img src="{{ asset('website/img/header.png') }}" alt="Truck Image" class="header-image">
         </div>
     </div>

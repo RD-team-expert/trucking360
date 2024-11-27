@@ -35,7 +35,7 @@
                 <!-- Desktop Navigation Menu -->
                 <nav id="menu" class="hidden md:block">
                     <ul class="flex flex-row items-center space-x-6">
-                        <li><a href="{{ route('whyt360') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">Why trucking<span style="color: #e93232">360</span></a></li>
+                        <li><a href="{{ route('whyt360') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">Why Trucking <span style="color: #e93232">360</span></a></li>
                         <li><a href="{{ route('aboutus') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">About</a></li>
                         
                         <li><a href="{{ route('pricing') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">Pricing</a></li>
@@ -85,7 +85,7 @@
         <!-- Navigation Menu -->
         <nav class="mt-16 px-4">
             <ul class="flex flex-col items-center space-y-6 text-center">
-                <li><a href="{{ route('whyt360') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Why trucking360</a></li>
+                <li><a href="{{ route('whyt360') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Why Trucking 360</a></li>
                 <li><a href="{{ route('aboutus') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">About</a></li>
                 {{-- <li><a href="#faq" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">FAQ</a></li> --}}
                 <li><a href="{{ route('pricing') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Pricing</a></li>
