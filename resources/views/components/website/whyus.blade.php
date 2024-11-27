@@ -1,7 +1,7 @@
 
 <!-- Why Choose Us Section -->
 <section id="why" class="py-16 text-primary bg-gray-100">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4" >
         <h2 class="text-2xl font-semibold text-center mb-2" data-aos="fade-up">Our Commitment to Excellence</h2>
         <h1 class="text-4xl font-bold text-center mb-6" data-aos="fade-up" data-aos-delay="100">Why Choose Us!</h1>
         <p class="text-center mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
@@ -43,7 +43,8 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold mb-2 text-white">Customized Solutions and Transparency</h3>
-                <p class="text-gray-300">We understand that every AFP has unique needs. Our flexible solutions are designed to your specific goals, ensuring alignment with Amazon's high expectations. We will keep you informed at every step, from dispatch updates to safety insights, so you're always in the loop.</p>
+                <p class="text-gray-300">
+                    We understand that every AFP has unique needs. Our flexible solutions are designed to your specific goals, ensuring alignment with Amazon's high expectations.</p>
             </div>
         </div>
     </div>

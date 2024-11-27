@@ -237,12 +237,8 @@
 </section>
 
 
-
-
-
-
         <!-- Dispatch Section -->
-        <section class="mb-16 py-16" data-aos="zoom-in" data-aos-delay="700">
+        <section class="mb-16 py-16" data-aos="fade-left" data-aos-delay="500">
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-12">
                 <table class="w-full text-sm text-center text-gray-900 border border-gray-300">
                     <!-- Dispatching Services Header -->
@@ -748,7 +744,7 @@
   /* Adjust Best Value Banner */
   .best-value-banner {
         position: absolute;
-        top: -20px; /* Adjust this value to push it higher or lower */
+        top: -15px; /* Adjust this value to push it higher or lower */
         left: 0;
         width: 100%;
         background-color: #2e368f; /* Primary color */

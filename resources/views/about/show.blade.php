@@ -6,7 +6,7 @@
 
 <div class="bg-gray-100 font-sans">
 
-    <main class="container mx-auto px-4 py-20">
+    <main class="container mx-auto px-4 py-20" data-aos="fade-up" data-aos-delay="600">
         <section class="mb-12">
             <h2 class="text-3xl font-bold text-primary mb-6">About Us</h2>
             <div class="bg-white shadow-lg rounded-lg p-6 md:flex items-start">
