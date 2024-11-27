@@ -315,7 +315,7 @@
                         <!-- Safety Header -->
                         <tr class="bg-secondary text-white border-b border-gray-300">
                             <th colspan="2" class="text-lg font-bold px-6 py-4">
-                                Safety and Support Services
+                                Safety features are included
                             </th>
                         </tr>
             
@@ -544,7 +544,7 @@
                         <!-- Safety Header -->
                         <tr class="bg-secondary text-white border-b border-gray-300">
                             <th colspan="2" class="text-lg font-bold px-6 py-4">
-                                Safety and Support Services
+                                Safety features are included
                             </th>
                         </tr>
             
@@ -669,7 +669,7 @@
                         <!-- Safety Header -->
                         <tr class="bg-secondary text-white border-b border-gray-300">
                             <th colspan="2" class="text-lg font-bold px-6 py-4">
-                                Safety and Support Services
+                                Safety features are included
                             </th>
                         </tr>
             
