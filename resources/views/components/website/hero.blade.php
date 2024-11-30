@@ -51,6 +51,21 @@
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
 }
 
+@media (max-width: 1024px) and (min-height: 1366px) {
+    #home .container > div {
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 2.75rem;
+    }
+
+    .header-image {
+        display: none;
+    }
+}
+
+
 @media (max-width: 767px) {
     .header-image {
         display: none;
@@ -63,6 +78,8 @@
     h3 {
         font-size: 2.75rem;
     }
+
+    
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -82,6 +99,9 @@
 @media (min-width: 1024px) {
     .header-image {
         height: 44rem;
+    }
+    #home .container > div {
+        text-align: center;
     }
 }
 

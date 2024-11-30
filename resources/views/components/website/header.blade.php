@@ -32,40 +32,45 @@
                     </ul>
                 </nav>
            @else
-                <!-- Desktop Navigation Menu -->
-                <nav id="menu" class="hidden md:block">
-                    <ul class="flex flex-row items-center space-x-6">
-                        <li><a href="{{ route('whyt360') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">Why Trucking <span style="color: #e93232">360</span></a></li>
-                        <li><a href="{{ route('aboutus') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">About</a></li>
-                        
-                        <li><a href="{{ route('pricing') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">Pricing</a></li>
-                        {{-- <li><a href="#faq" class="block px-4 py-2 text-center text-gray-600 hover:text-secondary transition-colors duration-300">FAQ</a></li> --}}
-                        <li><a href="{{ route('contact') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold	">Contact</a></li>
-                        <!-- Resources Dropdown -->
-                        <li class="relative group">
-                            <a href="#" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold">
-                                Resources
-                                <svg class="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </a>
-                            <ul class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
-                                <li><a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Newsletter</a></li>
-                                <li><a href="{{ route('faqs') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQ's</a></li>
-                                <li><a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Free Resources</a></li>
-                            </ul>
-                        </li>
-                        <!-- "Book a Meeting" Button -->
-                        <li>
-                            <a href="{{ url('/bookings/create') }}" class="block px-4 py-2 text-center text-white bg-primary border border-primary hover:bg-white hover:text-secondary rounded transition-colors duration-300">
-                                Book a Meeting
-                            </a>
-                        </li>
-                        <a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-center text-white bg-secondary border border-secondary hover:bg-white hover:text-secondary rounded transition-colors duration-300">
-                            Dashboard
-                        </a>
-                    </ul>
-                </nav>
+              <!-- Desktop Navigation Menu -->
+<nav id="menu" class="hidden md:block">
+    <ul class="flex flex-row items-center space-x-6">
+        <li><a href="{{ route('whyt360') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold">Why Trucking <span style="color: #e93232">360</span></a></li>
+        <li><a href="{{ route('aboutus') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold">About</a></li>
+        <li><a href="{{ route('pricing') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold">Pricing</a></li>
+        <li><a href="{{ route('contact') }}" class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold">Contact</a></li>
+        
+        <!-- Resources Dropdown -->
+        <li class="relative">
+            <button id="resourcesDropdownButton" 
+                class="block px-4 py-2 text-center text-primary hover:text-secondary transition-colors duration-300 font-bold focus:outline-none">
+                Resources
+                <svg class="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <ul id="resourcesDropdownMenu" 
+                class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden">
+                <li><a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Newsletter</a></li>
+                <li><a href="{{ route('faqs') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQ's</a></li>
+                <li><a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Free Resources</a></li>
+            </ul>
+        </li>
+
+        <!-- "Book a Meeting" Button -->
+        <li>
+            <a href="{{ url('/bookings/create') }}" class="block px-4 py-2 text-center text-white bg-primary border border-primary hover:bg-white hover:text-secondary rounded transition-colors duration-300">
+                Book a Meeting
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-center text-white bg-secondary border border-secondary hover:bg-white hover:text-secondary rounded transition-colors duration-300">
+                Dashboard
+            </a>
+        </li>
+    </ul>
+</nav>
+
            @endif
         </div>
     </div>
@@ -126,6 +131,11 @@
     const desktopResourcesToggle = document.querySelector('.group > a'); // Selects the Resources link in the desktop view
     const desktopResourcesDropdown = document.querySelector('.group-hover\\:block'); // Desktop dropdown menu
 
+    // Toggle Resources dropdown in mobile menu
+    mobileResourcesToggle.addEventListener('click', () => {
+        mobileResourcesDropdown.classList.toggle('hidden');
+    });
+
     // Toggle mobile menu visibility
     menuToggle.addEventListener('click', () => {
         mobileMenuOverlay.classList.toggle('hidden');
@@ -145,23 +155,22 @@
         });
     });
 
-    // Toggle Resources dropdown in mobile menu
-    mobileResourcesToggle.addEventListener('click', () => {
-        mobileResourcesDropdown.classList.toggle('hidden');
+    document.addEventListener('DOMContentLoaded', function () {
+    const dropdownButton = document.getElementById('resourcesDropdownButton');
+    const dropdownMenu = document.getElementById('resourcesDropdownMenu');
+
+    dropdownButton.addEventListener('click', function () {
+        dropdownMenu.classList.toggle('hidden');
     });
 
-    // Toggle Resources dropdown in desktop menu
-    desktopResourcesToggle.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevents the default link behavior
-        desktopResourcesDropdown.classList.toggle('hidden');
-    });
-
-    // Close the desktop dropdown when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!desktopResourcesToggle.contains(event.target) && !desktopResourcesDropdown.contains(event.target)) {
-            desktopResourcesDropdown.classList.add('hidden');
+    // Close the dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.classList.add('hidden');
         }
     });
+});
+
 
     
 </script>

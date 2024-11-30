@@ -8,7 +8,8 @@
     <meta name="keywords" content="{{$settings->tags}}">
     {{-- <link href="{{ asset('website/css/output.css') }}" rel="stylesheet">
      --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}">
     <link rel="stylesheet" href="{{ asset('build/assets/output.css') }}">
@@ -114,6 +115,9 @@
             // For anchor links, show spinner briefly for smooth UX
             showSpinner();
             setTimeout(hideSpinner, 1000); // Short delay for anchor links
+        } else if (href && href.startsWith('#res') && !isNewTab) {
+       
+
         }
     });
 
