@@ -115,10 +115,7 @@
             // For anchor links, show spinner briefly for smooth UX
             showSpinner();
             setTimeout(hideSpinner, 1000); // Short delay for anchor links
-        } else if (href && href.startsWith('#res') && !isNewTab) {
-       
-
-        }
+        
     });
 
     // Graceful loading fallback
