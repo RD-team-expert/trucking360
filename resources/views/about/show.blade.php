@@ -38,7 +38,7 @@
                     </div>
                     <div class="w-full md:w-2/3" data-aos="fade-left" data-aos-duration="1500">
                         <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-                            Nick Krave
+                            Nicholas Krave
                         </h2>
                         <h3 class="text-2xl font-bold text-primary mb-6">
                             President, Trucking <span class="text-secondary">360</span>
@@ -91,7 +91,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We put our customers at the center of everything we do, making their needs and goals our
                                     top priority. By maintaining open communication, understanding their unique challenges,
                                     and tailoring our services to address them, we strive to exceed expectations and deliver
@@ -109,7 +109,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We are dedicated to engaging and empowering our customers’ employees, recognizing that
                                     they are the backbone of success in every operation. Through tailored safety campaigns,
                                     we prioritize the well-being of drivers and staff, equipping them with the knowledge and
@@ -129,7 +129,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We take full ownership of our actions, holding ourselves accountable for every decision
                                     and outcome. By providing clear direction, we ensure that our strategies and solutions
                                     align with your goals and operational needs. We collaborate closely with your dedicated
@@ -149,7 +149,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We continuously seek to innovate and simplify by leveraging technology to streamline
                                     processes and improve efficiency.</p>
                             </div>
@@ -164,7 +164,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We foster a culture of curiosity and continuous learning, encouraging exploration and
                                     innovation at every level. By offering assistance with pilot programs, we help our
                                     customers test and adopt new strategies that drive growth and adaptability. We deeply
@@ -183,7 +183,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We are dedicated to hiring and developing top talent to best serve our customers,
                                     ensuring that our team is equipped with the skills, knowledge, and passion needed to
                                     deliver exceptional service. This same principle is seamlessly passed along to our
@@ -206,7 +206,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We hold ourselves to the highest standards in every aspect of our operations, ensuring
                                     that excellence is not just a goal but a way of doing business. Striving to achieve and
                                     maintain a Fantastic+ status, we align our processes, services, and results with the
@@ -226,7 +226,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We strive to earn trust by consistently delivering on our promises with speed and
                                     quality, understanding that action and reliability are key to building strong
                                     partnerships. Our commitment to taking action means we do what we say we will do,
@@ -248,7 +248,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We prioritize cost savings by partnering with value-driven solutions, enabling us to
                                     deliver more with less without compromising quality or service. Our per-accepted
                                     contract cost structure ensures that our customers are in good hands, only paying for
@@ -267,7 +267,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We work diligently to earn and maintain trust by offering honest business guidance and
                                     fostering long-term relationships that deliver results to benefit your bottom line.</p>
                             </div>
@@ -282,7 +282,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We dive deep into every detail, leaving no stone unturned to ensure accuracy. We conduct
                                     thorough accident investigations including comprehensive root cause analysis and
                                     implementing actionable solutions to prevent recurrence. In addition, we analyze
@@ -302,7 +302,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary font-semibold">
                                 <p>We are dedicated to delivering outstanding results, doing whatever it takes to safely
                                     achieve Fantastic+ status and drive our customers’ businesses forward. With a focus on
                                     safety, efficiency, and overall excellence scores, we align every effort with the high
