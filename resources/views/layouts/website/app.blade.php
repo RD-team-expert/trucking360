@@ -116,7 +116,7 @@
             showSpinner();
             setTimeout(hideSpinner, 1000); // Short delay for anchor links
         
-    });
+    }});
 
     // Graceful loading fallback
     setTimeout(() => {

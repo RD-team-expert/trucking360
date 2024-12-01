@@ -691,23 +691,15 @@
             </div>
             
         </section>
-
-        <!-- FAQs Section -->
-        <section class="py-10 bg-gray-100">
-            <div class="max-w-4xl mx-auto">
-                <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">
-                    Frequently Asked Questions
-                </h3>
-                <div class="space-y-4" id="faq-accordion">
-                    <!-- FAQ items will be dynamically inserted here -->
-                    
-                        <div class="p-4 text-gray-600 hidden">
-                            <!-- Answer content dynamically added here -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- FAQ Section -->
+<section id="faq" class="py-20 bg-gray-100 px-4 py-8" data-aos="fade-up" data-aos-delay="600">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-primary mb-12">Frequently Asked Questions</h2>
+        <div class="max-w-3xl mx-auto space-y-4" id="faq-accordion">
+            <!-- FAQ items will be dynamically inserted here -->
+        </div>
+    </div>
+</section>
         <section class="py-16 bg-gray-100">
             <div class="container mx-auto px-6 text-center">
                 <div class="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg inline-block">
@@ -953,33 +945,55 @@
         },
     ];
 
-    const faqContainer = document.getElementById("faq-accordion");
+  // Populate FAQ Accordion
+  const faqContainer = document.getElementById("faq-accordion");
 
-    faqData.forEach((faq, index) => {
-        const faqItem = document.createElement("div");
-        faqItem.className = "border-b border-gray-200";
-        faqItem.innerHTML = `
-        <button class="flex justify-between items-center w-full py-4 px-6 text-left hover:bg-gray-50 focus:outline-none" id="faq-button-${index}">
-            <span class="font-medium">${faq.question}</span>
-            <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
+faqData.forEach((faq, index) => {
+    // Create FAQ Item
+    const faqItem = document.createElement("div");
+    faqItem.className = "bg-white rounded-lg shadow-md";
+
+    faqItem.innerHTML = `
+        <button 
+            class="flex justify-between items-center w-full p-4 text-left focus:outline-none"
+            id="faq-button-${index}"
+        >
+            <span class="text-lg font-semibold text-primary">${faq.question}</span>
+            <i class="fas fa-chevron-down text-secondary transition-transform duration-300"></i>
         </button>
-        <div class="hidden px-6 pb-4" id="faq-answer-${index}">
-            <p>${faq.answer}</p>
+        <div class="hidden p-4 border-t" id="faq-answer-${index}">
+            <p class="text-gray-600">${faq.answer}</p>
         </div>
     `;
-        faqContainer.appendChild(faqItem);
 
-        const button = faqItem.querySelector(`#faq-button-${index}`);
-        const answer = faqItem.querySelector(`#faq-answer-${index}`);
-        const icon = button.querySelector("svg");
+    faqContainer.appendChild(faqItem);
 
-        button.addEventListener("click", () => {
-            answer.classList.toggle("hidden");
-            icon.classList.toggle("rotate-180");
+    // Add Toggle Functionality
+    const button = faqItem.querySelector(`#faq-button-${index}`);
+    const answer = faqItem.querySelector(`#faq-answer-${index}`);
+    const icon = button.querySelector("i");
+
+    button.addEventListener("click", () => {
+        const isOpen = !answer.classList.contains("hidden");
+
+        // Close all other open answers
+        document.querySelectorAll("#faq-accordion .p-4.border-t").forEach((item) => {
+            if (!item.classList.contains("hidden")) {
+                item.classList.add("hidden");
+                item.previousElementSibling.querySelector("i").classList.remove("rotate-180");
+            }
         });
+
+        // Toggle current answer
+        if (!isOpen) {
+            answer.classList.remove("hidden");
+            icon.classList.add("rotate-180");
+        } else {
+            answer.classList.add("hidden");
+            icon.classList.remove("rotate-180");
+        }
     });
+});
 </script>
 @endsection
 
