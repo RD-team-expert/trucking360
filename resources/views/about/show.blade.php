@@ -14,7 +14,7 @@
                         <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">
                             Our <span class="text-4xl md:text-5xl font-bold text-secondary mb-4">Mission</span>
                         </h1>
-                        <p class="text-lg md:text-xl text-primary leading-relaxed">
+                        <p class="text-lg md:text-xl text-primary font-semibold leading-relaxed">
                             To empower AFPs by delivering top-tier management solutions tailored to enhance operational
                             efficiency, elevate excellence performance metrics, and secure high evaluations from Amazon. We
                             are dedicated to fostering a culture of continuous improvement, ensuring mutual growth, success,
@@ -38,32 +38,34 @@
                     </div>
                     <div class="w-full md:w-2/3" data-aos="fade-left" data-aos-duration="1500">
                         <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
-                            Leadership
+                            Nick Krave
                         </h2>
-                        <h3 class="text-2xl font-semibold text-primary mb-6">
+                        <h3 class="text-2xl font-bold text-primary mb-6">
                             President, Trucking <span class="text-secondary">360</span>
                         </h3>
                         <div class="space-y-6 text-primary">
-                            <p class="leading-relaxed font-bold	">
-                                Hi, my name is Nicholas Krave, and I’m proud to serve as the President of Trucking 360. I am an
+                            <p class="leading-relaxed font-semibold">
+                                Hi, my name is Nicholas, and I’m proud to serve as the President of Trucking <span
+                                    class="text-secondary">360</span>. I am an
                                 Ohio native with my degree from Ferris State University in Big Rapids, Michigan. After
                                 college, I developed a deep passion for logistics and everything it takes to keep things
                                 moving smoothly. Throughout my career, I’ve been dedicated to creating efficient,
                                 customer-centered solutions that prioritize flexibility and operational excellence.
                             </p>
-                            <p class="leading-relaxed font-bold	">
+                            <p class="leading-relaxed font-semibold">
                                 Beyond logistics, I have a big love for dogs and believe that genuine connections and clear
                                 communication make all the difference. Not only with dogs but, in business too! That’s why
                                 you can always count on me being just one call away whenever you need support.
                             </p>
-                            <p class="leading-relaxed font-bold	">
-                                With Trucking <span class="text-secondary">360</span>, I’ve worked hard to build a team that shares my obsession with customer
+                            <p class="leading-relaxed font-semibold">
+                                With Trucking <span class="text-secondary">360</span>, I’ve worked hard to build a team that
+                                shares my obsession with customer
                                 success and excellence. You can count on my team and I to be focused on doing whatever it
                                 takes to ensure you achieve and maintain a Fantastic Plus rating. Together, we’re here to be
                                 more than just a service provider—we’re your partner, fully committed to helping your
                                 business thrive.
                             </p>
-                            <p class="leading-relaxed font-bold	">
+                            <p class="leading-relaxed font-semibold">
                                 We proudly align our leadership principles with those of Amazon to best serve our customers.
                                 These principles guide every action we take, from putting our customers first and fostering
                                 engagement within their teams, to delivering with speed, precision, and integrity. Our
@@ -81,7 +83,7 @@
                     <div class="accordion">
                         <div class="accordion-item border-b border-gray-200">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Customer Obsession
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -89,17 +91,17 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
                                 <p>We put our customers at the center of everything we do, making their needs and goals our
                                     top priority. By maintaining open communication, understanding their unique challenges,
                                     and tailoring our services to address them, we strive to exceed expectations and deliver
                                     exceptional service. Every action we take is driven by a commitment to helping our
-                                    customers succeed in their operations..</p>
+                                    customers succeed in their operations.</p>
                             </div>
                         </div>
                         <div class="accordion-item border-b border-gray-200">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Employee Obsession
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +109,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
                                 <p>We are dedicated to engaging and empowering our customers’ employees, recognizing that
                                     they are the backbone of success in every operation. Through tailored safety campaigns,
                                     we prioritize the well-being of drivers and staff, equipping them with the knowledge and
@@ -117,9 +119,9 @@
                                     ensuring employees feel valued, motivated, and aligned with their company’s goals.</p>
                             </div>
                         </div>
-                        <div class="accordion-item border-b border-gray-200">
+                        <div class="accordion-item border-b border-gray-200 text-primary">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Ownership
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -137,9 +139,9 @@
                                     your operations.</p>
                             </div>
                         </div>
-                        <div class="accordion-item border-b border-gray-200">
+                        <div class="accordion-item border-b border-gray-200 text-primary">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Invent & Simplify
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -147,14 +149,14 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
                                 <p>We continuously seek to innovate and simplify by leveraging technology to streamline
                                     processes and improve efficiency.</p>
                             </div>
                         </div>
                         <div class="accordion-item border-b border-gray-200">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Learn & Be Curious
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -162,7 +164,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
                                 <p>We foster a culture of curiosity and continuous learning, encouraging exploration and
                                     innovation at every level. By offering assistance with pilot programs, we help our
                                     customers test and adopt new strategies that drive growth and adaptability. We deeply
@@ -173,7 +175,7 @@
                         </div>
                         <div class="accordion-item border-b border-gray-200">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Hire & Develop the Best
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +183,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
                                 <p>We are dedicated to hiring and developing top talent to best serve our customers,
                                     ensuring that our team is equipped with the skills, knowledge, and passion needed to
                                     deliver exceptional service. This same principle is seamlessly passed along to our
@@ -194,9 +196,9 @@
                                     to achieve long-term success.</p>
                             </div>
                         </div>
-                        <div class="accordion-item border-b border-gray-200">
+                        <div class="accordion-item border-b border-gray-200 text-primary">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Insist on the Highest Standards - Fantastic+ Status
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +206,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
                                 <p>We hold ourselves to the highest standards in every aspect of our operations, ensuring
                                     that excellence is not just a goal but a way of doing business. Striving to achieve and
                                     maintain a Fantastic+ status, we align our processes, services, and results with the
@@ -216,7 +218,7 @@
                         </div>
                         <div class="accordion-item border-b border-gray-200">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Bias for Action
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -224,7 +226,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
                                 <p>We strive to earn trust by consistently delivering on our promises with speed and
                                     quality, understanding that action and reliability are key to building strong
                                     partnerships. Our commitment to taking action means we do what we say we will do,
@@ -238,7 +240,7 @@
                         </div>
                         <div class="accordion-item border-b border-gray-200">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Frugality - Value Added Partners & Cost Savings
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -246,7 +248,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
                                 <p>We prioritize cost savings by partnering with value-driven solutions, enabling us to
                                     deliver more with less without compromising quality or service. Our per-accepted
                                     contract cost structure ensures that our customers are in good hands, only paying for
@@ -257,7 +259,7 @@
                         </div>
                         <div class="accordion-item border-b border-gray-200">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Earn Trust
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -265,14 +267,14 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
                                 <p>We work diligently to earn and maintain trust by offering honest business guidance and
                                     fostering long-term relationships that deliver results to benefit your bottom line.</p>
                             </div>
                         </div>
                         <div class="accordion-item border-b border-gray-200">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Dive Deep - Accident Investigation & Customer Supply Chain Analysis
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -280,7 +282,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
                                 <p>We dive deep into every detail, leaving no stone unturned to ensure accuracy. We conduct
                                     thorough accident investigations including comprehensive root cause analysis and
                                     implementing actionable solutions to prevent recurrence. In addition, we analyze
@@ -292,7 +294,7 @@
                         </div>
                         <div class="accordion-item">
                             <button
-                                class="accordion-header w-full text-left p-4 font-semibold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
+                                class="accordion-header w-full text-left p-4 font-bold text-primary hover:bg-gray-50 focus:outline-none flex justify-between items-center">
                                 Deliver Results - Whatever it Takes to be Fantastic+, Safely
                                 <svg class="w-6 h-6 transform transition-transform duration-200" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -300,7 +302,7 @@
                                         d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </button>
-                            <div class="accordion-content hidden p-4 bg-gray-50">
+                            <div class="accordion-content hidden p-4 bg-gray-50 text-primary">
                                 <p>We are dedicated to delivering outstanding results, doing whatever it takes to safely
                                     achieve Fantastic+ status and drive our customers’ businesses forward. With a focus on
                                     safety, efficiency, and overall excellence scores, we align every effort with the high
