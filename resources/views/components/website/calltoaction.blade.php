@@ -1,7 +1,7 @@
 <!-- Parallax Section -->
 <section 
     class="parallax py-20 bg-fixed bg-cover bg-center" 
-    style="background-image: url('{{ asset('website/img/paral.jpg') }}');">
+    style="background-image: url('{{ asset('website/img/para.jpg') }}');">
     <div class="container mx-auto px-6 text-center">
         <div 
             class="bg-white bg-opacity-80 p-8 rounded-lg shadow-lg inline-block" 
