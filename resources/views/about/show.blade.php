@@ -33,7 +33,7 @@
             <section class="container mx-auto px-4 py-16 bg-white">
                 <div class="flex flex-col md:flex-row gap-12 items-start" data-aos="fade-up" data-aos-duration="800">
                     <div class="w-full md:w-1/2 image" data-aos="fade-right" data-aos-duration="1300">
-                        <img src="{{ asset('website/img/nick.jpg') }}" alt="Leadership placeholder"
+                        <img src="{{ asset('website/img/nickpic.jpg') }}" alt="Leadership placeholder"
                             class="rounded-lg shadow-lg w-full" />
                     </div>
                     <div class="w-full md:w-2/3" data-aos="fade-left" data-aos-duration="1500">
