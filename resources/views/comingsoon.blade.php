@@ -96,14 +96,53 @@
             object-fit: cover;
             z-index: -1;
         }
+
+        /* افتراضياً، نخفي فيديو الموبايل */
+.mobile-video {
+    display: none;
+}
+
+/* الفيديو الرئيسي للديسكتوب */
+.desktop-video {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .desktop-video {
+        display: none; 
+    }
+    .mobile-video {
+        display: block; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+
     </style>
     
     <div class="min-h-screen enhanced-gradient flex flex-col justify-between p-6 md:p-12 text-white overflow-hidden relative">
-        <!-- Video Background -->
-        <video autoplay muted loop class="video-background">
-            <source src="{{asset('website/img/dahsboard.mp4')}}" type="video/mp4" /> <!-- Replace 'path/to/your/video.mp4' with your video URL -->
-            Your browser does not support the video tag.
-        </video>
+       <!-- Video Background -->
+<video autoplay muted loop class="video-background desktop-video">
+    <source src="{{ asset('website/img/dahsboard.mp4') }}" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
+
+<video autoplay muted loop class="video-background mobile-video">
+    <source src="{{ asset('website/img/dashboardmobile.mp4') }}" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
     
         <!-- Background Elements -->
         <div class="absolute inset-0 overflow-hidden">

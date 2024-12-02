@@ -35,6 +35,19 @@
     /* animation: gradientBG 15s ease infinite; */
 }
 
+#home {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#typed {
+    display: block;
+    height: 3rem; /* ارتفاع ثابت للنص المتحرك */
+    white-space: pre-wrap; /* يمنع انكسار النص */
+}
+
+
 .header-container {
     width: 50%;
     display: flex;
@@ -47,7 +60,7 @@
     bottom: -345px;
     right: -40px;
     width: auto;
-    height: 12rem;
+    height: 10rem;
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
 }
 
@@ -98,7 +111,8 @@
 
 @media (min-width: 1024px) {
     .header-image {
-        height: 44rem;
+        height: 42.8rem;
+        /* bottom: 2rem; */
     }
     #home .container > div {
         text-align: center;
@@ -107,9 +121,11 @@
 
 @media (min-width: 1920px) {
     .header-image {
-        height: 53rem;
-        bottom: -415px;
+        height: 64rem;
+        /* bottom: 80px; */
+        top: -32rem;
         right: -190px;
+        width: 200rem;
     }
 
     h3 {

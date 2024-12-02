@@ -90,28 +90,28 @@
         <!-- Navigation Menu -->
         <nav class="mt-16 px-4">
             <ul class="flex flex-col items-center space-y-6 text-center">
-                <li><a href="{{ route('whyt360') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Why Trucking 360</a></li>
-                <li><a href="{{ route('aboutus') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">About</a></li>
+                <li><a href="{{ route('whyt360') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Why Trucking 360</a></li>
+                <li><a href="{{ route('aboutus') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">About</a></li>
                 {{-- <li><a href="#faq" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">FAQ</a></li> --}}
-                <li><a href="{{ route('pricing') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Pricing</a></li>
+                <li><a href="{{ route('pricing') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Pricing</a></li>
 
-                <li><a href="#contact" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Contact</a></li>
+                <li><a href="#contact" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Contact</a></li>
                 <!-- Resources Dropdown (Mobile) -->
                 <li class="relative">
-                    <button id="mobile-resources-toggle" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300 flex items-center">
+                    <button id="mobile-resources-toggle" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300 flex items-center">
                         Resources
                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <ul id="mobile-resources-dropdown" class="hidden mt-2 space-y-2">
-                        <li><a href="{{ route('comingsoon') }}" class="text-gray-700 text-xl hover:text-secondary transition-colors duration-300">Newsletter</a></li>
-                        <li><a href="{{ route('faqs') }}" class="text-gray-700 text-xl hover:text-secondary transition-colors duration-300">FAQ's</a></li>
-                        <li><a href="{{ route('comingsoon') }}" class="text-gray-700 text-xl hover:text-secondary transition-colors duration-300">Free Resources</a></li>
+                        <li><a href="{{ route('comingsoon') }}" class="text-primary text-xl hover:text-secondary transition-colors duration-300">Newsletter</a></li>
+                        <li><a href="{{ route('faqs') }}" class="text-primary text-xl hover:text-secondary transition-colors duration-300">FAQ's</a></li>
+                        <li><a href="{{ route('comingsoon') }}" class="text-primary text-xl hover:text-secondary transition-colors duration-300">Free Resources</a></li>
                     </ul>
                 </li>
-                <li><a href="{{url('bookings/create')}}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Book A Meeting</a></li>
-                <li><a href="{{ route('comingsoon') }}" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">Dashboard</a></li>
+                <li><a href="{{url('bookings/create')}}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Book A Meeting</a></li>
+                <li><a href="{{ route('comingsoon') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Dashboard</a></li>
             </ul>
         </nav>
     </div>
