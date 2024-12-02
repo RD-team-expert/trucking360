@@ -962,7 +962,7 @@ faqData.forEach((faq, index) => {
             <i class="fas fa-chevron-down text-secondary transition-transform duration-300"></i>
         </button>
         <div class="hidden p-4 border-t" id="faq-answer-${index}">
-            <p class="text-gray-600">${faq.answer}</p>
+            <p class="text-primary">${faq.answer}</p>
         </div>
     `;
 

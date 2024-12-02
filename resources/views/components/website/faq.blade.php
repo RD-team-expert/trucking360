@@ -10,7 +10,7 @@
                         <i class="fas fa-chevron-down text-secondary transition-transform duration-300"></i>
                     </button>
                     <div class="hidden p-4 border-t">
-                        <p class="text-gray-600">{{ $faq->answer }}</p>
+                        <p class="text-primary">{{ $faq->answer }}</p>
                     </div>
                 </div>
             @endforeach
