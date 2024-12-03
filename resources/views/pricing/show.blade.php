@@ -57,7 +57,7 @@
                             <span class="dollar-sign">$</span>
                             <span id="total-price">145</span>
                         </span>
-                        <span class="per-contracted ml-2">Per contracted tractor</span>
+                        <span class="per-contracted ml-2">Per accepted contract</span>
                     </div>
                     <!-- Customizable Explanation -->
                     <p class="text-gray-600 text-sm mb-4">
@@ -146,11 +146,11 @@
                             <span class="dollar-sign">$</span>
                             <span id="total-price">125</span>
                         </span>
-                        <span class="per-contracted ml-2">Per contracted tractor</span>
+                        <span class="per-contracted ml-2">Per accepted contract</span>
                     </div>
                     <p class="mb-4 text-gray-700">
                         Save <span class="font-bold">$80 monthly</span> and <span class="font-bold">$4,160 annually</span>
-                        <span class="font-bold">per contracted tractor</span> by choosing the F+ Bundle plan.
+                        <span class="font-bold">Per accepted contract</span> by choosing the F+ Bundle plan.
                     </p>
                     <ul class="mb-6 space-y-4">
                         <li class="flex items-start text-gray-700">
@@ -240,7 +240,7 @@
         <!-- Dispatch Section -->
         <section class="mb-16 py-16" data-aos="fade-left" data-aos-delay="500">
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-12">
-                <table class="w-full text-sm text-center text-gray-900 border border-gray-300">
+                <table class="w-full text-sm text-gray-900 border border-gray-300">
                     <!-- Dispatching Services Header -->
                     <thead>
                         <tr class="bg-primary text-white border-b border-gray-300 ">
@@ -349,7 +349,7 @@
             </div>
 
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-12">
-                <table class="w-full text-sm text-center text-gray-900 border border-gray-300">
+                <table class="w-full text-sm text-gray-900 border border-gray-300">
                     <!-- Fleet Services Header -->
                     <thead>
                         <tr class="bg-primary text-white border-b border-gray-300">
@@ -453,7 +453,7 @@
             </div>
             
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-12">
-                <table class="w-full text-sm text-center text-gray-900 border border-gray-300">
+                <table class="w-full text-sm text-gray-900 border border-gray-300">
                     <!-- Hiring Services Header -->
                     <thead>
                         <tr class="bg-primary text-white border-b border-gray-300">
@@ -572,7 +572,7 @@
             </div>
             
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-12">
-                <table class="w-full text-sm text-center text-gray-900 border border-gray-300">
+                <table class="w-full text-sm text-gray-900 border border-gray-300">
                     <!-- HR Services Header -->
                     <thead>
                         <tr class="bg-primary text-white border-b border-gray-300">

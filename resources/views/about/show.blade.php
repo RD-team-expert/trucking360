@@ -22,12 +22,49 @@
 
                         </p>
                     </div>
-                    <div class="w-64 h-64 relative" data-aos="fade-left" data-aos-duration="1200">
-                        <img src="{{ asset('website/img/3.1.gif') }}" alt="Leadership placeholder"
-                            class="rounded-lg w-full h-full object-cover" />
+                    <div class="mission-image">
+                        <img src="{{ asset('website/img/3.1.gif') }}" alt="Mission Image" />
                     </div>
+
                 </div>
             </section>
+
+            <style>
+                .mission-image {
+                    max-width: 25%;
+                    /* Adjust size relative to the container */
+                    margin-left: auto;
+                    
+                    /* Push image to the right */
+                }
+
+                .mission-image img {
+                    width: 100%;
+                    /* Fully responsive */
+                    height: 20%;
+                    /* Maintain aspect ratio */
+                    object-fit: contain;
+                    /* Ensure proper scaling without cropping */
+                }
+
+                /* Responsive adjustments for mobile */
+                @media (max-width: 768px) {
+                    .mission-image {
+                        max-width: 100%;
+                        /* Full width for smaller screens */
+                        margin-left: 0;
+                        /* Center the image */
+                        text-align: center;
+                    }
+
+                    .mission-image img {
+                        width: 80%;
+                        /* Slightly smaller than the full width for padding */
+                        margin: 0 auto;
+                        /* Center the image */
+                    }
+                }
+            </style>
 
             <!-- Leadership Section -->
             <section class="container mx-auto px-4 py-16 bg-white">
@@ -45,7 +82,7 @@
                         </h3>
                         <div class="space-y-6 text-primary">
                             <p class="leading-relaxed font-semibold">
-                                Hi, my name is Nicholas, and I’m proud to serve as the President of Trucking <span
+                                Hi, my name is Nick, and I’m proud to serve as the President of Trucking <span
                                     class="text-secondary">360</span>. I am an
                                 Ohio native with my degree from Ferris State University in Big Rapids, Michigan. After
                                 college, I developed a deep passion for logistics and everything it takes to keep things
@@ -76,7 +113,7 @@
                 </div>
             </section>
             <style>
-                .image{
+                .image {
                     margin-top: 1%;
                 }
             </style>
