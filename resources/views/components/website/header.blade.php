@@ -90,12 +90,12 @@
         <!-- Navigation Menu -->
         <nav class="mt-16 px-4">
             <ul class="flex flex-col items-center space-y-6 text-center">
-                <li><a href="{{ route('whyt360') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Why Trucking 360</a></li>
+                <li><a href="{{ route('whyt360') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Why Trucking <span style="color: #e93232">360</span></a></li>
                 <li><a href="{{ route('aboutus') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">About</a></li>
                 {{-- <li><a href="#faq" class="text-gray-800 text-2xl font-semibold hover:text-secondary transition-colors duration-300">FAQ</a></li> --}}
                 <li><a href="{{ route('pricing') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Pricing</a></li>
 
-                <li><a href="#contact" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Contact</a></li>
+                <li><a href="{{ route('contact') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Contact</a></li>
                 <!-- Resources Dropdown (Mobile) -->
                 <li class="relative">
                     <button id="mobile-resources-toggle" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300 flex items-center">
