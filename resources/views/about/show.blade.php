@@ -151,7 +151,7 @@
 <!-- FAQ Section -->
 <section id="faq" class="py-20 bg-gray-100">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-primary mb-12" data-aos="fade-up">Frequently Asked Questions</h2>
+        <h2 class="text-3xl font-bold text-center text-primary mb-12" data-aos="fade-up">Our Core Principles</h2>
         <div class="max-w-3xl mx-auto space-y-4" id="accordion">
             <!-- Customer Obsession -->
             <div class="bg-white rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="0">
