@@ -720,6 +720,14 @@
                     margin-bottom: 1.5rem;
                     /* Adjust spacing as needed */
                 }
+                @media (max-width: 767px) {
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+}
             }
         </style>
 

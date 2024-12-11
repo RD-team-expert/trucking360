@@ -64,7 +64,7 @@
                 <!-- Email -->
                 <p class="text-sm md:text-base flex items-center">
                     <i class="fas fa-envelope mr-2 text-secondary"></i> 
-                    <a href="mailto:{{ $settings->email }}" class="text-white hover:text-secondary transition-colors duration-300">
+                    <a href="mailto:{{ $settings->email }}" class="text-white hover:text-secondary transition-colors duration-300 email">
                         {{ $settings->email }}
                     </a>
                 </p>
@@ -76,3 +76,11 @@
         </div>
     </div>
 </footer>
+
+
+<style>
+    .email{
+        overflow: hidden;
+        
+    }
+</style>
