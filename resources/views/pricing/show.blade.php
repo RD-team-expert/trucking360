@@ -7,7 +7,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <div class="bg-gray-100 font-sans">
+    <div class="bg-gray-100 font-sans" style="overflow: hidden;">
 
 
         <main class="container mx-auto px-4 py-8 con">
