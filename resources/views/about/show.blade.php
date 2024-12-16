@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="bg-gray-100 font-sans">
+    <div class="bg-gray-100 font-sans" style="overflow: hidden;">
 
         <main class="container mx-auto px-4 py-20">
             <section class="container mx-auto px-4 py-16 md:py-24">
@@ -45,6 +45,15 @@
                     /* Maintain aspect ratio */
                     object-fit: contain;
                     /* Ensure proper scaling without cropping */
+                }
+
+                @media (max-width: 300px) {
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        overflow-x: hidden;
+                        /* Prevent horizontal overflow */
+                    }
                 }
 
                 /* Responsive adjustments for mobile */

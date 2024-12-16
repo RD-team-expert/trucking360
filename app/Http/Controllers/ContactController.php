@@ -27,7 +27,7 @@ class ContactController extends Controller
 
         // Notification
         Notification::create([
-            'user_id'         => Auth::id() ?? null,
+            'user_id'         => 3,
             'type'            => 'New Contact Submission',
             'title'           => 'New Contact Form Submission',
             'message'         => 'A new contact form submission has been made by ' . $contact->name . '.',
@@ -35,6 +35,7 @@ class ContactController extends Controller
             'notifiable_type' => User::class,
             'notifiable_id'   => Auth::id() ?? 1,
         ]);
+        
 
         // Redirect with success message
         return redirect()->route('message')->with([
