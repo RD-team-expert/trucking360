@@ -154,6 +154,8 @@
             }
         }
 
+        
+
         @media (min-width: 820px) and (max-width:1024px) {
             .desktop-video {
                 display: none;
@@ -178,10 +180,17 @@
                 align-items: flex-start;
             }
         }
+
+        @media (max-width: 348px) {
+            #mainContent{
+                margin-top: 4rem;
+            }
+        
+        }
     </style>
 
     <div
-        class="min-h-screen enhanced-gradient flex flex-col justify-between p-6 md:p-12 text-white overflow-hidden relative">
+        class="min-h-screen enhanced-gradient flex flex-col justify-between p-6 md:p-12 text-white overflow-hidden relative" id="screen">
         <!-- Video Background -->
         <video autoplay muted loop class="video-background desktop-video">
             <source src="{{ asset('website/img/dahsboard.mp4') }}" type="video/mp4" />

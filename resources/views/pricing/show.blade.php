@@ -791,6 +791,10 @@ body {
                 answer: "Our per-accepted contract pricing provides flexibility and savings, ensuring you only pay for active operations. Unlike flat-rate models that charge regardless of tractor status, our approach aligns costs with your actual usage—no unnecessary charges if a tractor is down. This way, you maximize value, paying only for what's actively moving your business forward.",
             },
             {
+                question: "How will I be billed?",
+                answer: "Clients are billed the Monday following the acceptance of their upcoming contracts, which are released and approved each Friday. Once contracts are finalized, Trucking 360 strategically plans dedicated staffing to meet your business needs. Billing is processed through our secure payment portal, offering two convenient options: automatic ACH debits from your account on file or credit card payments, based on your preference. You will receive a detailed invoice outlining the charges, along with a receipt once the payment has been successfully processed.",
+            },
+            {
                 question: "Will my pricing change if I add more tractors?",
                 answer: "The rate per accepted contract stays consistent, so you know what to expect! However, accepting more contracts will increase the total amount billed, based on how many contracts you accept that week. For instance, if you accepted 14 contracts at our dispatching rate of $75, your bill would be 14 x $75 = $1,050. With 15 contracts, it would be 15 x $75 = $1,125. For Fantastic+ bundle users at $125 per accepted contract, the bill would be 14 x $125 = $1,750, and for 15 accepted contracts, 15 x $125 = $1,875. This predictable per-unit pricing scales with your operations while keeping costs transparent.",
             },
