@@ -41,7 +41,7 @@
                     <i class="bi bi-exclamation-triangle text-6xl text-blue-500"></i>
                     <h1 class="text-5xl font-bold mt-4">404</h1>
                     <h2 class="text-3xl font-semibold mt-4">Page Not Found</h2>
-                    <p class="text-lg mt-4">We’re sorry, the page you have looked for does not exist on our website! Maybe go to our home page or try to use a search?</p>
+                    <p class="text-lg mt-4">We’re sorry, the page you have looked for does not exist on our website!</p>
                     <a href="{{ url('/') }}" class="bg-blue-500 text-white py-3 px-6 rounded-full mt-8 inline-block hover:bg-blue-600">Go Back To Home</a>
                 @endif
             </div>

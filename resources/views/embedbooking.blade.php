@@ -6,7 +6,7 @@
 <div class="flex justify-center">
     <iframe
         class="custom-iframe w-full md:w-3/4 lg:w-2/3"
-        src="https://trucking3601.zohobookings.com/portal-embed#/trucking360"
+        src="https://trucking360solutions.zohobookings.com/portal-embed#/t360"
         frameborder="0"
         allowfullscreen
     ></iframe>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>@yield('title', 'Dashboard') - {{ $settings->website_name ?? '360Trucking' }}</title>
@@ -46,52 +47,63 @@
                 </div> --}}
                 <div class="navbar-nav w-100 flex-grow-1 mt-5">
                     <!-- Dashboard Link -->
-                    <a href="{{ route('dashboard') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard') ? 'active' : '' }}">
+                    <a href="{{ route('dashboard') }}"
+                        class="nav-item nav-link small {{ Request::routeIs('dashboard') ? 'active' : '' }}">
                         <i class="fa fa-tachometer-alt me-2 "></i>Dashboard
                     </a>
-        
+
                     <!-- Divider -->
                     <hr class="dropdown-divider text-grey mx-2">
-        
+
                     <!-- Generals Section Header -->
-                    <a href="{{ route('dashboard.generals') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.generals') ? 'active' : '' }}">
+                    <a href="{{ route('dashboard.generals') }}"
+                        class="nav-item nav-link small {{ Request::routeIs('dashboard.generals') ? 'active' : '' }}">
                         <i class="fa fa-th-large me-2"></i>Generals
                     </a>
-        
+
                     <!-- Home Link -->
                     {{-- <a href="{{ route('dashboard.home') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.home') ? 'active' : '' }}">
                         <i class="fa fa-home me-2"></i>Home
                     </a> --}}
-        
+
                     <!-- About Link -->
                     {{-- <a href="{{ route('dashboard.about') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.about') ? 'active' : '' }}">
                         <i class="fa fa-info-circle me-2"></i>About
                     </a> --}}
 
-                <!-- FAQs Link -->
-<a href="{{ route('dashboard.faqs.index') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.faqs.*') ? 'active' : '' }}">
-    <i class="bi bi-patch-question-fill me-2"></i>FAQ's
-</a>
-
-        
-                    <!-- Pricing Link -->
-                    <a href="{{ route('dashboard.pricing') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.pricing') ? 'active' : '' }}">
-                        <i class="fa fa-dollar-sign me-2"></i>Pricing
+                    <!-- FAQs Link -->
+                    <a href="{{ route('dashboard.faqs.index') }}"
+                        class="nav-item nav-link small {{ Request::routeIs('dashboard.faqs.*') ? 'active' : '' }}">
+                        <i class="bi bi-patch-question-fill me-2"></i>FAQ's
                     </a>
-        
+
+
+                    <!-- Pricing Link -->
+                    {{-- <a href="{{ route('dashboard.pricing') }}"
+                        class="nav-item nav-link small {{ Request::routeIs('dashboard.pricing') ? 'active' : '' }}">
+                        <i class="fa fa-dollar-sign me-2"></i>Pricing
+                    </a> --}}
+
                     <!-- Contact Link -->
-                    <a href="{{ route('dashboard.contact') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.contact') ? 'active' : '' }}">
+                    <a href="{{ route('dashboard.contact') }}"
+                        class="nav-item nav-link small {{ Request::routeIs('dashboard.contact') ? 'active' : '' }}">
                         <i class="fa fa-envelope me-2"></i>Contact
                     </a>
-        
-                    <!-- Services Link -->
-                    <a href="{{ route('dashboard.services.index') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.services.index') ? 'active' : '' }}">
-                        <i class="fa fa-cogs me-2"></i>Services
+
+                    <a href="{{ route('zolo-clientinfo.index') }}"
+                        class="nav-item nav-link small {{ Request::routeIs('zolo-clientinfo.*') ? 'active' : '' }}">
+                        <i class="bi bi-person-lines-fill me-2"></i>Clients info
                     </a>
-        
+
+                    <!-- Services Link -->
+                    {{-- <a href="{{ route('dashboard.services.index') }}"
+                        class="nav-item nav-link small {{ Request::routeIs('dashboard.services.index') ? 'active' : '' }}">
+                        <i class="fa fa-cogs me-2"></i>Services
+                    </a> --}}
+
                     <!-- Divider -->
                     <hr class="dropdown-divider text-grey mx-2">
-        
+
                     {{-- <a href="{{ route('dashboard.bookings.index') }}" class="nav-item nav-link small {{ Request::routeIs('dashboard.bookings.index') ? 'active' : '' }}">
                         <i class="fa fa-calendar-alt me-2"></i>Bookings
                     </a>
@@ -103,7 +115,7 @@
                         <i class="fa fa-info-circle me-2"></i>AFP Details
                     </a> --}}
                 </div>
-        
+
                 <!-- Website Button -->
                 <div class="mt-auto text-center">
                     <a href="{{ url('/') }}" class="btn btn-outline-primary m-2">
@@ -112,7 +124,7 @@
                 </div>
             </nav>
         </div>
-        
+
         <!-- Sidebar End -->
 
         <!-- Content Start -->
@@ -131,29 +143,29 @@
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <h6 class="dropdown-header">Notifications</h6>
                             <div class="list-group">
-                                @foreach(Auth::user()->notifications()->latest()->take(5)->get() as $notification)
-                                <a href="{{ $notification->url }}" class="list-group-item list-group-item-action {{ $notification->is_read ? '' : 'bg-light' }}">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-1">{{ $notification->title }}</h6>
-                                        <small>{{ $notification->created_at->diffForHumans() }}</small>
-                                    </div>
-                                    <p class="mb-1">{{ $notification->message }}</p>
-                                </a>
+                                @foreach (Auth::user()->notifications()->latest()->take(5)->get() as $notification)
+                                    <a href="{{ $notification->url }}"
+                                        class="list-group-item list-group-item-action {{ $notification->is_read ? '' : 'bg-light' }}">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">{{ $notification->title }}</h6>
+                                            <small>{{ $notification->created_at->diffForHumans() }}</small>
+                                        </div>
+                                        <p class="mb-1">{{ $notification->message }}</p>
+                                    </a>
                                 @endforeach
                             </div>
                             <div class="dropdown-footer text-center">
-                                <a href="{{ route('notifications.index') }}" class="btn btn-link">View All Notifications</a>
+                                <a href="{{ route('notifications.index') }}" class="btn btn-link">View All
+                                    Notifications</a>
                             </div>
                         </div>
                     </div>
                     <div class="nav-item dropdown ms-3">
-                        <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle d-flex align-items-center"
+                            data-bs-toggle="dropdown">
                             <!-- Profile Image -->
-                            <img 
-                                src="{{ Auth::user()->profile_image ? asset( Auth::user()->profile_image) : 'https://via.placeholder.com/40' }}" 
-                                alt="Profile Image" 
-                                class="rounded-circle me-2" 
-                                style="width: 40px; height: 40px;">
+                            <img src="{{ Auth::user()->profile_image ? asset(Auth::user()->profile_image) : 'https://via.placeholder.com/40' }}"
+                                alt="Profile Image" class="rounded-circle me-2" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex">{{ Auth::user()->name }}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
@@ -170,33 +182,33 @@
                 </div>
             </nav>
             <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const notificationDropdown = document.querySelector('.nav-item.dropdown .nav-link');
-    const badge = document.querySelector('.nav-item.dropdown .badge');
+                document.addEventListener('DOMContentLoaded', function() {
+                    const notificationDropdown = document.querySelector('.nav-item.dropdown .nav-link');
+                    const badge = document.querySelector('.nav-item.dropdown .badge');
 
-    notificationDropdown.addEventListener('click', function() {
-        fetch('{{ route('notifications.markAsRead') }}', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': '{{ csrf_token() }}',
-            },
-        }).then(response => response.json()).then(data => {
-            if (data.success) {
-                badge.textContent = '0';
-            }
-        });
-    });
-});
+                    notificationDropdown.addEventListener('click', function() {
+                        fetch('{{ route('notifications.markAsRead') }}', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                            },
+                        }).then(response => response.json()).then(data => {
+                            if (data.success) {
+                                badge.textContent = '0';
+                            }
+                        });
+                    });
+                });
 
-
+                
             </script>
             <style>
                 .dropdown-menu {
                     min-width: 300px;
                 }
             </style>
-            
+
             <!-- Navbar End -->
 
             <!-- Main Content Start -->
@@ -207,22 +219,25 @@
 
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
+                <div class="bg-light rounded-top p-4 text-center">
+                    <div class="row justify-content-center">
                         @isset($settings)
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">{{ $settings->website_name ?? 'Trucking360' }}</a>, All Right Reserved.
-                        </div>
+                            <div class="col-12">
+                                <small class="d-block">
+                                    &copy; <a href="#">{{ $settings->website_name ?? 'Trucking360' }}</a>, All Rights
+                                    Reserved.
+                                </small>
+                            </div>
                         @endisset
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            made with <svg xmlns="http://www.w3.org/2000/svg" style="color: red" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-                              </svg>
-                            BY R&D
+                        <div class="col-12 mt-2">
+                            <small class="d-block">
+                                Made by R&D
+                            </small>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- Footer End -->
         </div>
         <!-- Content End -->

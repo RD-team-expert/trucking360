@@ -30,6 +30,8 @@ use App\Models\Faq;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\ZoloClientInfoController;
+
 
 
 
@@ -39,23 +41,23 @@ Route::get('/', [HomeController::class, 'index'])->name('home')->middleware(Trac
 Route::post('/visitors/store', [VisitorController::class, 'store'])->name('visitors.store');
 $settings = GeneralSetting::first();
 
-Route::view('/message', 'message',compact('settings'))->name('message');
+Route::view('/message', 'message', compact('settings'))->name('message');
 Route::get('/comingsoon', function () {
-$settings = GeneralSetting::first();
+    $settings = GeneralSetting::first();
 
     return view('comingsoon', compact('settings'));
 })->name('comingsoon');
 Route::get('/aboutus', function () {
     $settings = GeneralSetting::first();
-    
-        return view('about.show', compact('settings'));
-    })->name('aboutus');
+
+    return view('about.show', compact('settings'));
+})->name('aboutus');
 
 Route::get('/bookings/create', function () {
     $settings = GeneralSetting::first();
-    
-        return view('embedbooking', compact('settings'));
-    })->name('embedbooking');
+
+    return view('embedbooking', compact('settings'));
+})->name('embedbooking');
 
 Route::get('/pricing', function () {
     $settings = GeneralSetting::first();
@@ -65,13 +67,26 @@ Route::get('/pricing', function () {
 
 Route::get('/faqs', function () {
     $settings = GeneralSetting::first();
-    $faqs = Faq::all(); 
+    $faqs = Faq::all();
 
-    return view('faqs.show', compact('settings','faqs'));
+    return view('faqs.show', compact('settings', 'faqs'));
 })->name('faqs');
 
 Route::get('/services', [ServicePageController::class, 'index'])->name('services.index')->middleware(TrackVisitor::class);;
 Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show')->middleware(TrackVisitor::class);;
+
+Route::get('/form', function () {
+
+
+    return view('form.show');
+})->name('form');
+
+Route::get('/booking', function () {
+
+
+    return view('bookings.show');
+})->name('booking');
+
 
 
 
@@ -98,6 +113,7 @@ Route::get('/whyt360', function () {
 Route::get('/about', [AboutUsController::class, 'show'])->name('about');
 
 
+
 // Route::get('/bookings/create', [BookingController::class, 'create'])->name('bookings.create')->middleware(TrackVisitor::class);;
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store')->middleware(TrackVisitor::class);;
 
@@ -121,7 +137,7 @@ Route::get('/dashboard', function () {
 
 
 
-    return view('dashboard', compact('settings','logs','visitors'));
+    return view('dashboard', compact('settings', 'logs', 'visitors'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
@@ -143,11 +159,11 @@ Route::get('/notifications/{id}', [NotificationController::class, 'show'])->name
 
 Route::middleware('auth')->group(function () {
 
- 
+
     // Route::resource('carousel', CarouselController::class);
-// routes/web.php
-// Route::post('/carousel/store', [CarouselController::class, 'store'])->name('carousel.store');
-// // routes/web.php
+    // routes/web.php
+    // Route::post('/carousel/store', [CarouselController::class, 'store'])->name('carousel.store');
+    // // routes/web.php
     Route::get('/dashboard/visitors', [VisitorController::class, 'index'])->name('visitors.index');
 
 
@@ -155,13 +171,25 @@ Route::middleware('auth')->group(function () {
     Route::get('dashboard/profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::patch('dashboard/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::post('dashboard/profile/change-password', [ProfileController::class, 'changePassword'])->name('profile.change-password');
-    
+
     Route::get('/dashboard/logs', [LogController::class, 'index'])->name('logs.index');
 
     // Route::get('/dashboard/about', function () {
     //     return view('dashboard.about');
     // })->name('dashboard.about');
-// Meeting Schedule Routes
+    // Meeting Schedule Routes
+
+    // Display all client records
+    Route::get('dashboard/clientinfo', [ZoloClientInfoController::class, 'index'])
+        ->name('zolo-clientinfo.index');
+
+    // Show the edit form
+    Route::get('dashboard/clientinfo/{id}/edit', [ZoloClientInfoController::class, 'edit'])
+        ->name('zolo-clientinfo.edit');
+
+    // Handle the update request
+    Route::put('dashboard/clientinfo/{id}', [ZoloClientInfoController::class, 'update'])
+        ->name('zolo-clientinfo.update');
 
     // Route::get('/dashboard/contact', [DashboardContactController::class, 'index'])->name('dashboard.contact');
     Route::get('/dashboard/contact', [DashboardContactController::class, 'index'])->name('dashboard.contact');
@@ -169,7 +197,7 @@ Route::middleware('auth')->group(function () {
     Route::get('dashboard/contact/export/excel', [DashboardContactController::class, 'exportExcel'])->name('dashboard.contact.export.excel');
 
     Route::get('/dashboard/pricing', function () {
-    $settings = GeneralSetting::first();
+        $settings = GeneralSetting::first();
 
         return view('dashboard.pricing', compact('settings'));
     })->name('dashboard.pricing');
@@ -190,43 +218,39 @@ Route::middleware('auth')->group(function () {
         Route::get('services/{service}/edit', [ServiceController::class, 'edit'])->name('services.edit');
         Route::put('services/{service}', [ServiceController::class, 'update'])->name('services.update');
         Route::delete('services/{service}', [ServiceController::class, 'destroy'])->name('services.destroy');
-
-
-        
-
     });
 
     // Group routes under the dashboard prefix and middleware
-Route::prefix('dashboard')->middleware(['auth'])->group(function () {
-    Route::get('/faqs', [FaqController::class, 'adminIndex'])->name('dashboard.faqs.index');
-    Route::get('/faqs/create', [FaqController::class, 'create'])->name('dashboard.faqs.create');
-    Route::post('/faqs', [FaqController::class, 'store'])->name('dashboard.faqs.store');
-    Route::get('/faqs/{faq}/edit', [FaqController::class, 'edit'])->name('dashboard.faqs.edit');
-    Route::put('/faqs/{faq}', [FaqController::class, 'update'])->name('dashboard.faqs.update');
-    Route::delete('/faqs/{faq}', [FaqController::class, 'destroy'])->name('dashboard.faqs.destroy');
-    Route::post('/faqs/update-order', [FaqController::class, 'updateOrder'])->name('dashboard.faqs.updateOrder');
-});
+    Route::prefix('dashboard')->middleware(['auth'])->group(function () {
+        Route::get('/faqs', [FaqController::class, 'adminIndex'])->name('dashboard.faqs.index');
+        Route::get('/faqs/create', [FaqController::class, 'create'])->name('dashboard.faqs.create');
+        Route::post('/faqs', [FaqController::class, 'store'])->name('dashboard.faqs.store');
+        Route::get('/faqs/{faq}/edit', [FaqController::class, 'edit'])->name('dashboard.faqs.edit');
+        Route::put('/faqs/{faq}', [FaqController::class, 'update'])->name('dashboard.faqs.update');
+        Route::delete('/faqs/{faq}', [FaqController::class, 'destroy'])->name('dashboard.faqs.destroy');
+        Route::post('/faqs/update-order', [FaqController::class, 'updateOrder'])->name('dashboard.faqs.updateOrder');
+    });
 
 
-// About Us Routes
-Route::get('/dashboard/about', [AboutUsController::class, 'index'])->name('dashboard.about');
-Route::post('/dashboard/about/store', [AboutUsController::class, 'store'])->name('dashboard.about.store');
+    // About Us Routes
+    Route::get('/dashboard/about', [AboutUsController::class, 'index'])->name('dashboard.about');
+    Route::post('/dashboard/about/store', [AboutUsController::class, 'store'])->name('dashboard.about.store');
 
 
-// Features Routes
-Route::post('/dashboard/about/features', [AboutUsController::class, 'storeFeature'])->name('dashboard.about.features.store');
-Route::delete('/dashboard/about/features/{feature}', [AboutUsController::class, 'destroyFeature'])->name('dashboard.about.features.destroy');
+    // Features Routes
+    Route::post('/dashboard/about/features', [AboutUsController::class, 'storeFeature'])->name('dashboard.about.features.store');
+    Route::delete('/dashboard/about/features/{feature}', [AboutUsController::class, 'destroyFeature'])->name('dashboard.about.features.destroy');
 
-// Team Members Routes
-Route::post('/dashboard/about/team', [AboutUsController::class, 'storeTeamMember'])->name('dashboard.about.team.store');
-Route::delete('/dashboard/about/team/{teamMember}', [AboutUsController::class, 'destroyTeamMember'])->name('dashboard.about.team.destroy');
+    // Team Members Routes
+    Route::post('/dashboard/about/team', [AboutUsController::class, 'storeTeamMember'])->name('dashboard.about.team.store');
+    Route::delete('/dashboard/about/team/{teamMember}', [AboutUsController::class, 'destroyTeamMember'])->name('dashboard.about.team.destroy');
 
 
     Route::get('/dashboard/generals', [GeneralSettingController::class, 'index'])->name('dashboard.generals');
     Route::post('/dashboard/generals', [GeneralSettingController::class, 'update'])->name('dashboard.generals.update');
 });
 
-Route::prefix('dashboard')->name('dashboard.')->group(function() {
+Route::prefix('dashboard')->name('dashboard.')->group(function () {
     Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
     Route::get('/bookings/{id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
     Route::put('/bookings/{id}', [BookingController::class, 'update'])->name('bookings.update');
@@ -254,6 +278,6 @@ Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])->name(
 Route::fallback(function () {
     $settings = GeneralSetting::first();
 
-    return response()->view('errors.404', compact('settings'), 404, );
+    return response()->view('errors.404', compact('settings'), 404,);
 });
 // require __DIR__.'/auth.php';
