@@ -22,6 +22,11 @@ class ZoloClientinfo extends Model
         'name_on_acc',
         'legal_b_name',
         'csac_code',
+        'dispatch',
+        'fleet',
+        'hiring',
+        'hr',
+        'bundle',
         // 'created_at' is usually automatically handled by Laravel,
         // but you may add it if you explicitly manage timestamps
     ];

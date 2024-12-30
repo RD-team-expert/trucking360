@@ -15,10 +15,10 @@ class ZoloClientInfoController extends Controller
     {
         // Get all client info records
         $clientInfos = ZoloClientinfo::all();
-        $settings = GeneralSetting::first(); 
+        $settings = GeneralSetting::first();
 
         // Return a view with these records
-        return view('dashboard.client.index', compact('clientInfos','settings' ));
+        return view('dashboard.client.index', compact('clientInfos', 'settings'));
     }
 
     /**
@@ -28,7 +28,7 @@ class ZoloClientInfoController extends Controller
     {
         // Find the record by ID or throw a 404
         $clientInfo = ZoloClientinfo::findOrFail($id);
-        $settings = GeneralSetting::first(); 
+        $settings = GeneralSetting::first();
 
         // Return a view to edit this record
         return view('dashboard.client.edit', compact('clientInfo', 'settings'));
@@ -49,6 +49,12 @@ class ZoloClientInfoController extends Controller
             'name_on_acc'        => 'required',
             'legal_b_name'       => 'required',
             'csac_code'          => 'required',
+            'dispatch'           => 'required',
+            'fleet'              => 'required',
+            'hiring'             => 'required',
+            'hr'                 => 'required',
+            'bundle'             => 'required',
+
         ]);
 
         // Find the existing record

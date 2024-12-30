@@ -110,6 +110,35 @@
                                     Get Started
                                 </button>
                             </a>
+
+                            <script>
+                                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+                                // Attach an event listener to the "Get Started" button
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    const getStartedLink = document.getElementById('getStartedLink');
+
+                                    if (getStartedLink) {
+                                        getStartedLink.addEventListener('click', function(e) {
+                                            // Prevent default navigation
+                                            e.preventDefault();
+
+                                            // Gather the checkbox states
+                                            const selectedServices = {};
+                                            checkboxes.forEach((checkbox) => {
+                                                const serviceName = checkbox.getAttribute('data-service');
+                                                selectedServices[serviceName] = checkbox.checked;
+                                            });
+
+                                            // Store the states in localStorage
+                                            localStorage.setItem('selectedServices', JSON.stringify(selectedServices));
+
+                                            // Navigate to the next page
+                                            window.location.href = this.href;
+                                        });
+                                    }
+                                });
+                            </script>
                         </div>
                     </div>
                     <!-- Fantastic+ Bundle -->
@@ -182,7 +211,26 @@
                             </a>
                         </div>
                     </div>
-
+                    <script>
+         
+                        // ===== New code for Fantastic+ Bundle =====
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const fantasticBundleLink = document.getElementById('fantasticBundleLink');
+                    
+                            if (fantasticBundleLink) {
+                                fantasticBundleLink.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                    
+                                    // Here, we only have one plan (Fantastic+ Bundle).
+                                    // If user clicked "Get Started", it means "Bundle" = true.
+                                    localStorage.setItem('Bundle', 'true');
+                    
+                                    // Now proceed to the next page
+                                    window.location.href = this.href;
+                                });
+                            }
+                        });
+                    </script>
 
                 </div>
             </section>
@@ -814,204 +862,148 @@
 
 
     <script>
-document.addEventListener("DOMContentLoaded", function() {
-    /*******************************************
-     * 1) Calculate total price for customizable plan
-     *******************************************/
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const totalPriceElement = document.getElementById("total-price");
+        // Calculate total price for customizable plan
+        const checkboxes = document.querySelectorAll(
+            'input[type="checkbox"]'
+        );
+        const totalPriceElement = document.getElementById("total-price");
 
-    checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", updateTotalPrice);
-    });
-
-    function updateTotalPrice() {
-        let total = 0;
         checkboxes.forEach((checkbox) => {
-            if (checkbox.checked) {
-                total += parseInt(checkbox.value);
-            }
+            checkbox.addEventListener("change", updateTotalPrice);
         });
-        totalPriceElement.textContent = total;
-    }
 
-    // Run once on page load to ensure the correct total is displayed
-    updateTotalPrice();
-
-
-    /*******************************************
-     * 2) Tooltip functionality
-     *******************************************/
-    const tooltipButtons = document.querySelectorAll("[data-tooltip]");
-    tooltipButtons.forEach((button) => {
-        button.addEventListener("mouseenter", showTooltip);
-        button.addEventListener("mouseleave", hideTooltip);
-    });
-
-    function showTooltip(event) {
-        const tooltip = document.createElement("div");
-        tooltip.textContent = event.target.dataset.tooltip;
-        tooltip.className = "absolute bg-gray-800 text-white p-2 rounded text-sm z-10";
-        document.body.appendChild(tooltip);
-
-        const rect = event.target.getBoundingClientRect();
-        tooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
-        tooltip.style.left = `${rect.left + window.scrollX}px`;
-    }
-
-    function hideTooltip() {
-        const tooltip = document.querySelector(".absolute.bg-gray-800");
-        if (tooltip) {
-            tooltip.remove();
-        }
-    }
-
-
-    /*******************************************
-     * 3) FAQ Accordion
-     *******************************************/
-    const faqData = [
-        {
-            question: "How does the Per Accepted Contract pricing work?",
-            answer: "We keep billing straightforward and aligned with your usage. Each week, you're only billed for the contracts you accept. For example, if you have 17 contracted tractors but only accept 15 contracts, you'll only be billed for those 15. If you're using our dispatching service at $75 per contract, your weekly bill would be 15 x $75 = $1,125. For those on our Fantastic+ bundle, covering dispatch, hiring, HR, and fleet services, the rate is $125 per contract, so you'd pay 15 x $125 = $1,875. Our goal is to make billing transparent and flexible, matching your operational pace.",
-        },
-        {
-            question: "Why is Per Accepted Contract pricing beneficial to me?",
-            answer: "Our per-accepted contract pricing provides flexibility and savings, ensuring you only pay for active operations. Unlike flat-rate models that charge regardless of tractor status, our approach aligns costs with your actual usage—no unnecessary charges if a tractor is down. This way, you maximize value, paying only for what's actively moving your business forward.",
-        },
-        {
-            question: "How will I be billed?",
-            answer: "Clients are billed the Monday following the acceptance of their upcoming contracts, which are released and approved each Friday. Once contracts are finalized, Trucking 360 strategically plans dedicated staffing to meet your business needs. Billing is processed through our secure payment portal, offering two convenient options: automatic ACH debits from your account on file or credit card payments, based on your preference. You will receive a detailed invoice outlining the charges, along with a receipt once the payment has been successfully processed.",
-        },
-        {
-            question: "Will my pricing change if I add more tractors?",
-            answer: "The rate per accepted contract stays consistent, so you know what to expect! However, accepting more contracts will increase the total amount billed, based on how many contracts you accept that week. For instance, if you accepted 14 contracts at our dispatching rate of $75, your bill would be 14 x $75 = $1,050. With 15 contracts, it would be 15 x $75 = $1,125. For Fantastic+ bundle users at $125 per accepted contract, the bill would be 14 x $125 = $1,750, and for 15 accepted contracts, 15 x $125 = $1,875. This predictable per-unit pricing scales with your operations while keeping costs transparent.",
-        },
-        {
-            question: "Will I pay for a rejected contract?",
-            answer: "No, we only bill for contracts you accept. If a contract is rejected, there's no charge, regardless of whether you're on our Fantastic+ bundle or just the dispatching service. Our commitment is to ensure billing reflects the work accepted, so you can focus on what counts.",
-        },
-        {
-            question: "Why is it beneficial to bill per accepted contract for hiring, fleet, HR, and other services?",
-            answer: "Our service billing is tied to your accepted contract count to adapt to your operational needs. If you're running fewer contracts, you won't pay a flat fee for services like hiring, HR, and fleet management. Instead, your costs decrease with usage, ensuring fair pricing without locking you into fixed rates. It's a flexible model designed to optimize your expenses as your operations fluctuate.",
-        },
-        {
-            question: "Why do you bill weekly?",
-            answer: "Weekly billing is designed to stay in sync with your business. By billing per accepted contract each week, we offer precise billing that reflects any changes in your accepted contracts. This way, you're always paying accurately for what you actually use, supporting a flexible and transparent billing cycle.",
-        },
-        {
-            question: "Are there any hidden fees or setup costs?",
-            answer: "Not at all—our pricing is completely transparent. You're billed based solely on the accepted contracts each week, with no hidden fees or setup costs. We want you to feel confident in exactly what you're paying for.",
-        },
-        {
-            question: "Am I locked into a contract?",
-            answer: "No, you have complete flexibility. You can cancel at any time with just a one-week notice, giving you full control over your service commitments. We're here to support you as your needs evolve.",
-        },
-        {
-            question: "How does billing work if a tractor breaks down during the week?",
-            answer: "If your tractor experiences a breakdown during an accepted contract, rest assured that you'll still be billed solely for the accepted contract amount, without any extra charges. Should you choose to continue the contract with a Permaloaner or a different tractor from your fleet, there's no need to worry—our goal is to ensure your operations can carry on smoothly without unexpected costs. We're here to support you through any challenges!",
-        },
-        {
-            question: "How do you track the daily Operational Excellence Score?",
-            answer: "We have proprietary technology that will enable us to provide you with a daily Operational Excellence Score that will take into account previous day acceptance and on-time metrics.",
-        },
-    ];
-
-    const faqContainer = document.getElementById("faq-accordion");
-
-    faqData.forEach((faq, index) => {
-        // Create FAQ Item
-        const faqItem = document.createElement("div");
-        faqItem.className = "bg-white rounded-lg shadow-md";
-
-        faqItem.innerHTML = `
-            <button 
-                class="flex justify-between items-center w-full p-4 text-left focus:outline-none"
-                id="faq-button-${index}"
-            >
-                <span class="text-lg font-semibold text-primary">${faq.question}</span>
-                <i class="fas fa-chevron-down text-secondary transition-transform duration-300"></i>
-            </button>
-            <div class="hidden p-4 border-t" id="faq-answer-${index}">
-                <p class="text-primary">${faq.answer}</p>
-            </div>
-        `;
-        faqContainer.appendChild(faqItem);
-
-        // Add Toggle Functionality
-        const button = faqItem.querySelector(`#faq-button-${index}`);
-        const answer = faqItem.querySelector(`#faq-answer-${index}`);
-        const icon   = button.querySelector("i");
-
-        button.addEventListener("click", () => {
-            const isOpen = !answer.classList.contains("hidden");
-
-            // Close all other open answers
-            document.querySelectorAll("#faq-accordion .p-4.border-t").forEach((item) => {
-                if (!item.classList.contains("hidden")) {
-                    item.classList.add("hidden");
-                    item
-                      .previousElementSibling
-                      .querySelector("i")
-                      .classList
-                      .remove("rotate-180");
+        function updateTotalPrice() {
+            let total = 0;
+            checkboxes.forEach((checkbox) => {
+                if (checkbox.checked) {
+                    total += parseInt(checkbox.value);
                 }
             });
+            totalPriceElement.textContent = total;
+        }
 
-            // Toggle current answer
-            if (!isOpen) {
-                answer.classList.remove("hidden");
-                icon.classList.add("rotate-180");
-            } else {
-                answer.classList.add("hidden");
-                icon.classList.remove("rotate-180");
+        // Tooltip functionality
+        const tooltipButtons = document.querySelectorAll("[data-tooltip]");
+        tooltipButtons.forEach((button) => {
+            button.addEventListener("mouseenter", showTooltip);
+            button.addEventListener("mouseleave", hideTooltip);
+        });
+
+        function showTooltip(event) {
+            const tooltip = document.createElement("div");
+            tooltip.textContent = event.target.dataset.tooltip;
+            tooltip.className =
+                "absolute bg-gray-800 text-white p-2 rounded text-sm z-10";
+            document.body.appendChild(tooltip);
+
+            const rect = event.target.getBoundingClientRect();
+            tooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
+            tooltip.style.left = `${rect.left + window.scrollX}px`;
+        }
+
+        function hideTooltip() {
+            const tooltip = document.querySelector(".absolute.bg-gray-800");
+            if (tooltip) {
+                tooltip.remove();
             }
-        });
-    });
+        }
 
+        // FAQ Accordion
+        const faqData = [{
+                question: "How does the Per Accepted Contract pricing work?",
+                answer: "We keep billing straightforward and aligned with your usage. Each week, you're only billed for the contracts you accept. For example, if you have 17 contracted tractors but only accept 15 contracts, you'll only be billed for those 15. If you're using our dispatching service at $75 per contract, your weekly bill would be 15 x $75 = $1,125. For those on our Fantastic+ bundle, covering dispatch, hiring, HR, and fleet services, the rate is $125 per contract, so you'd pay 15 x $125 = $1,875. Our goal is to make billing transparent and flexible, matching your operational pace.",
+            },
+            {
+                question: "Why is Per Accepted Contract pricing beneficial to me?",
+                answer: "Our per-accepted contract pricing provides flexibility and savings, ensuring you only pay for active operations. Unlike flat-rate models that charge regardless of tractor status, our approach aligns costs with your actual usage—no unnecessary charges if a tractor is down. This way, you maximize value, paying only for what's actively moving your business forward.",
+            },
+            {
+                question: "How will I be billed?",
+                answer: "Clients are billed the Monday following the acceptance of their upcoming contracts, which are released and approved each Friday. Once contracts are finalized, Trucking 360 strategically plans dedicated staffing to meet your business needs. Billing is processed through our secure payment portal, offering two convenient options: automatic ACH debits from your account on file or credit card payments, based on your preference. You will receive a detailed invoice outlining the charges, along with a receipt once the payment has been successfully processed.",
+            },
+            {
+                question: "Will my pricing change if I add more tractors?",
+                answer: "The rate per accepted contract stays consistent, so you know what to expect! However, accepting more contracts will increase the total amount billed, based on how many contracts you accept that week. For instance, if you accepted 14 contracts at our dispatching rate of $75, your bill would be 14 x $75 = $1,050. With 15 contracts, it would be 15 x $75 = $1,125. For Fantastic+ bundle users at $125 per accepted contract, the bill would be 14 x $125 = $1,750, and for 15 accepted contracts, 15 x $125 = $1,875. This predictable per-unit pricing scales with your operations while keeping costs transparent.",
+            },
+            {
+                question: "Will I pay for a rejected contract?",
+                answer: "No, we only bill for contracts you accept. If a contract is rejected, there's no charge, regardless of whether you're on our Fantastic+ bundle or just the dispatching service. Our commitment is to ensure billing reflects the work accepted, so you can focus on what counts.",
+            },
+            {
+                question: "Why is it beneficial to bill per accepted contract for hiring, fleet, HR, and other services?",
+                answer: "Our service billing is tied to your accepted contract count to adapt to your operational needs. If you're running fewer contracts, you won't pay a flat fee for services like hiring, HR, and fleet management. Instead, your costs decrease with usage, ensuring fair pricing without locking you into fixed rates. It's a flexible model designed to optimize your expenses as your operations fluctuate.",
+            },
+            {
+                question: "Why do you bill weekly?",
+                answer: "Weekly billing is designed to stay in sync with your business. By billing per accepted contract each week, we offer precise billing that reflects any changes in your accepted contracts. This way, you're always paying accurately for what you actually use, supporting a flexible and transparent billing cycle.",
+            },
+            {
+                question: "Are there any hidden fees or setup costs?",
+                answer: "Not at all—our pricing is completely transparent. You're billed based solely on the accepted contracts each week, with no hidden fees or setup costs. We want you to feel confident in exactly what you're paying for.",
+            },
+            {
+                question: "Am I locked into a contract?",
+                answer: "No, you have complete flexibility. You can cancel at any time with just a one-week notice, giving you full control over your service commitments. We're here to support you as your needs evolve.",
+            },
+            {
+                question: "How does billing work if a tractor breaks down during the week?",
+                answer: "If your tractor experiences a breakdown during an accepted contract, rest assured that you'll still be billed solely for the accepted contract amount, without any extra charges. Should you choose to continue the contract with a Permaloaner or a different tractor from your fleet, there's no need to worry—our goal is to ensure your operations can carry on smoothly without unexpected costs. We're here to support you through any challenges!",
+            },
+            {
+                question: "How do you track the daily Operational Excellence Score?",
+                answer: "We have proprietary technology that will enable us to provide you with a daily Operational Excellence Score that will take into account previous day acceptance and on-time metrics.",
+            },
+        ];
 
-    /*******************************************
-     * 4) LocalStorage for the Customizable Plan
-     *******************************************/
-    const getStartedLink = document.getElementById('getStartedLink');
+        // Populate FAQ Accordion
+        const faqContainer = document.getElementById("faq-accordion");
 
-    if (getStartedLink) {
-        getStartedLink.addEventListener('click', function(e) {
-            // Prevent default navigation
-            e.preventDefault();
+        faqData.forEach((faq, index) => {
+            // Create FAQ Item
+            const faqItem = document.createElement("div");
+            faqItem.className = "bg-white rounded-lg shadow-md";
 
-            // Gather the checkbox states
-            const selectedServices = {};
-            checkboxes.forEach((checkbox) => {
-                const serviceName = checkbox.getAttribute('data-service');
-                selectedServices[serviceName] = checkbox.checked;
+            faqItem.innerHTML = `
+        <button 
+            class="flex justify-between items-center w-full p-4 text-left focus:outline-none"
+            id="faq-button-${index}"
+        >
+            <span class="text-lg font-semibold text-primary">${faq.question}</span>
+            <i class="fas fa-chevron-down text-secondary transition-transform duration-300"></i>
+        </button>
+        <div class="hidden p-4 border-t" id="faq-answer-${index}">
+            <p class="text-primary">${faq.answer}</p>
+        </div>
+    `;
+
+            faqContainer.appendChild(faqItem);
+
+            // Add Toggle Functionality
+            const button = faqItem.querySelector(`#faq-button-${index}`);
+            const answer = faqItem.querySelector(`#faq-answer-${index}`);
+            const icon = button.querySelector("i");
+
+            button.addEventListener("click", () => {
+                const isOpen = !answer.classList.contains("hidden");
+
+                // Close all other open answers
+                document.querySelectorAll("#faq-accordion .p-4.border-t").forEach((item) => {
+                    if (!item.classList.contains("hidden")) {
+                        item.classList.add("hidden");
+                        item.previousElementSibling.querySelector("i").classList.remove(
+                            "rotate-180");
+                    }
+                });
+
+                // Toggle current answer
+                if (!isOpen) {
+                    answer.classList.remove("hidden");
+                    icon.classList.add("rotate-180");
+                } else {
+                    answer.classList.add("hidden");
+                    icon.classList.remove("rotate-180");
+                }
             });
-
-            // Store the states in localStorage
-            localStorage.setItem('selectedServices', JSON.stringify(selectedServices));
-
-            // Navigate to the next page
-            window.location.href = this.href;
         });
-    }
-
-    /*******************************************
-     * 5) LocalStorage for Fantastic+ Bundle
-     *******************************************/
-    const fantasticBundleLink = document.getElementById('fantasticBundleLink');
-
-    if (fantasticBundleLink) {
-        fantasticBundleLink.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            // If user clicked "Get Started", store "Bundle" = true
-            localStorage.setItem('Bundle', 'true');
-
-            // Now proceed to the next page
-            window.location.href = this.href;
-        });
-    }
-});
-</script>
-
+    </script>
 @endsection
