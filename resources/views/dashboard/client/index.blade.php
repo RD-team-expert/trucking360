@@ -44,23 +44,36 @@
                         <td>{{ $clientInfo->name_on_acc }}</td>
                         <td>{{ $clientInfo->legal_b_name }}</td>
                         <td>{{ $clientInfo->csac_code }}</td>
-                        <!-- Boolean Columns -->
+
+                        <!-- For columns that are stored as varchar, but represent true/false -->
                         <td class="text-center">
-                            {!! $clientInfo->dispatch ? '<span class="text-success">✔</span>' : '<span class="text-danger">X</span>' !!}
+                            {!! ($clientInfo->dispatch === 'true')
+                                ? '<span class="text-success">✔</span>'
+                                : '<span class="text-danger">X</span>' !!}
                         </td>
                         <td class="text-center">
-                            {!! $clientInfo->fleet ? '<span class="text-success">✔</span>' : '<span class="text-danger">X</span>' !!}
+                            {!! ($clientInfo->fleet === 'true')
+                                ? '<span class="text-success">✔</span>'
+                                : '<span class="text-danger">X</span>' !!}
                         </td>
                         <td class="text-center">
-                            {!! $clientInfo->hiring ? '<span class="text-success">✔</span>' : '<span class="text-danger">X</span>' !!}
+                            {!! ($clientInfo->hiring === 'true')
+                                ? '<span class="text-success">✔</span>'
+                                : '<span class="text-danger">X</span>' !!}
                         </td>
                         <td class="text-center">
-                            {!! $clientInfo->hr ? '<span class="text-success">✔</span>' : '<span class="text-danger">X</span>' !!}
+                            {!! ($clientInfo->hr === 'true')
+                                ? '<span class="text-success">✔</span>'
+                                : '<span class="text-danger">X</span>' !!}
                         </td>
+
                         <!-- Bundle Column -->
                         <td class="text-center">
-                            {!! $clientInfo->bundle ? '<span class="text-success">●</span>' : '<span class="text-secondary">-</span>' !!}
+                            {!! ($clientInfo->bundle === 'true')
+                                ? '<span class="text-success">●</span>'
+                                : '<span class="text-secondary">-</span>' !!}
                         </td>
+                        
                         <td>{{ $clientInfo->created_at }}</td>
                         <td>
                             <a href="{{ route('zolo-clientinfo.edit', $clientInfo->id) }}" class="btn btn-primary btn-sm">
