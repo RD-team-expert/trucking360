@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
@@ -7,16 +8,14 @@ use App\Http\Controllers\SitemapController;
 class GenerateSitemap extends Command
 {
     protected $signature = 'sitemap:generate';
-    protected $description = 'Generate the sitemap.xml file';
-
-    public function __construct()
-    {
-        parent::__construct();
-    }
+    protected $description = 'Generate the sitemap and save it to the public directory';
 
     public function handle()
     {
-        (new SitemapController)->generate();
+        $controller = new SitemapController();
+        $controller->generate();
+
         $this->info('Sitemap generated successfully.');
     }
+    
 }

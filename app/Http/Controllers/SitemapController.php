@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers;
 
@@ -18,14 +18,22 @@ class SitemapController extends Controller
             ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
             ->setLastModificationDate(now()));
 
-        // Add each service
-        $services = Service::all();
-        foreach ($services as $service) {
-            $sitemap->add(Url::create(route('services.show', $service->slug))
-                ->setLastModificationDate($service->updated_at)
+
+        $sitemap->add(
+            Url::create(route('about'))
+                ->setPriority(0.6)
                 ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
-                ->setPriority(0.8));
-        }
+                ->setLastModificationDate(now())
+        );
+
+        $sitemap->add(
+            Url::create(route('pricing'))
+                ->setPriority(0.8)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
+                ->setLastModificationDate(now())
+        );
+
+
 
         // Save the sitemap to the public directory
         $sitemap->writeToFile(public_path('sitemap.xml'));

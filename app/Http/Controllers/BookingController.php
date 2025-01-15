@@ -11,6 +11,7 @@ use App\Models\GeneralSetting;
 use Illuminate\Support\Facades\Log;
 use App\Models\User;
 use App\Mail\BookingConfirmed;
+use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Support\Facades\Mail;
 
 
@@ -94,6 +95,9 @@ class BookingController extends Controller
     {
         $settings = GeneralSetting::first();
         $bookings = Booking::with('customer')->latest()->get();
+        SEOTools::setTitle('Trucking 360 - Bookings');
+        // Set Open Graph meta tags
+        SEOTools::opengraph()->setTitle('Trucking 360 - Bookings');
         return view('dashboard.bookings.index', compact('bookings','settings'));
     }
 

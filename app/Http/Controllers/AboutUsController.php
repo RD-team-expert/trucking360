@@ -8,6 +8,7 @@ use App\Models\Feature;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
 use App\Models\GeneralSetting;
+use Artesaos\SEOTools\Facades\SEOTools;
 
 class AboutUsController extends Controller
 {
@@ -17,6 +18,9 @@ class AboutUsController extends Controller
         $about = AboutUs::first();
         $features = Feature::all();
         $settings = GeneralSetting::first();
+        SEOTools::setTitle('Trucking 360 - About us');
+        // Set Open Graph meta tags
+        SEOTools::opengraph()->setTitle('Trucking 360 - About us');
 
         return view('dashboard.about', compact('about', 'features', 'settings'));
     }
