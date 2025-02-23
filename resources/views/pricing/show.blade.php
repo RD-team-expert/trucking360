@@ -53,7 +53,7 @@
                                     Customizable Plan
                                 </h3>
                                 <div class="flex items-center text-2xl font-bold mb-4">
-                                    Total:
+                                    <span style="color: black">Total:</span>
                                     <span class="total-wrapper ml-2">
                                         <span class="dollar-sign">$</span>
                                         <span id="total-price">145</span>
@@ -126,7 +126,7 @@
                                     Fantastic+ Bundle
                                 </h3>
                                 <div class="flex items-center text-2xl font-bold mb-4">
-                                    Total:
+                                    <span style="color: black">Total:</span>
                                     <span class="total-wrapper-red ml-2">
                                         <span class="dollar-sign">$</span>
                                         <span id="total-price">125</span>

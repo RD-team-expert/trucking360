@@ -25,7 +25,7 @@
             @foreach($faqs as $faq)
             <tr data-id="{{ $faq->id }}">
                 <td>{{ $faq->question }}</td>
-                <td>{{ Str::limit($faq->answer, 50) }}</td>
+                <td>{{ \Illuminate\Support\Str::limit($faq->answer, 50) }}</td>
                 <td>{{ $faq->order }}</td>
                 <td>
                     <a href="{{ route('dashboard.faqs.edit', $faq->id) }}" class="btn btn-warning btn-sm">Edit</a>

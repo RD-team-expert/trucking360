@@ -12,6 +12,8 @@
     {{-- @include('components.website.clients') --}}
     {{-- @include('components.website.stats') --}}
     @include('components.website.calltoaction')
+    @include('components.website.successstory')
+
     {{-- @include('components.website.testimonials') --}}
     @include('components.website.faq')
     {{-- <section class="bg-gray-100 py-12">

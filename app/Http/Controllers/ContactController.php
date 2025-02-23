@@ -25,6 +25,8 @@ class ContactController extends Controller
         // Create the contact record
         $contact = Contact::create($validatedData);
 
+       
+
         // Notification
         Notification::create([
             'user_id'         => 3,

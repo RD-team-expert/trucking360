@@ -59,7 +59,7 @@
         
         </div>
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm md:text-base">
-            <p>&copy; 2024 Trucking 360. All rights reserved.</p>
+            <p>&copy; {{date("Y");}} Trucking 360. All rights reserved.</p>
         </div>
     </div>
 </footer>
