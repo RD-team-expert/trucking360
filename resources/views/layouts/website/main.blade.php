@@ -32,7 +32,7 @@
             transform: scale(1.1);
         }
     </style>
-    <!-- Matomo -->
+    {{-- <!-- Matomo -->
     <script>
         var _paq = window._paq || [];
         _paq.push(['setTrackerUrl', 'https://matomo.pneunited.com/matomo.php']);
@@ -45,7 +45,7 @@
             g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
         })();
     </script>
-    <!-- End Matomo Code -->
+    <!-- End Matomo Code --> --}}
 
 </head>
 
