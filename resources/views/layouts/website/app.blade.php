@@ -184,9 +184,9 @@
 <!-- Matomo -->
 <script>
    var _paq = window._paq || [];
-_paq.push(['setTrackerUrl', 'http://matomo.pneunited.com/matomo.php']);
+_paq.push(['setTrackerUrl', 'https://matomo.pneunited.com/matomo.php']);
 _paq.push(['setSiteId', 'X']); // X is your site ID
-var u="http://matomo.pneunited.com/";
+var u="https://matomo.pneunited.com/";
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
 (function() {
