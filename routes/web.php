@@ -37,7 +37,7 @@ use App\Http\Controllers\ZoloClientInfoController;
 
 Route::get('/sitemap.xml', [SitemapController::class, 'generate'])->name('sitemap');
 
-Route::get('/', [HomeController::class, 'index'])->name('home')->middleware(TrackVisitor::class);;
+Route::get('/', [HomeController::class, 'index'])->name('home')->middleware(TrackVisitor::class);
 Route::post('/visitors/store', [VisitorController::class, 'store'])->name('visitors.store');
 $settings = GeneralSetting::first();
 
