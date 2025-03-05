@@ -56,7 +56,7 @@
         }
     </style>
 
-    <!-- Matomo -->
+<!-- Matomo -->
 <script>
     var _paq = window._paq = window._paq || [];
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -71,6 +71,7 @@
     })();
   </script>
   <!-- End Matomo Code -->
+  
   
 </head>
 <body class="bg-white">
