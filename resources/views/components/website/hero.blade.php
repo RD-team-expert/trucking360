@@ -10,16 +10,12 @@
             <br>
             <div id="typed-strings" class="hidden md:block">
                 <p>Best-in-class dispatch service</p>
-                <p>Fully Automated Metric
-                    Dashboard With Daily Scores
-                </p>
+                <p>Fully Automated Metric Dashboard With Daily Scores</p>
                 <p>Available 24/7 for your drivers</p>
                 <p>High-quality communication</p>
                 <p>Scorecard analysis and tailored action plans to achieve and maintain Fantastic Plus scores</p>
                 <p>Customized reports</p>
-                <p>Fully Automated Metric
-                    Dashboard With Daily Scores
-                </p>
+                <p>Fully Automated Metric Dashboard With Daily Scores</p>
                 <p>Daily disputes</p>
             </div>
             <span id="typed" class="text-lg md:text-3xl text-white" data-aos="fade-in" data-aos-delay="400"></span>
