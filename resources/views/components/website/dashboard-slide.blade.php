@@ -9,7 +9,6 @@
                 <span class="text-secondary font-medium">Updated Daily</span>
                 <span class="text-secondary font-medium">-</span>
                 <span class="text-secondary font-medium">Daily Scores</span>
-
             </div>
         </div>
 
@@ -19,28 +18,41 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div class="dashboard-image rounded-lg overflow-hidden">
+                        <div class="dashboard-image rounded-lg overflow-hidden relative">
                             <img src="{{ asset('website/img/about.jpg') }}" alt="Dashboard Analytics" class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer" onclick="openImageModal(this.src)">
+                            <!-- Mobile Navigation Arrows (only visible on mobile) -->
+                            <div class="hidden absolute inset-0 flex items-center justify-between pointer-events-none">
+                                <div class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left w-5 h-5 text-primary">
+                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right w-5 h-5 text-primary">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                         <div class="dashboard-content p-4">
-                            <h3 class="text-2xl font-bold text-primary mb-4">Comprehensive Analytics Dashboard</h3>
-                            <p class="text-gray-700 mb-6">Our automated dashboard provides real-time insights into your delivery performance metrics. Track your Fantastic+ score components with daily updates and no manual data entry required.</p>
-                            <ul class="space-y-4">
-                                <li class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 rounded-full bg-secondary flex items-center justify-center mr-4">
-                                        <svg class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <h3 class="text-2xl font-bold text-primary mb-4">One Dashboard</h3>
+                            <p class="text-gray-700 mb-6">No more wasting hours jumping between portals. Get one centralized command center that simplifies, sharpens, and accelerates your operations.</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                        <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
-                                    <span class="pl-1">Daily performance metrics updated automatically</span>
+                                    <span class="text-sm">Daily performance metrics updated automatically</span>
                                 </li>
-                                <li class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 rounded-full bg-secondary flex items-center justify-center mr-4">
-                                        <svg class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                        <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
-                                    <span class="pl-1">Visual representation of key performance indicators</span>
+                                    <span class="text-sm">Visual representation of key performance indicators</span>
                                 </li>
                             </ul>
                         </div>
@@ -50,30 +62,84 @@
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div class="dashboard-image rounded-lg overflow-hidden">
+                        <div class="dashboard-image rounded-lg overflow-hidden relative">
                             <img src="{{ asset('website/img/about.jpg') }}" alt="Performance Tracking" class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer" onclick="openImageModal(this.src)">
+                            <!-- Mobile Navigation Arrows (only visible on mobile) -->
+                            <div class="md:hidden absolute inset-0 flex items-center justify-between pointer-events-none">
+                                <div class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left w-5 h-5 text-primary">
+                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right w-5 h-5 text-primary">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                         <div class="dashboard-content p-4">
-                            <h3 class="text-2xl font-bold text-primary mb-4">Driver Performance Tracking</h3>
-                            <p class="text-gray-700 mb-6">Monitor individual driver metrics and identify areas for improvement. Our system automatically highlights performance trends and provides actionable insights to help maintain Fantastic+ status.</p>
-                            <ul class="space-y-4">
-                                <li class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 rounded-full bg-secondary flex items-center justify-center mr-4">
-                                        <svg class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span class="pl-1">Individual driver performance metrics</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 rounded-full bg-secondary flex items-center justify-center mr-4">
-                                        <svg class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span class="pl-1">Automated alerts for performance issues</span>
-                                </li>
-                            </ul>
+                            <h3 class="text-2xl font-bold text-primary mb-4">What Makes it Unstoppable</h3>
+                            <div class="grid grid-cols-1 gap-4">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <span class="text-sm">All-in-One Access</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <span class="text-sm">Real-Time + Daily Updates</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <span class="text-sm">Data-Driven Coaching, Automated</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <span class="text-sm">Tactical & Strategic Insights</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <span class="text-sm">Multi-User, Role-Based Access</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <span class="text-sm">Top & Bottom Performer Highlight</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <span class="text-sm">One-Click Report</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,42 +147,104 @@
                 <!-- Slide 3 -->
                 <div class="swiper-slide">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div class="dashboard-image rounded-lg overflow-hidden">
+                        <div class="dashboard-image rounded-lg overflow-hidden relative">
                             <img src="{{ asset('website/img/about.jpg') }}" alt="Trend Analysis" class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer" onclick="openImageModal(this.src)">
+                            <!-- Mobile Navigation Arrows (only visible on mobile) -->
+                            <div class="md:hidden absolute inset-0 flex items-center justify-between pointer-events-none">
+                                <div class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left w-5 h-5 text-primary">
+                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right w-5 h-5 text-primary">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                         <div class="dashboard-content p-4">
-                            <h3 class="text-2xl font-bold text-primary mb-4">Historical Trend Analysis</h3>
-                            <p class="text-gray-700 mb-6">Gain valuable insights from historical performance data. Our dashboard automatically compiles and analyzes past performance to help you make data-driven decisions for your AFP business.</p>
-                            <ul class="space-y-4">
-                                <li class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 rounded-full bg-secondary flex items-center justify-center mr-4">
-                                        <svg class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span class="pl-1">Week-over-week performance comparisons</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <div class="flex-shrink-0 w-6 h-6 rounded-full bg-secondary flex items-center justify-center mr-4">
-                                        <svg class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
-                                    </div>
-                                    <span class="pl-1">Predictive analytics for future performance</span>
-                                </li>
-                            </ul>
+                            <h3 class="text-2xl font-bold text-primary mb-4">With vs. Without the Dashboard</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="p-4 rounded-lg">
+                                    <h4 class="text-lg font-semibold text-secondary mb-3">With the Dashboard</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-sm">You stay informed</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-sm">You stay proactive</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-sm">You operate like the true business owner you are, not a micromanager drowning in details</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="p-4 rounded-lg">
+                                    <h4 class="text-lg font-semibold text-red-500 mb-3">Without the Dashboard</h4>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-sm">You lose hours jumping between tools</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-sm">You risk missing critical performance trends</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-sm">You react after problems appear, instead of staying ahead</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-sm">You leave revenue, performance bonuses, and efficiency gains on the table</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Custom Navigation Arrows -->
-            <div class="custom-nav-prev">
+            <!-- Custom Navigation Arrows (only visible on desktop) -->
+            <div class="custom-nav-prev hidden md:flex">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left">
                     <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
             </div>
-            <div class="custom-nav-next">
+            <div class="custom-nav-next hidden md:flex">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
                     <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
@@ -168,8 +296,8 @@
                     dynamicBullets: true,
                 },
                 navigation: {
-                    nextEl: '.custom-nav-next',
-                    prevEl: '.custom-nav-prev',
+                    nextEl: '.custom-nav-next, .custom-nav-next-mobile',
+                    prevEl: '.custom-nav-prev, .custom-nav-prev-mobile',
                 },
                 breakpoints: {
                     640: {
