@@ -6,16 +6,16 @@
 
 @section('content')
     @include('components.website.hero')
-    @include('components.website.whyus')
+    {{-- @include('components.website.whyus') --}}
     {{-- @include('components.website.services') --}}
     {{-- @include('components.website.about') --}}
     {{-- @include('components.website.clients') --}}
     {{-- @include('components.website.stats') --}}
-    @include('components.website.calltoaction')
     @include('components.website.successstory')
+    @include('components.website.faq')
+    @include('components.website.calltoaction')
 
     {{-- @include('components.website.testimonials') --}}
-    @include('components.website.faq')
     {{-- <section class="bg-gray-100 py-12">
         <div class="container mx-auto px-4">
           <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">

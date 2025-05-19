@@ -35,9 +35,58 @@
                     </div>
                 </div>
             </section>
+
             <!-- Plans Section -->
             <section class="mb-16 px-4" data-aos="fade-up" data-aos-delay="600">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto relative">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto relative">
+                    <!-- Dashboard 360 Plan -->
+                    <div class="relative plan-card">
+                        <!-- Dashboard 360 Card -->
+                        <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between h-full mt-6">
+                            <div class="flex flex-col justify-between flex-grow">
+                                <h3 class="text-2xl font-bold mb-4 text-primary">
+                                    Dashboard 360
+                                </h3>
+                                <div class="flex items-center mb-4">
+                                    <span class="text-xl font-bold mr-2">Price:</span>
+                                    <span class="bg-primary text-white text-xl font-bold px-2 py-1 rounded">$199</span>
+                                    <span class="ml-2 text-xl">per month</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Complete visibility into your business with real-time analytics and reporting.
+                                </p>
+                                <div class="border-l-4 border-primary pl-3 mb-4">
+                                    <p class="text-gray-700">Get <span class="font-bold text-primary">50% OFF</span> when combined with any other service!</p>
+                                </div>
+                                <ul class="mb-6 space-y-2">
+                                    <li class="flex items-start text-gray-700">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Real-time performance tracking</span>
+                                    </li>
+                                    <li class="flex items-start text-gray-700">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Customizable reporting tools</span>
+                                    </li>
+                                    <li class="flex items-start text-gray-700">
+                                        <svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Driver performance metrics</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Button -->
+                            <a href="{{ route('form') }}" id="dashboardLink">
+                                <button class="bg-primary text-white px-6 py-3 w-full rounded-lg font-medium hover:bg-opacity-80 transition duration-300 mt-4">
+                                    Get Dashboard 360
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                     <!-- Customizable Plan -->
                     <div class="relative plan-card">
                         <!-- Hidden Placeholder for Best Value -->

@@ -3,16 +3,23 @@
     <div class="container mx-auto px-0 flex flex-col md:flex-row items-center relative z-10">
         <div class="md:w-1/2 md:pl-12 z-10">
             <!-- "Trucking 360" text with animations -->
-            <h1 class="text-5xl font-bold text-white mb-4 md:text-5xl" data-aos="fade-down">{{ $settings->website_name }}</h1>
+            <h1 class="text-5xl font-bold text-white mb-4 md:text-5xl" data-aos="fade-down">{{ $settings->website_name }}
+            </h1>
             <h4 class="text-2xl font-bold text-white mb-4 md:text-4xl" data-aos="fade-up" data-aos-delay="200">Your Partner
                 to Fantastic Plus</h4>
             <br>
             <div id="typed-strings" class="hidden md:block">
                 <p>Best-in-class dispatch service</p>
+                <p>Fully Automated Metric
+                    Dashboard With Daily Scores
+                </p>
                 <p>Available 24/7 for your drivers</p>
                 <p>High-quality communication</p>
                 <p>Scorecard analysis and tailored action plans to achieve and maintain Fantastic Plus scores</p>
                 <p>Customized reports</p>
+                <p>Fully Automated Metric
+                    Dashboard With Daily Scores
+                </p>
                 <p>Daily disputes</p>
             </div>
             <span id="typed" class="text-lg md:text-3xl text-white" data-aos="fade-in" data-aos-delay="400"></span>
@@ -45,9 +52,7 @@
     #typed {
         display: block;
         height: 3rem;
-        /* ارتفاع ثابت للنص المتحرك */
         white-space: pre-wrap;
-        /* يمنع انكسار النص */
     }
 
     .header-container {
@@ -94,60 +99,66 @@
         }
     }
 
-  /* Existing CSS ... */
+    /* Existing CSS ... */
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .header-image {
-        display: none;
-        /* Hide the image on tablet screens */
-    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .header-image {
+            display: none;
+            /* Hide the image on tablet screens */
+        }
 
-    #home .container {
-        display: flex;
-        /* Use flexbox to center content */
-        flex-direction: column;
-        /* Stack elements vertically */
-        justify-content: center;
-        /* Center vertically */
-        align-items: center;
-        /* Center horizontally */
-        text-align: center;
-        /* Center-align the text */
-        height: 100%;
-        /* Ensure the container spans full height */
-        white-space: normal;
-        /* Prevent text breaking */
-        padding: 0 20px; /* Optional: Add horizontal padding for better spacing */
-    }
+        #home .container {
+            display: flex;
+            /* Use flexbox to center content */
+            flex-direction: column;
+            /* Stack elements vertically */
+            justify-content: center;
+            /* Center vertically */
+            align-items: center;
+            /* Center horizontally */
+            text-align: center;
+            /* Center-align the text */
+            height: 100%;
+            /* Ensure the container spans full height */
+            white-space: normal;
+            /* Prevent text breaking */
+            padding: 0 20px;
+            /* Optional: Add horizontal padding for better spacing */
+        }
 
-    /* Make the text container wider */
-    #home .container > div {
-        width: 80%; /* Adjust this percentage as needed */
-        max-width: 800px; /* Optional: Set a maximum width for very large tablets */
-    }
+        /* Make the text container wider */
+        #home .container>div {
+            width: 80%;
+            /* Adjust this percentage as needed */
+            max-width: 800px;
+            /* Optional: Set a maximum width for very large tablets */
+        }
 
-    h1 {
-        font-size: 2.5rem; /* Slightly smaller for tablet */
-        line-height: 1.3;
-        margin-bottom: 1.5rem;
-    }
+        h1 {
+            font-size: 2.5rem;
+            /* Slightly smaller for tablet */
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+        }
 
-    h4 {
-        font-size: 2rem; /* Adjusted from 2xl/4xl to fit better on tablet */
-        line-height: 1.3;
-        margin-bottom: 1.5rem;
-    }
+        h4 {
+            font-size: 2rem;
+            /* Adjusted from 2xl/4xl to fit better on tablet */
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+        }
 
-    #typed {
-        font-size: 1.5rem; /* Slightly smaller typed text for tablet */
-        margin-top: 1rem;
-    }
+        #typed {
+            font-size: 1.5rem;
+            /* Slightly smaller typed text for tablet */
+            margin-top: 1rem;
+        }
 
-    /* If h3 is not used in your HTML, you can remove or ignore these styles */
-    h3 {
-        font-size: 1.8rem;
+        /* If h3 is not used in your HTML, you can remove or ignore these styles */
+        h3 {
+            font-size: 1.8rem;
+        }
     }
-}
 
 
     @media (min-width: 1024px) {
@@ -158,6 +169,18 @@
 
         #home .container>div {
             text-align: center;
+        }
+    }
+
+    /* New media query for screens between 1100px and 1280px */
+    @media (min-width: 1100px) and (max-width: 1280px) {
+        .header-image {
+            height:38rem;
+            
+        }
+
+        h3 {
+            font-size: 2.25rem;
         }
     }
 
@@ -172,6 +195,25 @@
 
         h3 {
             font-size: 2.75rem;
+        }
+    }
+
+    /* New media query for 2800 x 1800 resolution */
+    @media (min-width: 2800px) {
+        .header-image {
+            height: 82rem;
+            /* Scaled up from 56rem */
+            top: -40rem;
+            /* Scaled up from -27rem */
+            right: -270px;
+            /* Scaled up from -185px */
+            width: 263rem;
+            /* Scaled up from 180rem */
+        }
+
+        h3 {
+            font-size: 4rem;
+            /* Increased font size for larger screens */
         }
     }
 
@@ -250,7 +292,6 @@
     .overflow-hidden {
         overflow: hidden;
     }
-    
 </style>
 
 <script>

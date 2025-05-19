@@ -19,9 +19,9 @@
                     <ul class="space-y-2 text-sm md:text-base">
                       <li><a href="{{url('/')}}" class="hover:text-secondary transition-colors duration-300">Home</a></li>
                       <li><a href="{{ route('whyt360') }}" class="hover:text-secondary transition-colors duration-300">Why Trucking 360</a></li>
-                      <li><a href="{{ route('aboutus') }}" class="hover:text-secondary transition-colors duration-300">About</a></li>
+                      {{-- <li><a href="{{ route('aboutus') }}" class="hover:text-secondary transition-colors duration-300">About</a></li> --}}
                       <li><a href="{{ route('faqs') }}" class="hover:text-secondary transition-colors duration-300">FAQs</a></li>
-                      <li><a href="{{ route('pricing') }}" class="hover:text-secondary transition-colors duration-300">Pricing</a></li>
+                      <li><a href="{{ route('pricing') }}" class="hover:text-secondary transition-colors duration-300">Services & Pricing</a></li>
                       <li><a href="{{ route('contact') }}" class="hover:text-secondary transition-colors duration-300">Contact us</a></li>
   
                     </ul>

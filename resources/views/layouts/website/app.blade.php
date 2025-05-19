@@ -28,6 +28,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .parallax {
@@ -60,6 +61,21 @@
         /* Hide spinner by default */
         .spinner-hidden {
             display: none;
+        }
+    
+        /* Responsive text sizing */
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+            }
+            h2, h3 {
+                font-size: 1.5rem !important;
+                line-height: 1.3 !important;
+            }
+            p {
+                font-size: 1rem !important;
+            }
         }
     </style>
 
