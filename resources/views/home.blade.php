@@ -12,6 +12,8 @@
     {{-- @include('components.website.clients') --}}
     {{-- @include('components.website.stats') --}}
     @include('components.website.successstory')
+    @include('components.website.dashboard-slide')
+
     @include('components.website.faq')
     @include('components.website.calltoaction')
 
