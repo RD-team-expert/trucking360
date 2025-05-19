@@ -4,7 +4,10 @@
 <section id="dashboard-slide" class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
         <div class="text-center mb-12" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Fully Automated – No Manual Entry by the User</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Introducing the Trucking 360 Dashboard
+            </h2>
+            <h3 class="text-xl md:text-2xl font-bold text-primary mb-4">Fully Automated – No Manual Entry by the User
+            </h3>
             <div class="feature-highlights flex justify-center gap-6 mt-4">
                 <span class="text-secondary font-medium">Updated Daily</span>
                 <span class="text-secondary font-medium">-</span>
@@ -19,16 +22,26 @@
                 <div class="swiper-slide">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div class="dashboard-image rounded-lg overflow-hidden relative">
-                            <img src="{{ asset('website/img/about.jpg') }}" alt="Dashboard Analytics" class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer" onclick="openImageModal(this.src)">
+                            <img src="{{ asset('website/img/about.jpg') }}" alt="Dashboard Analytics"
+                                class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer"
+                                onclick="openImageModal(this.src)">
                             <!-- Mobile Navigation Arrows (only visible on mobile) -->
                             <div class="hidden absolute inset-0 flex items-center justify-between pointer-events-none">
-                                <div class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left w-5 h-5 text-primary">
+                                <div
+                                    class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-chevron-left w-5 h-5 text-primary">
                                         <polyline points="15 18 9 12 15 6"></polyline>
                                     </svg>
                                 </div>
-                                <div class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right w-5 h-5 text-primary">
+                                <div
+                                    class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-chevron-right w-5 h-5 text-primary">
                                         <polyline points="9 18 15 12 9 6"></polyline>
                                     </svg>
                                 </div>
@@ -36,20 +49,28 @@
                         </div>
                         <div class="dashboard-content p-4">
                             <h3 class="text-2xl font-bold text-primary mb-4">One Dashboard</h3>
-                            <p class="text-gray-700 mb-6">No more wasting hours jumping between portals. Get one centralized command center that simplifies, sharpens, and accelerates your operations.</p>
+                            <p class="text-gray-700 mb-6">No more wasting hours jumping between portals. Get one
+                                centralized command center that simplifies, sharpens, and accelerates your operations.
+                            </p>
                             <ul class="space-y-3">
                                 <li class="flex items-start">
-                                    <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                        <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    <div
+                                        class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                        <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
                                     <span class="text-sm">Daily performance metrics updated automatically</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                        <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    <div
+                                        class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                        <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
                                     <span class="text-sm">Visual representation of key performance indicators</span>
@@ -63,16 +84,27 @@
                 <div class="swiper-slide">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div class="dashboard-image rounded-lg overflow-hidden relative">
-                            <img src="{{ asset('website/img/about.jpg') }}" alt="Performance Tracking" class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer" onclick="openImageModal(this.src)">
+                            <img src="{{ asset('website/img/about.jpg') }}" alt="Performance Tracking"
+                                class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer"
+                                onclick="openImageModal(this.src)">
                             <!-- Mobile Navigation Arrows (only visible on mobile) -->
-                            <div class="md:hidden absolute inset-0 flex items-center justify-between pointer-events-none">
-                                <div class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left w-5 h-5 text-primary">
+                            <div
+                                class="md:hidden absolute inset-0 flex items-center justify-between pointer-events-none">
+                                <div
+                                    class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-chevron-left w-5 h-5 text-primary">
                                         <polyline points="15 18 9 12 15 6"></polyline>
                                     </svg>
                                 </div>
-                                <div class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right w-5 h-5 text-primary">
+                                <div
+                                    class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-chevron-right w-5 h-5 text-primary">
                                         <polyline points="9 18 15 12 9 6"></polyline>
                                     </svg>
                                 </div>
@@ -83,57 +115,78 @@
                             <div class="grid grid-cols-1 gap-4">
                                 <ul class="space-y-3">
                                     <li class="flex items-start">
-                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        <div
+                                            class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
                                         <span class="text-sm">All-in-One Access</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        <div
+                                            class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
                                         <span class="text-sm">Real-Time + Daily Updates</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        <div
+                                            class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
                                         <span class="text-sm">Data-Driven Coaching, Automated</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        <div
+                                            class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
                                         <span class="text-sm">Tactical & Strategic Insights</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        <div
+                                            class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
                                         <span class="text-sm">Multi-User, Role-Based Access</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        <div
+                                            class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
                                         <span class="text-sm">Top & Bottom Performer Highlight</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        <div
+                                            class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                            <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
                                         <span class="text-sm">One-Click Report</span>
@@ -148,16 +201,27 @@
                 <div class="swiper-slide">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div class="dashboard-image rounded-lg overflow-hidden relative">
-                            <img src="{{ asset('website/img/about.jpg') }}" alt="Trend Analysis" class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer" onclick="openImageModal(this.src)">
+                            <img src="{{ asset('website/img/about.jpg') }}" alt="Trend Analysis"
+                                class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer"
+                                onclick="openImageModal(this.src)">
                             <!-- Mobile Navigation Arrows (only visible on mobile) -->
-                            <div class="md:hidden absolute inset-0 flex items-center justify-between pointer-events-none">
-                                <div class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left w-5 h-5 text-primary">
+                            <div
+                                class="md:hidden absolute inset-0 flex items-center justify-between pointer-events-none">
+                                <div
+                                    class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-chevron-left w-5 h-5 text-primary">
                                         <polyline points="15 18 9 12 15 6"></polyline>
                                     </svg>
                                 </div>
-                                <div class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right w-5 h-5 text-primary">
+                                <div
+                                    class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-chevron-right w-5 h-5 text-primary">
                                         <polyline points="9 18 15 12 9 6"></polyline>
                                     </svg>
                                 </div>
@@ -170,28 +234,38 @@
                                     <h4 class="text-lg font-semibold text-secondary mb-3">With the Dashboard</h4>
                                     <ul class="space-y-3">
                                         <li class="flex items-start">
-                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
-                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            <div
+                                                class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7" />
                                                 </svg>
                                             </div>
                                             <span class="text-sm">You stay informed</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
-                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            <div
+                                                class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7" />
                                                 </svg>
                                             </div>
                                             <span class="text-sm">You stay proactive</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
-                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            <div
+                                                class="flex-shrink-0 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7" />
                                                 </svg>
                                             </div>
-                                            <span class="text-sm">You operate like the true business owner you are, not a micromanager drowning in details</span>
+                                            <span class="text-sm">You operate like the true business owner you are, not
+                                                a micromanager drowning in details</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -199,36 +273,50 @@
                                     <h4 class="text-lg font-semibold text-red-500 mb-3">Without the Dashboard</h4>
                                     <ul class="space-y-3">
                                         <li class="flex items-start">
-                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                            <div
+                                                class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                                 </svg>
                                             </div>
                                             <span class="text-sm">You lose hours jumping between tools</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                            <div
+                                                class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                                 </svg>
                                             </div>
                                             <span class="text-sm">You risk missing critical performance trends</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                            <div
+                                                class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                                 </svg>
                                             </div>
-                                            <span class="text-sm">You react after problems appear, instead of staying ahead</span>
+                                            <span class="text-sm">You react after problems appear, instead of staying
+                                                ahead</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <div class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
-                                                <svg class="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                            <div
+                                                class="flex-shrink-0 w-4 h-4 rounded-full bg-red-500 flex items-center justify-center mt-1 mr-4">
+                                                <svg class="h-2.5 w-2.5 text-white" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                                 </svg>
                                             </div>
-                                            <span class="text-sm">You leave revenue, performance bonuses, and efficiency gains on the table</span>
+                                            <span class="text-sm">You leave revenue, performance bonuses, and
+                                                efficiency gains on the table</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -240,16 +328,20 @@
 
             <!-- Custom Navigation Arrows (only visible on desktop) -->
             <div class="custom-nav-prev hidden md:flex">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-left">
                     <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
             </div>
             <div class="custom-nav-next hidden md:flex">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-right">
                     <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
             </div>
-            
+
             <!-- Pagination -->
             <div class="swiper-pagination custom-pagination"></div>
         </div>
@@ -258,9 +350,11 @@
     <!-- Image Modal -->
     <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
         <div class="relative max-w-4xl w-full mx-4">
-            <button onclick="closeImageModal()" class="absolute top-4 right-4 text-white hover:text-secondary focus:outline-none">
+            <button onclick="closeImageModal()"
+                class="absolute top-4 right-4 text-white hover:text-secondary focus:outline-none">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
                 </svg>
             </button>
             <img id="modalImage" src="" alt="Dashboard Full View" class="max-w-full max-h-[80vh] mx-auto">
@@ -278,7 +372,7 @@
                 spaceBetween: 30,
                 loop: true,
                 autoplay: {
-                    delay: 5000,
+                    delay: 15000, // Changed from 5000 to 15000 (15 seconds)
                     disableOnInteraction: false,
                 },
                 effect: 'coverflow',
@@ -323,7 +417,7 @@
                         const activeSlide = this.slides[this.activeIndex];
                         const image = activeSlide.querySelector('.dashboard-image');
                         const content = activeSlide.querySelector('.dashboard-content');
-                        
+
                         if (image && content) {
                             image.classList.add('slide-in-left');
                             content.classList.add('slide-in-right');
@@ -334,7 +428,7 @@
                         this.slides.forEach(slide => {
                             const image = slide.querySelector('.dashboard-image');
                             const content = slide.querySelector('.dashboard-content');
-                            
+
                             if (image && content) {
                                 if (slide !== this.slides[this.activeIndex]) {
                                     image.classList.remove('slide-in-left');
@@ -345,14 +439,14 @@
                     }
                 }
             });
-            
+
             // Add custom transition effects
             const slides = document.querySelectorAll('.swiper-slide');
             slides.forEach(slide => {
                 slide.addEventListener('mouseenter', function() {
                     this.classList.add('slide-hover');
                 });
-                
+
                 slide.addEventListener('mouseleave', function() {
                     this.classList.remove('slide-hover');
                 });
@@ -387,7 +481,7 @@
         .badge-container span:first-child {
             margin-right: 80px;
         }
-        
+
         .badge-card {
             display: inline-block;
             background-color: var(--secondary-color, #e53e3e);
@@ -401,7 +495,7 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-        
+
         .badge-card::before {
             content: '';
             position: absolute;
@@ -409,14 +503,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 50%);
             pointer-events: none;
         }
-        
+
         .badge-card:hover {
             transform: translateY(-2px);
         }
-        
+
         /* Swiper Custom Styles */
         .swiper {
             width: 100%;
@@ -440,7 +534,7 @@
             transform: scale(1);
         }
 
-        .swiper-slide-prev, 
+        .swiper-slide-prev,
         .swiper-slide-next {
             opacity: 0.7;
             transform: scale(0.9);
@@ -465,6 +559,7 @@
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -476,6 +571,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -549,7 +645,7 @@
         }
 
         /* Dashboard content styles */
-        .dashboard-image, 
+        .dashboard-image,
         .dashboard-content {
             transition: all 0.5s ease;
         }
@@ -563,19 +659,19 @@
             .swiper-slide {
                 padding: 15px;
             }
-            
+
             .custom-nav-next,
             .custom-nav-prev {
                 width: 35px;
                 height: 35px;
             }
-            
+
             .custom-nav-next svg,
             .custom-nav-prev svg {
                 width: 18px;
                 height: 18px;
             }
-            
+
             .dashboard-content {
                 padding: 15px 0;
             }
@@ -585,23 +681,23 @@
             .swiper {
                 padding-bottom: 50px;
             }
-            
+
             .custom-nav-next,
             .custom-nav-prev {
                 width: 30px;
                 height: 30px;
             }
-            
+
             .custom-nav-next svg,
             .custom-nav-prev svg {
                 width: 16px;
                 height: 16px;
             }
-            
+
             .custom-nav-next {
                 right: 15px;
             }
-            
+
             .custom-nav-prev {
                 left: 15px;
             }
