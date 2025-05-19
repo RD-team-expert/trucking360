@@ -1,5 +1,5 @@
 <!-- Hero Section with Gradient Background -->
-<section id="home" class="pt-20 min-h-screen flex items-center gradient-bg relative overflow-hidden">
+<section id="home" class="pt-40  flex items-end gradient-bg relative overflow-hidden">
     <div class="container mx-auto px-0 flex flex-col md:flex-row items-center relative z-10">
         <div class="md:w-1/2 md:pl-12 z-10">
             <!-- "Trucking 360" text with animations -->
@@ -35,12 +35,11 @@
 <style>
     .gradient-bg {
         background: repeating-linear-gradient(to right, #2e368f, #e93232);
-        /* background-size: 400% 400%; */
-        /* animation: gradientBG 15s ease infinite; */
+        height: 50rem;/* Added fixed height */
     }
 
     #home {
-        min-height: 100vh;
+        height: 50rem; /* Added fixed height */
         position: relative;
         overflow: hidden;
     }
@@ -159,7 +158,8 @@
 
     @media (min-width: 1024px) {
         .header-image {
-            height: 42.8rem;
+            height: 40rem;
+            right: -100px;
             /* bottom: 2rem; */
         }
 
@@ -171,7 +171,8 @@
     /* New media query for screens between 1100px and 1280px */
     @media (min-width: 1100px) and (max-width: 1280px) {
         .header-image {
-            height:38rem;
+            height: 40rem;
+            right: -140px;
             
         }
 
@@ -180,6 +181,8 @@
         }
     }
 
+    
+
     @media (min-width: 1920px) {
         .header-image {
             height: 56rem;
@@ -187,6 +190,8 @@
             top: -27rem;
             right: -185px;
             width: 180rem;
+            height: 40rem;
+            right: -250px;
         }
 
         h3 {
@@ -205,6 +210,8 @@
             /* Scaled up from -185px */
             width: 263rem;
             /* Scaled up from 180rem */
+            height: 40rem;
+            right: -100px;
         }
 
         h3 {

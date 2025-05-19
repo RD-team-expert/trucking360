@@ -1,19 +1,17 @@
 <section class="max-w-7xl mx-auto px-6 py-16 md:py-24 lg:px-8 bg-gray-100">
     <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Left Column - Text Content -->
-        <div class="space-y-10 md:pr-8" data-aos="fade-right" data-aos-duration="800">
+        <div class="space-y-10 md:pr-8">
             {{-- <h2 class="text-3xl md:text-4xl font-bold text-primary leading-tight" data-aos="fade-up"
                 data-aos-delay="200" data-aos-duration="500">
                 Success Stories
             </h2> --}}
 
-            <blockquote class="text-2xl md:text-3xl font-semibold text-gray-800 leading-tight" data-aos="fade-up"
-                data-aos-delay="400" data-aos-duration="500">
+            <blockquote class="text-2xl md:text-3xl font-semibold text-gray-800 leading-tight">
                 <span class="text-primary">Hear directly from our partners and their drivers:</span>
             </blockquote>
 
-            <div class="space-y-4 border-l-4 border-primary pl-6" data-aos="fade-up" data-aos-delay="600"
-                data-aos-duration="500">
+            <div class="space-y-4 border-l-4 border-primary pl-6">
                 <p class="text-lg text-gray-700 leading-relaxed">
                     Go beyond the numbers and listen to real stories from the people who experience our services
                     firsthand. Our partners and their drivers share their thoughts, experiences, and the impact our
@@ -29,10 +27,8 @@
         </div>
 
         <!-- Right Column - Video -->
-        <div class="relative aspect-video bg-black rounded-xl overflow-hidden shadow-xl" data-aos="fade-left"
-            data-aos-duration="800" data-aos-delay="200">
-            <video class="w-full h-full object-cover" controls data-aos="zoom-in" data-aos-delay="0"
-                data-aos-duration="500">
+        <div class="relative aspect-video bg-black rounded-xl overflow-hidden shadow-xl">
+            <video class="w-full h-full object-cover" controls>
                 <source src="{{ asset('website/img/t360-home.mp4') }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
