@@ -8,10 +8,25 @@
             </h2>
             <h3 class="text-xl md:text-2xl font-bold text-primary mb-4">Fully Automated – No Manual Entry by the User
             </h3>
-            <div class="feature-highlights flex justify-center gap-6 mt-4">
-                <span class="text-secondary font-medium">Updated Daily</span>
-                <span class="text-secondary font-medium">-</span>
-                <span class="text-secondary font-medium">Daily Scores</span>
+            <div class="flex flex-wrap justify-center gap-6 mt-4">
+                <span class="text-green-500 font-medium flex items-center">
+                    <svg class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Updated Daily
+                </span>
+                <span class="text-green-500 font-medium flex items-center">
+                    <svg class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Daily Scores
+                </span>
+                <span class="text-green-500 font-medium flex items-center">
+                    <svg class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Real-Time Analytics
+                </span>
             </div>
         </div>
 
@@ -481,6 +496,211 @@
         .badge-container span:first-child {
             margin-right: 80px;
         }
+
+        /* Feature Items */
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    position: relative;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f0fff4; /* Light green background */
+    border-radius: 20px;
+    font-weight: 600;
+    color: #22543d; /* Dark green text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.feature-item::before {
+    content: '✓';
+    margin-right: 6px;
+    color: #48bb78; /* Green checkmark color */
+    font-weight: bold;
+}
+
+/* Swiper Styles */
+.swiper-slide {
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.swiper-slide-active {
+    transform: scale(1);
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+    transform: scale(0.9);
+}
+
+/* Custom Animation Classes */
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Removed the shadow from slide-hover class */
+.slide-hover {
+    transform: translateY(-5px);
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Custom Navigation Arrows */
+.custom-nav-next,
+.custom-nav-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-nav-next {
+    right: 25px;
+}
+
+.custom-nav-prev {
+    left: 25px;
+}
+
+.custom-nav-next svg,
+.custom-nav-prev svg {
+    width: 20px;
+    height: 20px;
+    color: #3490dc;
+    transition: all 0.3s ease;
+}
+
+.custom-nav-next:hover,
+.custom-nav-prev:hover {
+    background-color: #3490dc;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.custom-nav-next:hover svg,
+.custom-nav-prev:hover svg {
+    color: white;
+}
+
+/* Custom Pagination */
+.custom-pagination {
+    bottom: 20px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 6px !important;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    background-color: #ccc;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #3490dc !important;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+}
+
+/* Dashboard content styles */
+.dashboard-image,
+.dashboard-content {
+    transition: all 0.5s ease;
+}
+
+.dashboard-image img {
+    transition: transform 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .swiper-slide {
+        padding: 15px;
+    }
+
+    .custom-nav-next,
+    .custom-nav-prev {
+        width: 35px;
+        height: 35px;
+    }
+
+    .custom-nav-next svg,
+    .custom-nav-prev svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .dashboard-content {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .swiper {
+        padding-bottom: 50px;
+    }
+
+    .custom-nav-next,
+    .custom-nav-prev {
+        width: 30px;
+        height: 30px;
+    }
+
+    .custom-nav-next svg,
+    .custom-nav-prev svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .custom-nav-next {
+        right: 15px;
+    }
+
+    .custom-nav-prev {
+        left: 15px;
+    }
+}
 
         .badge-card {
             display: inline-block;
