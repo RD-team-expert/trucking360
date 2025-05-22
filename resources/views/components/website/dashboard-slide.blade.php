@@ -4,7 +4,7 @@
 <section id="dashboard-slide" class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
         <div class="text-center mb-12" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Introducing the Trucking 360 Dashboard
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Introducing Dashboard 360
             </h2>
             <h3 class="text-xl md:text-2xl font-bold text-primary mb-4">Fully Automated – No Manual Entry by the User
             </h3>
@@ -37,30 +37,9 @@
                 <div class="swiper-slide">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div class="dashboard-image rounded-lg overflow-hidden relative">
-                            <img src="{{ asset('website/img/about.jpg') }}" alt="Dashboard Analytics"
-                                class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer"
-                                onclick="openImageModal(this.src)">
-                            <!-- Mobile Navigation Arrows (only visible on mobile) -->
-                            <div class="hidden absolute inset-0 flex items-center justify-between pointer-events-none">
-                                <div
-                                    class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-chevron-left w-5 h-5 text-primary">
-                                        <polyline points="15 18 9 12 15 6"></polyline>
-                                    </svg>
-                                </div>
-                                <div
-                                    class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-chevron-right w-5 h-5 text-primary">
-                                        <polyline points="9 18 15 12 9 6"></polyline>
-                                    </svg>
-                                </div>
-                            </div>
+                            <img src="{{ asset('website/img/dashboard/1.jpg') }}" alt="Dashboard Analytics"
+                                class="w-full h-auto transition-transform duration-500 hover:scale-105">
+                            <!-- Mobile Navigation Arrows removed -->
                         </div>
                         <div class="dashboard-content p-4">
                             <h3 class="text-2xl font-bold text-primary mb-4">One Dashboard</h3>
@@ -99,31 +78,9 @@
                 <div class="swiper-slide">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div class="dashboard-image rounded-lg overflow-hidden relative">
-                            <img src="{{ asset('website/img/about.jpg') }}" alt="Performance Tracking"
-                                class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer"
-                                onclick="openImageModal(this.src)">
-                            <!-- Mobile Navigation Arrows (only visible on mobile) -->
-                            <div
-                                class="md:hidden absolute inset-0 flex items-center justify-between pointer-events-none">
-                                <div
-                                    class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-chevron-left w-5 h-5 text-primary">
-                                        <polyline points="15 18 9 12 15 6"></polyline>
-                                    </svg>
-                                </div>
-                                <div
-                                    class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-chevron-right w-5 h-5 text-primary">
-                                        <polyline points="9 18 15 12 9 6"></polyline>
-                                    </svg>
-                                </div>
-                            </div>
+                            <img src="{{ asset('website/img/dashboard/2.jpg') }}" alt="Performance Tracking"
+                                class="w-full h-auto transition-transform duration-500 hover:scale-105">
+                            <!-- Mobile Navigation Arrows removed -->
                         </div>
                         <div class="dashboard-content p-4">
                             <h3 class="text-2xl font-bold text-primary mb-4">What Makes it Unstoppable</h3>
@@ -213,34 +170,12 @@
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="swiper-slide">
+                {{-- <div class="swiper-slide">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div class="dashboard-image rounded-lg overflow-hidden relative">
-                            <img src="{{ asset('website/img/about.jpg') }}" alt="Trend Analysis"
-                                class="w-full h-auto transition-transform duration-500 hover:scale-105 cursor-pointer"
-                                onclick="openImageModal(this.src)">
-                            <!-- Mobile Navigation Arrows (only visible on mobile) -->
-                            <div
-                                class="md:hidden absolute inset-0 flex items-center justify-between pointer-events-none">
-                                <div
-                                    class="custom-nav-prev-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center ml-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-chevron-left w-5 h-5 text-primary">
-                                        <polyline points="15 18 9 12 15 6"></polyline>
-                                    </svg>
-                                </div>
-                                <div
-                                    class="custom-nav-next-mobile z-10 w-10 h-10 bg-white bg-opacity-70 rounded-full flex items-center justify-center mr-2 shadow-md pointer-events-auto cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-chevron-right w-5 h-5 text-primary">
-                                        <polyline points="9 18 15 12 9 6"></polyline>
-                                    </svg>
-                                </div>
-                            </div>
+                            <img src="{{ asset('website/img/dashboard/2.jpg') }}" alt="Trend Analysis"
+                                class="w-full h-auto transition-transform duration-500 hover:scale-105">
+                            <!-- Mobile Navigation Arrows removed -->
                         </div>
                         <div class="dashboard-content p-4">
                             <h3 class="text-2xl font-bold text-primary mb-4">With vs. Without the Dashboard</h3>
@@ -338,7 +273,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             <!-- Custom Navigation Arrows (only visible on desktop) -->
@@ -498,209 +433,212 @@
         }
 
         /* Feature Items */
-.features-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-.feature-item {
-    position: relative;
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #f0fff4; /* Light green background */
-    border-radius: 20px;
-    font-weight: 600;
-    color: #22543d; /* Dark green text */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
+        .feature-item {
+            position: relative;
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #f0fff4;
+            /* Light green background */
+            border-radius: 20px;
+            font-weight: 600;
+            color: #22543d;
+            /* Dark green text */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
 
-.feature-item::before {
-    content: '✓';
-    margin-right: 6px;
-    color: #48bb78; /* Green checkmark color */
-    font-weight: bold;
-}
+        .feature-item::before {
+            content: '✓';
+            margin-right: 6px;
+            color: #48bb78;
+            /* Green checkmark color */
+            font-weight: bold;
+        }
 
-/* Swiper Styles */
-.swiper-slide {
-    padding: 20px;
-    transition: all 0.3s ease;
-}
+        /* Swiper Styles */
+        .swiper-slide {
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
 
-.swiper-slide-active {
-    transform: scale(1);
-}
+        .swiper-slide-active {
+            transform: scale(1);
+        }
 
-.swiper-slide-prev,
-.swiper-slide-next {
-    transform: scale(0.9);
-}
+        .swiper-slide-prev,
+        .swiper-slide-next {
+            transform: scale(0.9);
+        }
 
-/* Custom Animation Classes */
-.slide-in-left {
-    animation: slideInLeft 0.8s ease-out forwards;
-}
+        /* Custom Animation Classes */
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
 
-.slide-in-right {
-    animation: slideInRight 0.8s ease-out forwards;
-}
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
 
-/* Removed the shadow from slide-hover class */
-.slide-hover {
-    transform: translateY(-5px);
-}
+        /* Removed the shadow from slide-hover class */
+        .slide-hover {
+            transform: translateY(-5px);
+        }
 
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-/* Custom Navigation Arrows */
-.custom-nav-next,
-.custom-nav-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+        /* Custom Navigation Arrows */
+        .custom-nav-next,
+        .custom-nav-prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-.custom-nav-next {
-    right: 25px;
-}
+        .custom-nav-next {
+            right: 25px;
+        }
 
-.custom-nav-prev {
-    left: 25px;
-}
+        .custom-nav-prev {
+            left: 25px;
+        }
 
-.custom-nav-next svg,
-.custom-nav-prev svg {
-    width: 20px;
-    height: 20px;
-    color: #3490dc;
-    transition: all 0.3s ease;
-}
+        .custom-nav-next svg,
+        .custom-nav-prev svg {
+            width: 20px;
+            height: 20px;
+            color: #3490dc;
+            transition: all 0.3s ease;
+        }
 
-.custom-nav-next:hover,
-.custom-nav-prev:hover {
-    background-color: #3490dc;
-    transform: translateY(-50%) scale(1.1);
-}
+        .custom-nav-next:hover,
+        .custom-nav-prev:hover {
+            background-color: #3490dc;
+            transform: translateY(-50%) scale(1.1);
+        }
 
-.custom-nav-next:hover svg,
-.custom-nav-prev:hover svg {
-    color: white;
-}
+        .custom-nav-next:hover svg,
+        .custom-nav-prev:hover svg {
+            color: white;
+        }
 
-/* Custom Pagination */
-.custom-pagination {
-    bottom: 20px !important;
-}
+        /* Custom Pagination */
+        .custom-pagination {
+            bottom: 20px !important;
+        }
 
-.swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    margin: 0 6px !important;
-    opacity: 0.7;
-    transition: all 0.3s ease;
-    background-color: #ccc;
-}
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            margin: 0 6px !important;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            background-color: #ccc;
+        }
 
-.swiper-pagination-bullet-active {
-    background-color: #3490dc !important;
-    opacity: 1;
-    width: 12px;
-    height: 12px;
-}
+        .swiper-pagination-bullet-active {
+            background-color: #3490dc !important;
+            opacity: 1;
+            width: 12px;
+            height: 12px;
+        }
 
-/* Dashboard content styles */
-.dashboard-image,
-.dashboard-content {
-    transition: all 0.5s ease;
-}
+        /* Dashboard content styles */
+        .dashboard-image,
+        .dashboard-content {
+            transition: all 0.5s ease;
+        }
 
-.dashboard-image img {
-    transition: transform 0.5s ease;
-}
+        .dashboard-image img {
+            transition: transform 0.5s ease;
+        }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .swiper-slide {
-        padding: 15px;
-    }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .swiper-slide {
+                padding: 15px;
+            }
 
-    .custom-nav-next,
-    .custom-nav-prev {
-        width: 35px;
-        height: 35px;
-    }
+            .custom-nav-next,
+            .custom-nav-prev {
+                width: 35px;
+                height: 35px;
+            }
 
-    .custom-nav-next svg,
-    .custom-nav-prev svg {
-        width: 18px;
-        height: 18px;
-    }
+            .custom-nav-next svg,
+            .custom-nav-prev svg {
+                width: 18px;
+                height: 18px;
+            }
 
-    .dashboard-content {
-        padding: 15px 0;
-    }
-}
+            .dashboard-content {
+                padding: 15px 0;
+            }
+        }
 
-@media (max-width: 640px) {
-    .swiper {
-        padding-bottom: 50px;
-    }
+        @media (max-width: 640px) {
+            .swiper {
+                padding-bottom: 50px;
+            }
 
-    .custom-nav-next,
-    .custom-nav-prev {
-        width: 30px;
-        height: 30px;
-    }
+            .custom-nav-next,
+            .custom-nav-prev {
+                width: 30px;
+                height: 30px;
+            }
 
-    .custom-nav-next svg,
-    .custom-nav-prev svg {
-        width: 16px;
-        height: 16px;
-    }
+            .custom-nav-next svg,
+            .custom-nav-prev svg {
+                width: 16px;
+                height: 16px;
+            }
 
-    .custom-nav-next {
-        right: 15px;
-    }
+            .custom-nav-next {
+                right: 15px;
+            }
 
-    .custom-nav-prev {
-        left: 15px;
-    }
-}
+            .custom-nav-prev {
+                left: 15px;
+            }
+        }
 
         .badge-card {
             display: inline-block;
@@ -815,6 +753,18 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
+
+        .custom-nav-prev svg,
+        .custom-nav-next svg {
+            display: none;
+        }
+
+        .custom-nav-prev,
+        .custom-nav-next {
+            display: none !important;
+        }
+
+
 
         .custom-nav-next {
             right: 25px;
