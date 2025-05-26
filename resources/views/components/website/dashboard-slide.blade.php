@@ -322,18 +322,13 @@
                 spaceBetween: 30,
                 loop: true,
                 autoplay: {
-                    delay: 15000, // Changed from 5000 to 15000 (15 seconds)
+                    delay: 15000, // 15 seconds
                     disableOnInteraction: false,
                 },
-                effect: 'coverflow',
-                coverflowEffect: {
-                    rotate: 30,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: false,
-                },
-                speed: 1000,
+                // Changed from coverflow to a normal slide effect
+                effect: 'slide',
+                // Removed coverflowEffect settings
+                speed: 800, // Slightly reduced for smoother transitions
                 pagination: {
                     el: '.custom-pagination',
                     clickable: true,
@@ -359,30 +354,35 @@
                 },
                 on: {
                     beforeInit: function() {
-                        // Add perspective to container
-                        this.el.style.perspective = '1200px';
+                        // Removed perspective style
                     },
                     slideChangeTransitionStart: function() {
-                        // Add animation classes to elements
+                        // Simplified animation for normal slide effect
                         const activeSlide = this.slides[this.activeIndex];
                         const image = activeSlide.querySelector('.dashboard-image');
                         const content = activeSlide.querySelector('.dashboard-content');
 
                         if (image && content) {
-                            image.classList.add('slide-in-left');
-                            content.classList.add('slide-in-right');
+                            // Simple fade-in effect
+                            image.style.opacity = '0';
+                            content.style.opacity = '0';
+                            setTimeout(() => {
+                                image.style.opacity = '1';
+                                content.style.opacity = '1';
+                                image.style.transition = 'opacity 0.5s ease';
+                                content.style.transition = 'opacity 0.5s ease';
+                            }, 50);
                         }
                     },
                     slideChangeTransitionEnd: function() {
-                        // Remove animation classes from all slides
+                        // Reset opacity for non-active slides
                         this.slides.forEach(slide => {
-                            const image = slide.querySelector('.dashboard-image');
-                            const content = slide.querySelector('.dashboard-content');
-
-                            if (image && content) {
-                                if (slide !== this.slides[this.activeIndex]) {
-                                    image.classList.remove('slide-in-left');
-                                    content.classList.remove('slide-in-right');
+                            if (slide !== this.slides[this.activeIndex]) {
+                                const image = slide.querySelector('.dashboard-image');
+                                const content = slide.querySelector('.dashboard-content');
+                                if (image && content) {
+                                    image.style.opacity = '';
+                                    content.style.opacity = '';
                                 }
                             }
                         });
@@ -393,6 +393,7 @@
             // Add custom transition effects
             const slides = document.querySelectorAll('.swiper-slide');
             slides.forEach(slide => {
+                // Keeping the hover effect but making it more subtle
                 slide.addEventListener('mouseenter', function() {
                     this.classList.add('slide-hover');
                 });
@@ -468,27 +469,16 @@
             transition: all 0.3s ease;
         }
 
-        .swiper-slide-active {
+        /* Remove the scaling effects */
+        .swiper-slide-active,
+        .swiper-slide-prev,
+        .swiper-slide-next {
             transform: scale(1);
         }
 
-        .swiper-slide-prev,
-        .swiper-slide-next {
-            transform: scale(0.9);
-        }
-
-        /* Custom Animation Classes */
-        .slide-in-left {
-            animation: slideInLeft 0.8s ease-out forwards;
-        }
-
-        .slide-in-right {
-            animation: slideInRight 0.8s ease-out forwards;
-        }
-
-        /* Removed the shadow from slide-hover class */
+        /* Subtle hover effect */
         .slide-hover {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
         }
 
         @keyframes slideInLeft {
