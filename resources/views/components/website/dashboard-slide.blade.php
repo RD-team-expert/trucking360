@@ -4,7 +4,7 @@
 <section id="dashboard-slide" class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
         <div class="text-center mb-12" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Introducing Dashboard 360
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Introducing Dashboard 360
             </h2>
             <h3 class="text-xl md:text-2xl font-bold text-primary mb-4">Fully Automated – No Manual Entry by the User
             </h3>
