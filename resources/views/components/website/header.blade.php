@@ -45,7 +45,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('comingsoon') }}" class="block px-4 py-2 text-center text-white bg-secondary border border-secondary hover:bg-white hover:text-secondary rounded transition-colors duration-300">
+                        <a href="{{ route('dashboard360') }}" class="block px-4 py-2 text-center text-white bg-secondary border border-secondary hover:bg-white hover:text-secondary rounded transition-colors duration-300">
                             Dashboard360
                         </a>
                     </li>
@@ -87,7 +87,7 @@
                     </ul>
                 </li>
                 <li><a href="{{ url('bookings/create') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Book A Meeting</a></li>
-                <li><a href="{{ route('comingsoon') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Dashboard360</a></li>
+                <li><a href="{{ route('dashboard360') }}" class="text-primary text-2xl font-semibold hover:text-secondary transition-colors duration-300">Dashboard360</a></li>
             </ul>
         </nav>
     </div>

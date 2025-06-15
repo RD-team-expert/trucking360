@@ -71,6 +71,13 @@ Route::get('/faqs', function () {
 
     return view('faqs.show', compact('settings', 'faqs'));
 })->name('faqs');
+Route::get('/dashboard360', function () {
+    $settings = GeneralSetting::first();
+    $faqs = Faq::all();
+
+
+    return view('dashboard360.index', compact('settings', 'faqs'));
+})->name('dashboard360');
 
 Route::get('/services', [ServicePageController::class, 'index'])->name('services.index')->middleware(TrackVisitor::class);;
 Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show')->middleware(TrackVisitor::class);;
