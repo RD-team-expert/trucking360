@@ -33,6 +33,13 @@ class SitemapController extends Controller
                 ->setLastModificationDate(now())
         );
 
+        $sitemap->add(
+            Url::create(route('dashboard360'))
+                ->setPriority(0.9)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
+                ->setLastModificationDate(now())
+        );
+
 
 
         // Save the sitemap to the public directory
